@@ -32,7 +32,9 @@
       "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "master",
       "branch_mapping": {}
-    },
+    }
+  ],
+  "dependent_packages": [
     {
       "id": "uref.plugins",
       "nuget_feed": "https://www.myget.org/F/docfx-dev/api/v2",
