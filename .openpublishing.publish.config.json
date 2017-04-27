@@ -43,5 +43,7 @@
       "version": "latest-prerelease"
     }
   ],
-  "need_generate_pdf_url_template": false
+  "need_generate_pdf_url_template": false,
+  "exportRawModel": true,
+  "exportViewModel": true
 }
