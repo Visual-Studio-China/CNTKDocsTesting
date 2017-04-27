@@ -33,6 +33,9 @@
     "globalMetadata": {},
     "fileMetadata": {},
     "template": [],
-    "dest": "Cntk"
+    "dest": "Cntk",
+    "exportRawModel": true,
+    "exportViewModel": true,
+    "dryRun": true
   }
 }
