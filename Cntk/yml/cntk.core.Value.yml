@@ -1,4 +1,4 @@
-#YamlMime:UniversalReference
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -11,9 +11,8 @@ items:
   class: cntk.core.Value
   fullName: cntk.core.Value
   inheritance:
-  - inheritance:
-      - type: builtins.object
-    type: cntk.cntk_py.Value
+  - - type: cntk.cntk_py.Value
+    - type: builtins.object
   langs:
   - python
   module: cntk.core
