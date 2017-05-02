@@ -1,0 +1,21 @@
+#YamlMime:PythonReference
+api_name: []
+items:
+- _type: module
+  children: []
+  fullName: cntk.logging.tests
+  langs:
+  - python
+  module: cntk.logging.tests
+  name: tests
+  source:
+    id: tests
+    path: cntk/logging/tests/__init__.py
+    remote:
+      branch: master
+      path: cntk/logging/tests/__init__.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 0
+  type: Namespace
+  uid: cntk.logging.tests
+references: []

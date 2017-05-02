@@ -1,0 +1,140 @@
+#YamlMime:PythonReference
+api_name: []
+items:
+- _type: class
+  children:
+  - cntk.ops.tests.userfunction_test.MyPlus.backward
+  - cntk.ops.tests.userfunction_test.MyPlus.clone
+  - cntk.ops.tests.userfunction_test.MyPlus.forward
+  - cntk.ops.tests.userfunction_test.MyPlus.infer_outputs
+  class: cntk.ops.tests.userfunction_test.MyPlus
+  fullName: cntk.ops.tests.userfunction_test.MyPlus
+  langs:
+  - python
+  module: cntk.ops.tests.userfunction_test
+  name: MyPlus
+  source:
+    id: MyPlus
+    path: cntk/ops/tests/userfunction_test.py
+    remote:
+      branch: master
+      path: cntk/ops/tests/userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 20
+  summary: >+
+    Bases: @cntk.ops.functions.UserFunction
+
+
+
+  syntax: {}
+  type: Class
+  uid: cntk.ops.tests.userfunction_test.MyPlus
+- _type: method
+  class: cntk.ops.tests.userfunction_test.MyPlus
+  fullName: cntk.ops.tests.userfunction_test.MyPlus.backward
+  langs:
+  - python
+  module: cntk.ops.tests.userfunction_test
+  name: backward
+  source:
+    id: backward
+    path: cntk/ops/tests/userfunction_test.py
+    remote:
+      branch: master
+      path: cntk/ops/tests/userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 43
+  syntax:
+    parameters:
+    - id: self
+    - id: state
+    - id: root_gradients
+  type: Method
+  uid: cntk.ops.tests.userfunction_test.MyPlus.backward
+- _type: method
+  class: cntk.ops.tests.userfunction_test.MyPlus
+  fullName: cntk.ops.tests.userfunction_test.MyPlus.clone
+  langs:
+  - python
+  module: cntk.ops.tests.userfunction_test
+  name: clone
+  source:
+    id: clone
+    path: cntk/ops/tests/userfunction_test.py
+    remote:
+      branch: master
+      path: cntk/ops/tests/userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 31
+  syntax:
+    parameters:
+    - id: self
+    - id: cloned_inputs
+  type: Method
+  uid: cntk.ops.tests.userfunction_test.MyPlus.clone
+- _type: method
+  class: cntk.ops.tests.userfunction_test.MyPlus
+  fullName: cntk.ops.tests.userfunction_test.MyPlus.forward
+  langs:
+  - python
+  module: cntk.ops.tests.userfunction_test
+  name: forward
+  source:
+    id: forward
+    path: cntk/ops/tests/userfunction_test.py
+    remote:
+      branch: master
+      path: cntk/ops/tests/userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 34
+  syntax:
+    parameters:
+    - defaultValue: None
+      id: self
+    - id: arguments
+    - id: device
+    - defaultValue: None
+      id: outputs_to_retain
+  type: Method
+  uid: cntk.ops.tests.userfunction_test.MyPlus.forward
+- _type: method
+  class: cntk.ops.tests.userfunction_test.MyPlus
+  fullName: cntk.ops.tests.userfunction_test.MyPlus.infer_outputs
+  langs:
+  - python
+  module: cntk.ops.tests.userfunction_test
+  name: infer_outputs
+  source:
+    id: infer_outputs
+    path: cntk/ops/tests/userfunction_test.py
+    remote:
+      branch: master
+      path: cntk/ops/tests/userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 27
+  syntax:
+    parameters:
+    - id: self
+  type: Method
+  uid: cntk.ops.tests.userfunction_test.MyPlus.infer_outputs
+references:
+- fullName: cntk.ops.tests.userfunction_test.MyPlus.backward
+  isExternal: false
+  name: backward
+  parent: cntk.ops.tests.userfunction_test.MyPlus
+  uid: cntk.ops.tests.userfunction_test.MyPlus.backward
+- fullName: cntk.ops.tests.userfunction_test.MyPlus.clone
+  isExternal: false
+  name: clone
+  parent: cntk.ops.tests.userfunction_test.MyPlus
+  uid: cntk.ops.tests.userfunction_test.MyPlus.clone
+- fullName: cntk.ops.tests.userfunction_test.MyPlus.forward
+  isExternal: false
+  name: forward
+  parent: cntk.ops.tests.userfunction_test.MyPlus
+  uid: cntk.ops.tests.userfunction_test.MyPlus.forward
+- fullName: cntk.ops.tests.userfunction_test.MyPlus.infer_outputs
+  isExternal: false
+  name: infer_outputs
+  parent: cntk.ops.tests.userfunction_test.MyPlus
+  uid: cntk.ops.tests.userfunction_test.MyPlus.infer_outputs

@@ -1,0 +1,208 @@
+#YamlMime:PythonReference
+api_name: []
+items:
+- _type: class
+  children:
+  - cntk.io.MinibatchData.end_of_sweep
+  - cntk.io.MinibatchData.is_sparse
+  - cntk.io.MinibatchData.mask
+  - cntk.io.MinibatchData.num_samples
+  - cntk.io.MinibatchData.num_sequences
+  - cntk.io.MinibatchData.shape
+  - cntk.io.MinibatchData.value
+  class: cntk.io.MinibatchData
+  fullName: cntk.io.MinibatchData
+  langs:
+  - python
+  module: cntk.io
+  name: MinibatchData
+  source:
+    id: MinibatchData
+    path: cntk/io/__init__.py
+    remote:
+      branch: master
+      path: cntk/io/__init__.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 20
+  summary: >+
+    Bases: @cntk.cntk_py.MinibatchData, @cntk.tensor.ArrayMixin
+
+    Holds a minibatch of input data. This is never directly created, but only returned by @MinibatchSource instances.
+
+
+
+
+
+
+  syntax: {}
+  type: Class
+  uid: cntk.io.MinibatchData
+- _type: attribute
+  class: cntk.io.MinibatchData
+  fullName: cntk.io.MinibatchData.end_of_sweep
+  langs:
+  - python
+  module: cntk.io
+  name: end_of_sweep
+  source:
+    id: end_of_sweep
+    path: 
+    remote:
+      branch: master
+      path: 
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 
+  summary: Indicates whether the data in this minibatch comes from a sweep end or crosses a sweep boundary (and as a result includes data from different sweeps).
+  syntax: {}
+  type: Property
+  uid: cntk.io.MinibatchData.end_of_sweep
+- _type: attribute
+  class: cntk.io.MinibatchData
+  fullName: cntk.io.MinibatchData.is_sparse
+  langs:
+  - python
+  module: cntk.io
+  name: is_sparse
+  source:
+    id: is_sparse
+    path: 
+    remote:
+      branch: master
+      path: 
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 
+  summary: Whether the data in this minibatch is sparse.
+  syntax: {}
+  type: Property
+  uid: cntk.io.MinibatchData.is_sparse
+- _type: attribute
+  class: cntk.io.MinibatchData
+  fullName: cntk.io.MinibatchData.mask
+  langs:
+  - python
+  module: cntk.io
+  name: mask
+  source:
+    id: mask
+    path: 
+    remote:
+      branch: master
+      path: 
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 
+  summary: The mask object of the minibatch. In it, *2* marks the beginning of a sequence, *1* marks a sequence element as valid, and *0* marks it as invalid.
+  syntax: {}
+  type: Property
+  uid: cntk.io.MinibatchData.mask
+- _type: attribute
+  class: cntk.io.MinibatchData
+  fullName: cntk.io.MinibatchData.num_samples
+  langs:
+  - python
+  module: cntk.io
+  name: num_samples
+  source:
+    id: num_samples
+    path: 
+    remote:
+      branch: master
+      path: 
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 
+  summary: The number of samples in this minibatch
+  syntax: {}
+  type: Property
+  uid: cntk.io.MinibatchData.num_samples
+- _type: attribute
+  class: cntk.io.MinibatchData
+  fullName: cntk.io.MinibatchData.num_sequences
+  langs:
+  - python
+  module: cntk.io
+  name: num_sequences
+  source:
+    id: num_sequences
+    path: 
+    remote:
+      branch: master
+      path: 
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 
+  summary: The number of sequences in this minibatch
+  syntax: {}
+  type: Property
+  uid: cntk.io.MinibatchData.num_sequences
+- _type: attribute
+  class: cntk.io.MinibatchData
+  fullName: cntk.io.MinibatchData.shape
+  langs:
+  - python
+  module: cntk.io
+  name: shape
+  source:
+    id: shape
+    path: 
+    remote:
+      branch: master
+      path: 
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 
+  summary: The shape of the data in this minibatch as tuple.
+  syntax: {}
+  type: Property
+  uid: cntk.io.MinibatchData.shape
+- _type: attribute
+  class: cntk.io.MinibatchData
+  fullName: cntk.io.MinibatchData.value
+  langs:
+  - python
+  module: cntk.io
+  name: value
+  source:
+    id: value
+    path: 
+    remote:
+      branch: master
+      path: 
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 
+  summary: The value of the minibatch as a NumPy array.
+  syntax: {}
+  type: Property
+  uid: cntk.io.MinibatchData.value
+references:
+- fullName: cntk.io.MinibatchData.end_of_sweep
+  isExternal: false
+  name: end_of_sweep
+  parent: cntk.io.MinibatchData
+  uid: cntk.io.MinibatchData.end_of_sweep
+- fullName: cntk.io.MinibatchData.is_sparse
+  isExternal: false
+  name: is_sparse
+  parent: cntk.io.MinibatchData
+  uid: cntk.io.MinibatchData.is_sparse
+- fullName: cntk.io.MinibatchData.mask
+  isExternal: false
+  name: mask
+  parent: cntk.io.MinibatchData
+  uid: cntk.io.MinibatchData.mask
+- fullName: cntk.io.MinibatchData.num_samples
+  isExternal: false
+  name: num_samples
+  parent: cntk.io.MinibatchData
+  uid: cntk.io.MinibatchData.num_samples
+- fullName: cntk.io.MinibatchData.num_sequences
+  isExternal: false
+  name: num_sequences
+  parent: cntk.io.MinibatchData
+  uid: cntk.io.MinibatchData.num_sequences
+- fullName: cntk.io.MinibatchData.shape
+  isExternal: false
+  name: shape
+  parent: cntk.io.MinibatchData
+  uid: cntk.io.MinibatchData.shape
+- fullName: cntk.io.MinibatchData.value
+  isExternal: false
+  name: value
+  parent: cntk.io.MinibatchData
+  uid: cntk.io.MinibatchData.value

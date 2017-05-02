@@ -1,0 +1,283 @@
+#YamlMime:PythonReference
+api_name: []
+items:
+- _type: module
+  children:
+  - cntk.ops.tests.evaluation_test.test_edit_distance_error
+  - cntk.ops.tests.evaluation_test.test_lambda_rank
+  - cntk.ops.tests.evaluation_test.test_ndcg
+  - cntk.ops.tests.evaluation_test.test_op_classification_error
+  - cntk.ops.tests.evaluation_test.test_op_classification_error_with_axis
+  - cntk.ops.tests.evaluation_test.test_op_cross_entropy_with_soft_max
+  - cntk.ops.tests.evaluation_test.test_op_cross_entropy_with_soft_max_and_axis
+  - cntk.ops.tests.evaluation_test.test_op_squared_error
+  - cntk.ops.tests.evaluation_test.test_sequence_grad_as_numpy_false
+  fullName: cntk.ops.tests.evaluation_test
+  langs:
+  - python
+  module: cntk.ops.tests.evaluation_test
+  name: evaluation_test
+  source:
+    id: evaluation_test
+    path: cntk/ops/tests/evaluation_test.py
+    remote:
+      branch: master
+      path: cntk/ops/tests/evaluation_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 0
+  summary: Unit tests for evaluation operations, each operation is tested for the forward and the backward pass
+  type: Namespace
+  uid: cntk.ops.tests.evaluation_test
+- _type: function
+  fullName: cntk.ops.tests.evaluation_test.test_edit_distance_error
+  langs:
+  - python
+  module: cntk.ops.tests.evaluation_test
+  name: test_edit_distance_error
+  source:
+    id: test_edit_distance_error
+    path: cntk/ops/tests/evaluation_test.py
+    remote:
+      branch: master
+      path: cntk/ops/tests/evaluation_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 284
+  syntax:
+    parameters:
+    - id: left_input
+    - id: right_input
+    - id: subPen
+    - id: delPen
+    - id: insPen
+    - id: squashInputs
+    - id: tokensToIgnore
+    - id: result
+    - id: device_id
+    - id: precision
+  type: Method
+  uid: cntk.ops.tests.evaluation_test.test_edit_distance_error
+- _type: function
+  fullName: cntk.ops.tests.evaluation_test.test_lambda_rank
+  langs:
+  - python
+  module: cntk.ops.tests.evaluation_test
+  name: test_lambda_rank
+  source:
+    id: test_lambda_rank
+    path: cntk/ops/tests/evaluation_test.py
+    remote:
+      branch: master
+      path: cntk/ops/tests/evaluation_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 225
+  syntax:
+    parameters:
+    - id: grad
+    - id: value
+    - id: output
+    - id: gain
+    - id: device_id
+    - id: precision
+  type: Method
+  uid: cntk.ops.tests.evaluation_test.test_lambda_rank
+- _type: function
+  fullName: cntk.ops.tests.evaluation_test.test_ndcg
+  langs:
+  - python
+  module: cntk.ops.tests.evaluation_test
+  name: test_ndcg
+  source:
+    id: test_ndcg
+    path: cntk/ops/tests/evaluation_test.py
+    remote:
+      branch: master
+      path: cntk/ops/tests/evaluation_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 254
+  syntax:
+    parameters:
+    - id: value
+    - id: output
+    - id: gain
+    - id: device_id
+    - id: precision
+  type: Method
+  uid: cntk.ops.tests.evaluation_test.test_ndcg
+- _type: function
+  fullName: cntk.ops.tests.evaluation_test.test_op_classification_error
+  langs:
+  - python
+  module: cntk.ops.tests.evaluation_test
+  name: test_op_classification_error
+  source:
+    id: test_op_classification_error
+    path: cntk/ops/tests/evaluation_test.py
+    remote:
+      branch: master
+      path: cntk/ops/tests/evaluation_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 136
+  syntax:
+    parameters:
+    - id: output_vector
+    - id: target_vector
+    - id: device_id
+    - id: precision
+  type: Method
+  uid: cntk.ops.tests.evaluation_test.test_op_classification_error
+- _type: function
+  fullName: cntk.ops.tests.evaluation_test.test_op_classification_error_with_axis
+  langs:
+  - python
+  module: cntk.ops.tests.evaluation_test
+  name: test_op_classification_error_with_axis
+  source:
+    id: test_op_classification_error_with_axis
+    path: cntk/ops/tests/evaluation_test.py
+    remote:
+      branch: master
+      path: cntk/ops/tests/evaluation_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 183
+  syntax:
+    parameters:
+    - id: output_vector
+    - id: target_vector
+    - id: axis
+    - id: device_id
+    - id: precision
+  type: Method
+  uid: cntk.ops.tests.evaluation_test.test_op_classification_error_with_axis
+- _type: function
+  fullName: cntk.ops.tests.evaluation_test.test_op_cross_entropy_with_soft_max
+  langs:
+  - python
+  module: cntk.ops.tests.evaluation_test
+  name: test_op_cross_entropy_with_soft_max
+  source:
+    id: test_op_cross_entropy_with_soft_max
+    path: cntk/ops/tests/evaluation_test.py
+    remote:
+      branch: master
+      path: cntk/ops/tests/evaluation_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 27
+  syntax:
+    parameters:
+    - id: output_vector
+    - id: target_vector
+    - id: device_id
+    - id: precision
+  type: Method
+  uid: cntk.ops.tests.evaluation_test.test_op_cross_entropy_with_soft_max
+- _type: function
+  fullName: cntk.ops.tests.evaluation_test.test_op_cross_entropy_with_soft_max_and_axis
+  langs:
+  - python
+  module: cntk.ops.tests.evaluation_test
+  name: test_op_cross_entropy_with_soft_max_and_axis
+  source:
+    id: test_op_cross_entropy_with_soft_max_and_axis
+    path: cntk/ops/tests/evaluation_test.py
+    remote:
+      branch: master
+      path: cntk/ops/tests/evaluation_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 73
+  syntax:
+    parameters:
+    - id: output_vector
+    - id: target_vector
+    - id: axis
+    - id: device_id
+    - id: precision
+  type: Method
+  uid: cntk.ops.tests.evaluation_test.test_op_cross_entropy_with_soft_max_and_axis
+- _type: function
+  fullName: cntk.ops.tests.evaluation_test.test_op_squared_error
+  langs:
+  - python
+  module: cntk.ops.tests.evaluation_test
+  name: test_op_squared_error
+  source:
+    id: test_op_squared_error
+    path: cntk/ops/tests/evaluation_test.py
+    remote:
+      branch: master
+      path: cntk/ops/tests/evaluation_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 110
+  syntax:
+    parameters:
+    - id: output_vector
+    - id: target_vector
+    - id: device_id
+    - id: precision
+  type: Method
+  uid: cntk.ops.tests.evaluation_test.test_op_squared_error
+- _type: function
+  fullName: cntk.ops.tests.evaluation_test.test_sequence_grad_as_numpy_false
+  langs:
+  - python
+  module: cntk.ops.tests.evaluation_test
+  name: test_sequence_grad_as_numpy_false
+  source:
+    id: test_sequence_grad_as_numpy_false
+    path: cntk/ops/tests/evaluation_test.py
+    remote:
+      branch: master
+      path: cntk/ops/tests/evaluation_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 292
+  syntax:
+    parameters:
+    - id: device_id
+    - id: precision
+  type: Method
+  uid: cntk.ops.tests.evaluation_test.test_sequence_grad_as_numpy_false
+references:
+- fullName: cntk.ops.tests.evaluation_test.test_edit_distance_error
+  isExternal: false
+  name: test_edit_distance_error
+  parent: cntk.ops.tests.evaluation_test
+  uid: cntk.ops.tests.evaluation_test.test_edit_distance_error
+- fullName: cntk.ops.tests.evaluation_test.test_lambda_rank
+  isExternal: false
+  name: test_lambda_rank
+  parent: cntk.ops.tests.evaluation_test
+  uid: cntk.ops.tests.evaluation_test.test_lambda_rank
+- fullName: cntk.ops.tests.evaluation_test.test_ndcg
+  isExternal: false
+  name: test_ndcg
+  parent: cntk.ops.tests.evaluation_test
+  uid: cntk.ops.tests.evaluation_test.test_ndcg
+- fullName: cntk.ops.tests.evaluation_test.test_op_classification_error
+  isExternal: false
+  name: test_op_classification_error
+  parent: cntk.ops.tests.evaluation_test
+  uid: cntk.ops.tests.evaluation_test.test_op_classification_error
+- fullName: cntk.ops.tests.evaluation_test.test_op_classification_error_with_axis
+  isExternal: false
+  name: test_op_classification_error_with_axis
+  parent: cntk.ops.tests.evaluation_test
+  uid: cntk.ops.tests.evaluation_test.test_op_classification_error_with_axis
+- fullName: cntk.ops.tests.evaluation_test.test_op_cross_entropy_with_soft_max
+  isExternal: false
+  name: test_op_cross_entropy_with_soft_max
+  parent: cntk.ops.tests.evaluation_test
+  uid: cntk.ops.tests.evaluation_test.test_op_cross_entropy_with_soft_max
+- fullName: cntk.ops.tests.evaluation_test.test_op_cross_entropy_with_soft_max_and_axis
+  isExternal: false
+  name: test_op_cross_entropy_with_soft_max_and_axis
+  parent: cntk.ops.tests.evaluation_test
+  uid: cntk.ops.tests.evaluation_test.test_op_cross_entropy_with_soft_max_and_axis
+- fullName: cntk.ops.tests.evaluation_test.test_op_squared_error
+  isExternal: false
+  name: test_op_squared_error
+  parent: cntk.ops.tests.evaluation_test
+  uid: cntk.ops.tests.evaluation_test.test_op_squared_error
+- fullName: cntk.ops.tests.evaluation_test.test_sequence_grad_as_numpy_false
+  isExternal: false
+  name: test_sequence_grad_as_numpy_false
+  parent: cntk.ops.tests.evaluation_test
+  uid: cntk.ops.tests.evaluation_test.test_sequence_grad_as_numpy_false

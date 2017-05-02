@@ -1,0 +1,79 @@
+#YamlMime:PythonReference
+api_name: []
+items:
+- _type: class
+  children:
+  - cntk.debugging.tests.debug_test.OutStream.flush
+  - cntk.debugging.tests.debug_test.OutStream.write
+  class: cntk.debugging.tests.debug_test.OutStream
+  fullName: cntk.debugging.tests.debug_test.OutStream
+  langs:
+  - python
+  module: cntk.debugging.tests.debug_test
+  name: OutStream
+  source:
+    id: OutStream
+    path: cntk/debugging/tests/debug_test.py
+    remote:
+      branch: master
+      path: cntk/debugging/tests/debug_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 58
+  summary: >+
+    Bases: @object
+
+  syntax: {}
+  type: Class
+  uid: cntk.debugging.tests.debug_test.OutStream
+- _type: method
+  class: cntk.debugging.tests.debug_test.OutStream
+  fullName: cntk.debugging.tests.debug_test.OutStream.flush
+  langs:
+  - python
+  module: cntk.debugging.tests.debug_test
+  name: flush
+  source:
+    id: flush
+    path: cntk/debugging/tests/debug_test.py
+    remote:
+      branch: master
+      path: cntk/debugging/tests/debug_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 69
+  syntax:
+    parameters:
+    - id: self
+  type: Method
+  uid: cntk.debugging.tests.debug_test.OutStream.flush
+- _type: method
+  class: cntk.debugging.tests.debug_test.OutStream
+  fullName: cntk.debugging.tests.debug_test.OutStream.write
+  langs:
+  - python
+  module: cntk.debugging.tests.debug_test
+  name: write
+  source:
+    id: write
+    path: cntk/debugging/tests/debug_test.py
+    remote:
+      branch: master
+      path: cntk/debugging/tests/debug_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 62
+  syntax:
+    parameters:
+    - id: self
+    - id: text
+  type: Method
+  uid: cntk.debugging.tests.debug_test.OutStream.write
+references:
+- fullName: cntk.debugging.tests.debug_test.OutStream.flush
+  isExternal: false
+  name: flush
+  parent: cntk.debugging.tests.debug_test.OutStream
+  uid: cntk.debugging.tests.debug_test.OutStream.flush
+- fullName: cntk.debugging.tests.debug_test.OutStream.write
+  isExternal: false
+  name: write
+  parent: cntk.debugging.tests.debug_test.OutStream
+  uid: cntk.debugging.tests.debug_test.OutStream.write

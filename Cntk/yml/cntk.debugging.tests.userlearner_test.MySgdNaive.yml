@@ -1,0 +1,54 @@
+#YamlMime:PythonReference
+api_name: []
+items:
+- _type: class
+  children:
+  - cntk.debugging.tests.userlearner_test.MySgdNaive.update
+  class: cntk.debugging.tests.userlearner_test.MySgdNaive
+  fullName: cntk.debugging.tests.userlearner_test.MySgdNaive
+  langs:
+  - python
+  module: cntk.debugging.tests.userlearner_test
+  name: MySgdNaive
+  source:
+    id: MySgdNaive
+    path: cntk/debugging/tests/userlearner_test.py
+    remote:
+      branch: master
+      path: cntk/debugging/tests/userlearner_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 29
+  summary: >
+    Bases: @cntk.learners.UserLearner
+  syntax: {}
+  type: Class
+  uid: cntk.debugging.tests.userlearner_test.MySgdNaive
+- _type: method
+  class: cntk.debugging.tests.userlearner_test.MySgdNaive
+  fullName: cntk.debugging.tests.userlearner_test.MySgdNaive.update
+  langs:
+  - python
+  module: cntk.debugging.tests.userlearner_test
+  name: update
+  source:
+    id: update
+    path: cntk/debugging/tests/userlearner_test.py
+    remote:
+      branch: master
+      path: cntk/debugging/tests/userlearner_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 34
+  syntax:
+    parameters:
+    - id: self
+    - id: gradient_values
+    - id: training_sample_count
+    - id: sweep_end
+  type: Method
+  uid: cntk.debugging.tests.userlearner_test.MySgdNaive.update
+references:
+- fullName: cntk.debugging.tests.userlearner_test.MySgdNaive.update
+  isExternal: false
+  name: update
+  parent: cntk.debugging.tests.userlearner_test.MySgdNaive
+  uid: cntk.debugging.tests.userlearner_test.MySgdNaive.update

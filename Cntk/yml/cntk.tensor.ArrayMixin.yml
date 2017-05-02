@@ -1,0 +1,24 @@
+#YamlMime:PythonReference
+api_name: []
+items:
+- _type: class
+  children: []
+  class: cntk.tensor.ArrayMixin
+  fullName: cntk.tensor.ArrayMixin
+  langs:
+  - python
+  module: cntk.tensor
+  name: ArrayMixin
+  source:
+    id: ArrayMixin
+    path: cntk/tensor.py
+    remote:
+      branch: master
+      path: cntk/tensor.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 158
+  summary: 'Bases: @object'
+  syntax: {}
+  type: Class
+  uid: cntk.tensor.ArrayMixin
+references: []

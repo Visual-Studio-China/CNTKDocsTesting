@@ -1,0 +1,127 @@
+#YamlMime:PythonReference
+api_name: []
+items:
+- _type: module
+  children:
+  - cntk.ops.tests.non_diff_test.test_input_variable
+  - cntk.ops.tests.non_diff_test.test_op_ceil
+  - cntk.ops.tests.non_diff_test.test_op_floor
+  - cntk.ops.tests.non_diff_test.test_op_round
+  fullName: cntk.ops.tests.non_diff_test
+  langs:
+  - python
+  module: cntk.ops.tests.non_diff_test
+  name: non_diff_test
+  source:
+    id: non_diff_test
+    path: cntk/ops/tests/non_diff_test.py
+    remote:
+      branch: master
+      path: cntk/ops/tests/non_diff_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 0
+  summary: Unit tests for operations that are not differentiable.
+  type: Namespace
+  uid: cntk.ops.tests.non_diff_test
+- _type: function
+  fullName: cntk.ops.tests.non_diff_test.test_input_variable
+  langs:
+  - python
+  module: cntk.ops.tests.non_diff_test
+  name: test_input_variable
+  source:
+    id: test_input_variable
+    path: cntk/ops/tests/non_diff_test.py
+    remote:
+      branch: master
+      path: cntk/ops/tests/non_diff_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 97
+  syntax: {}
+  type: Method
+  uid: cntk.ops.tests.non_diff_test.test_input_variable
+- _type: function
+  fullName: cntk.ops.tests.non_diff_test.test_op_ceil
+  langs:
+  - python
+  module: cntk.ops.tests.non_diff_test
+  name: test_op_ceil
+  source:
+    id: test_op_ceil
+    path: cntk/ops/tests/non_diff_test.py
+    remote:
+      branch: master
+      path: cntk/ops/tests/non_diff_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 43
+  syntax:
+    parameters:
+    - id: operand
+    - id: device_id
+    - id: precision
+  type: Method
+  uid: cntk.ops.tests.non_diff_test.test_op_ceil
+- _type: function
+  fullName: cntk.ops.tests.non_diff_test.test_op_floor
+  langs:
+  - python
+  module: cntk.ops.tests.non_diff_test
+  name: test_op_floor
+  source:
+    id: test_op_floor
+    path: cntk/ops/tests/non_diff_test.py
+    remote:
+      branch: master
+      path: cntk/ops/tests/non_diff_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 28
+  syntax:
+    parameters:
+    - id: operand
+    - id: device_id
+    - id: precision
+  type: Method
+  uid: cntk.ops.tests.non_diff_test.test_op_floor
+- _type: function
+  fullName: cntk.ops.tests.non_diff_test.test_op_round
+  langs:
+  - python
+  module: cntk.ops.tests.non_diff_test
+  name: test_op_round
+  source:
+    id: test_op_round
+    path: cntk/ops/tests/non_diff_test.py
+    remote:
+      branch: master
+      path: cntk/ops/tests/non_diff_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 84
+  syntax:
+    parameters:
+    - id: operand
+    - id: expected
+    - id: device_id
+    - id: precision
+  type: Method
+  uid: cntk.ops.tests.non_diff_test.test_op_round
+references:
+- fullName: cntk.ops.tests.non_diff_test.test_input_variable
+  isExternal: false
+  name: test_input_variable
+  parent: cntk.ops.tests.non_diff_test
+  uid: cntk.ops.tests.non_diff_test.test_input_variable
+- fullName: cntk.ops.tests.non_diff_test.test_op_ceil
+  isExternal: false
+  name: test_op_ceil
+  parent: cntk.ops.tests.non_diff_test
+  uid: cntk.ops.tests.non_diff_test.test_op_ceil
+- fullName: cntk.ops.tests.non_diff_test.test_op_floor
+  isExternal: false
+  name: test_op_floor
+  parent: cntk.ops.tests.non_diff_test
+  uid: cntk.ops.tests.non_diff_test.test_op_floor
+- fullName: cntk.ops.tests.non_diff_test.test_op_round
+  isExternal: false
+  name: test_op_round
+  parent: cntk.ops.tests.non_diff_test
+  uid: cntk.ops.tests.non_diff_test.test_op_round

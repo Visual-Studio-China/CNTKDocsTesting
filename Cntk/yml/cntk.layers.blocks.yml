@@ -1,0 +1,523 @@
+#YamlMime:PythonReference
+api_name: []
+items:
+- _type: module
+  children:
+  - cntk.layers.blocks.BlockFunction
+  - cntk.layers.blocks.Constant
+  - cntk.layers.blocks.ForwardDeclaration
+  - cntk.layers.blocks.GRU
+  - cntk.layers.blocks.Input
+  - cntk.layers.blocks.LSTM
+  - cntk.layers.blocks.Parameter
+  - cntk.layers.blocks.Placeholder
+  - cntk.layers.blocks.RNNUnit
+  - cntk.layers.blocks.Stabilizer
+  - cntk.layers.blocks.UntestedBranchError
+  fullName: cntk.layers.blocks
+  langs:
+  - python
+  module: cntk.layers.blocks
+  name: blocks
+  source:
+    id: blocks
+    path: cntk/layers/blocks.py
+    remote:
+      branch: master
+      path: cntk/layers/blocks.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 0
+  summary: blocks -- basic building blocks that are semantically not layers (not used in a layered fashion)           e.g. the LSTM
+  type: Namespace
+  uid: cntk.layers.blocks
+- _type: function
+  fullName: cntk.layers.blocks.BlockFunction
+  langs:
+  - python
+  module: cntk.layers.blocks
+  name: BlockFunction
+  source:
+    id: BlockFunction
+    path: cntk/layers/blocks.py
+    remote:
+      branch: master
+      path: cntk/layers/blocks.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 68
+  summary: Decorator for defining a @Function as a BlockFunction. Same as @Function, but wrap the content into an as_block().
+  syntax:
+    parameters:
+    - id: op_name
+    - id: name
+  type: Method
+  uid: cntk.layers.blocks.BlockFunction
+- _type: function
+  fullName: cntk.layers.blocks.Constant
+  langs:
+  - python
+  module: cntk.layers.blocks
+  name: Constant
+  source:
+    id: Constant
+    path: cntk/layers/blocks.py
+    remote:
+      branch: master
+      path: cntk/layers/blocks.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 107
+  summary: Constructs a Variable object that is constant.
+  syntax:
+    parameters:
+    - description: the object you want to make constant
+      id: value
+      type:
+      - object
+    - defaultValue: ''
+      description: vector or tensor dimension of the output of this layer
+      id: shape
+      type:
+      - int or tuple of ints
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f1ccc0>
+      description: data type
+      id: dtype
+      type:
+      - np.dtype, defaults to np.float32
+    - defaultValue: None
+      description: the name of the Function instance in the network
+      id: name
+      type:
+      - str, defaults to ''
+  type: Method
+  uid: cntk.layers.blocks.Constant
+- _type: function
+  fullName: cntk.layers.blocks.ForwardDeclaration
+  langs:
+  - python
+  module: cntk.layers.blocks
+  name: ForwardDeclaration
+  source:
+    id: ForwardDeclaration
+    path: cntk/layers/blocks.py
+    remote:
+      branch: master
+      path: cntk/layers/blocks.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 168
+  summary: Helper for recurrent network declarations. Returns a Placeholder variable with an added method resolve_to() to be called at the end to close the loop.
+  syntax:
+    parameters:
+    - id: name
+  type: Method
+  uid: cntk.layers.blocks.ForwardDeclaration
+- _type: function
+  fullName: cntk.layers.blocks.GRU
+  langs:
+  - python
+  module: cntk.layers.blocks
+  name: GRU
+  source:
+    id: GRU
+    path: cntk/layers/blocks.py
+    remote:
+      branch: master
+      path: cntk/layers/blocks.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 460
+  summary: Layer factory function to create a GRU block for use inside a recurrence.
+  syntax:
+    parameters:
+    - description: vector or tensor dimension of the output of this layer
+      id: shape
+      type:
+      - int or tuple of ints
+    - defaultValue: ''
+      description: ''
+      id: cell_shape
+      type:
+      - tuple, defaults to None
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f6eba8>
+      description: function to apply at the end, e.g. *relu*
+      id: activation
+      type:
+      - Function, defaults to tanh
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f6eb70>
+      description: initial value of weights *W*
+      id: init
+      type:
+      - scalar or NumPy array or cntk.initializer, defaults to glorot_uniform
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f6eb38>
+      description: initial value of weights *b*
+      id: init_bias
+      type:
+      - scalar or NumPy array or cntk.initializer, defaults to 0
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f6eac8>
+      description: ''
+      id: enable_self_stabilization
+      type:
+      - bool, defaults to False
+    - defaultValue: None
+      description: the name of the Function instance in the network
+      id: name
+      type:
+      - str, defaults to ''
+    return:
+      description: A function (prev_h, input) -> h)
+      type: cntk.ops.functions.Function
+  type: Method
+  uid: cntk.layers.blocks.GRU
+- _type: function
+  fullName: cntk.layers.blocks.Input
+  langs:
+  - python
+  module: cntk.layers.blocks
+  name: Input
+  source:
+    id: Input
+    path: cntk/layers/blocks.py
+    remote:
+      branch: master
+      path: cntk/layers/blocks.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 124
+  summary: Constructs an Input variable.
+  syntax:
+    parameters:
+    - description: vector or tensor dimension of the output of this layer
+      id: shape
+      type:
+      - int or tuple of ints
+    - defaultValue: ''
+      description: data type
+      id: dtype
+      type:
+      - np.dtype, defaults to np.float32
+    - defaultValue: (<cntk.axis.Axis; proxy of <Swig Object of type 'CNTK::Axis *' at 0x2b16b4f16630> >, <cntk.axis.Axis; proxy of <Swig Object of type 'CNTK::Axis *' at 0x2b16b4f16510> >)
+      description: ''
+      id: needs_gradient
+      type:
+      - bool, defaults to True
+    - defaultValue: "False"
+      description: ''
+      id: is_sparse
+      type:
+      - bool, defaults to False
+    - defaultValue: "True"
+      description: ''
+      id: dynamic_axes
+      type:
+      - object, Axis.default_input_variable_dynamic_axes
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f1cd68>
+      description: the name of the Function instance in the network
+      id: name
+      type:
+      - str, defaults to ''
+  type: Method
+  uid: cntk.layers.blocks.Input
+- _type: function
+  fullName: cntk.layers.blocks.LSTM
+  langs:
+  - python
+  module: cntk.layers.blocks
+  name: LSTM
+  source:
+    id: LSTM
+    path: cntk/layers/blocks.py
+    remote:
+      branch: master
+      path: cntk/layers/blocks.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 391
+  summary: Layer factory function to create an LSTM block for use inside a recurrence.
+  syntax:
+    parameters:
+    - description: vector or tensor dimension of the output of this layer
+      id: shape
+      type:
+      - int or tuple of ints
+    - defaultValue: ''
+      description: ''
+      id: cell_shape
+      type:
+      - tuple, defaults to None
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f3a588>
+      description: function to apply at the end, e.g. *relu*
+      id: activation
+      type:
+      - Function, defaults to tanh
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f296a0>
+      description: ''
+      id: use_peepholes
+      type:
+      - bool, defaults to False
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f24438>
+      description: initial value of weights *W*
+      id: init
+      type:
+      - scalar or NumPy array or cntk.initializer, defaults to glorot_uniform
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f24400>
+      description: initial value of weights *b*
+      id: init_bias
+      type:
+      - scalar or NumPy array or cntk.initializer, defaults to 0
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f32c88>
+      description: ''
+      id: enable_self_stabilization
+      type:
+      - bool, defaults to False
+    - defaultValue: None
+      description: the name of the Function instance in the network
+      id: name
+      type:
+      - str, defaults to ''
+    return:
+      description: A function (prev_h, prev_c, input) -> h)
+      type: cntk.ops.functions.Function
+  type: Method
+  uid: cntk.layers.blocks.LSTM
+- _type: function
+  fullName: cntk.layers.blocks.Parameter
+  langs:
+  - python
+  module: cntk.layers.blocks
+  name: Parameter
+  source:
+    id: Parameter
+    path: cntk/layers/blocks.py
+    remote:
+      branch: master
+      path: cntk/layers/blocks.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 87
+  summary: Constructs a Parameter variable.
+  syntax:
+    parameters:
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f1cc88>
+      description: vector or tensor dimension of the output of this layer
+      id: shape
+      type:
+      - int or tuple of ints
+    - description: initial value of weights *W*
+      id: init
+      type:
+      - scalar or NumPy array or cntk.initializer
+    - description: data type
+      id: dtype
+      type:
+      - np.dtype, defaults to np.float32
+    - defaultValue: ''
+      description: the name of the Function instance in the network
+      id: name
+      type:
+      - str, defaults to ''
+  type: Method
+  uid: cntk.layers.blocks.Parameter
+- _type: function
+  fullName: cntk.layers.blocks.Placeholder
+  langs:
+  - python
+  module: cntk.layers.blocks
+  name: Placeholder
+  source:
+    id: Placeholder
+    path: cntk/layers/blocks.py
+    remote:
+      branch: master
+      path: cntk/layers/blocks.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 145
+  summary: Constructs a Placeholder variable.
+  syntax:
+    parameters:
+    - defaultValue: "False"
+      description: vector or tensor dimension of the output of this layer
+      id: shape
+      type:
+      - int or tuple of ints, defaults to None
+    - defaultValue: None
+      description: ''
+      id: dynamic_axes
+      type:
+      - object, defaults to None
+    - defaultValue: None
+      description: ''
+      id: is_sparse
+      type:
+      - bool, defaults to False
+    - description: the name of the Function instance in the network
+      id: name
+      type:
+      - str, defaults to 'placeholder'
+  type: Method
+  uid: cntk.layers.blocks.Placeholder
+- _type: function
+  fullName: cntk.layers.blocks.RNNUnit
+  langs:
+  - python
+  module: cntk.layers.blocks
+  name: RNNUnit
+  source:
+    id: RNNUnit
+    path: cntk/layers/blocks.py
+    remote:
+      branch: master
+      path: cntk/layers/blocks.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 427
+  summary: Layer factory function to create a plain RNN block for use inside a recurrence.
+  syntax:
+    parameters:
+    - description: vector or tensor dimension of the output of this layer
+      id: shape
+      type:
+      - int or tuple of ints
+    - defaultValue: ''
+      description: ''
+      id: cell_shape
+      type:
+      - tuple, defaults to None
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f6ea90>
+      description: function to apply at the end, e.g. *relu*
+      id: activation
+      type:
+      - Function, defaults to signmoid
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f6ea58>
+      description: initial value of weights *W*
+      id: init
+      type:
+      - scalar or NumPy array or cntk.initializer, defaults to glorot_uniform
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f6ea20>
+      description: initial value of weights *b*
+      id: init_bias
+      type:
+      - scalar or NumPy array or cntk.initializer, defaults to 0
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f6e978>
+      description: ''
+      id: enable_self_stabilization
+      type:
+      - bool, defaults to False
+    - defaultValue: None
+      description: the name of the Function instance in the network
+      id: name
+      type:
+      - str, defaults to ''
+    return:
+      description: A function (prev_h, input) -> h) where h = activation (W * input + R * prev_h + b)
+      type: cntk.ops.functions.Function
+  type: Method
+  uid: cntk.layers.blocks.RNNUnit
+- _type: function
+  fullName: cntk.layers.blocks.Stabilizer
+  langs:
+  - python
+  module: cntk.layers.blocks
+  name: Stabilizer
+  source:
+    id: Stabilizer
+    path: cntk/layers/blocks.py
+    remote:
+      branch: master
+      path: cntk/layers/blocks.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 195
+  summary: >-
+    Layer factory function to create a [Droppo self-stabilizer](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/11/SelfLR.pdf). It multiplies its input with a scalar that is learned.
+
+    This takes *enable_self_stabilization* as a flag that allows to disable itself. Useful if this is a global default.
+
+    Note: Unlike the original paper, which proposed a linear or exponential scalar, CNTK uses a sharpened Softplus: 1/steepness ln(1+e^{steepness*beta}). The softplus behaves linear for weights around and above 1 (like the linear scalar) while guaranteeing positiveness (like the exponentional variant) but is also more robust by avoiding exploding gradients.
+  syntax:
+    parameters:
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f32cc0>
+      description: ''
+      id: steepness
+      type:
+      - int, defaults to 4
+    - defaultValue: "4"
+      description: a flag that allows to disable itself. Useful if this is a global default
+      id: enable_self_stabilization
+      type:
+      - bool, defaults to False
+    - description: the name of the Function instance in the network
+      id: name
+      type:
+      - str, defaults to ''
+    return:
+      description: A function
+      type: cntk.ops.functions.Function
+  type: Method
+  uid: cntk.layers.blocks.Stabilizer
+- _type: function
+  fullName: cntk.layers.blocks.UntestedBranchError
+  langs:
+  - python
+  module: cntk.layers.blocks
+  name: UntestedBranchError
+  source:
+    id: UntestedBranchError
+    path: cntk/layers/blocks.py
+    remote:
+      branch: master
+      path: cntk/layers/blocks.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 28
+  syntax:
+    parameters:
+    - id: name
+  type: Method
+  uid: cntk.layers.blocks.UntestedBranchError
+references:
+- fullName: cntk.layers.blocks.BlockFunction
+  isExternal: false
+  name: BlockFunction
+  parent: cntk.layers.blocks
+  uid: cntk.layers.blocks.BlockFunction
+- fullName: cntk.layers.blocks.Constant
+  isExternal: false
+  name: Constant
+  parent: cntk.layers.blocks
+  uid: cntk.layers.blocks.Constant
+- fullName: cntk.layers.blocks.ForwardDeclaration
+  isExternal: false
+  name: ForwardDeclaration
+  parent: cntk.layers.blocks
+  uid: cntk.layers.blocks.ForwardDeclaration
+- fullName: cntk.layers.blocks.GRU
+  isExternal: false
+  name: GRU
+  parent: cntk.layers.blocks
+  uid: cntk.layers.blocks.GRU
+- fullName: cntk.layers.blocks.Input
+  isExternal: false
+  name: Input
+  parent: cntk.layers.blocks
+  uid: cntk.layers.blocks.Input
+- fullName: cntk.layers.blocks.LSTM
+  isExternal: false
+  name: LSTM
+  parent: cntk.layers.blocks
+  uid: cntk.layers.blocks.LSTM
+- fullName: cntk.layers.blocks.Parameter
+  isExternal: false
+  name: Parameter
+  parent: cntk.layers.blocks
+  uid: cntk.layers.blocks.Parameter
+- fullName: cntk.layers.blocks.Placeholder
+  isExternal: false
+  name: Placeholder
+  parent: cntk.layers.blocks
+  uid: cntk.layers.blocks.Placeholder
+- fullName: cntk.layers.blocks.RNNUnit
+  isExternal: false
+  name: RNNUnit
+  parent: cntk.layers.blocks
+  uid: cntk.layers.blocks.RNNUnit
+- fullName: cntk.layers.blocks.Stabilizer
+  isExternal: false
+  name: Stabilizer
+  parent: cntk.layers.blocks
+  uid: cntk.layers.blocks.Stabilizer
+- fullName: cntk.layers.blocks.UntestedBranchError
+  isExternal: false
+  name: UntestedBranchError
+  parent: cntk.layers.blocks
+  uid: cntk.layers.blocks.UntestedBranchError

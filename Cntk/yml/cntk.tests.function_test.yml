@@ -1,0 +1,113 @@
+#YamlMime:PythonReference
+api_name: []
+items:
+- _type: module
+  children:
+  - cntk.tests.function_test.test_0d_data_1d_sample_shape
+  - cntk.tests.function_test.test_1d_NDArrayView_copy
+  - cntk.tests.function_test.test_outputs
+  - cntk.tests.function_test.test_sequences_packed_in_single_ndarray
+  fullName: cntk.tests.function_test
+  langs:
+  - python
+  module: cntk.tests.function_test
+  name: function_test
+  source:
+    id: function_test
+    path: cntk/tests/function_test.py
+    remote:
+      branch: master
+      path: cntk/tests/function_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 0
+  type: Namespace
+  uid: cntk.tests.function_test
+- _type: function
+  fullName: cntk.tests.function_test.test_0d_data_1d_sample_shape
+  langs:
+  - python
+  module: cntk.tests.function_test
+  name: test_0d_data_1d_sample_shape
+  source:
+    id: test_0d_data_1d_sample_shape
+    path: cntk/tests/function_test.py
+    remote:
+      branch: master
+      path: cntk/tests/function_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 25
+  syntax: {}
+  type: Method
+  uid: cntk.tests.function_test.test_0d_data_1d_sample_shape
+- _type: function
+  fullName: cntk.tests.function_test.test_1d_NDArrayView_copy
+  langs:
+  - python
+  module: cntk.tests.function_test
+  name: test_1d_NDArrayView_copy
+  source:
+    id: test_1d_NDArrayView_copy
+    path: cntk/tests/function_test.py
+    remote:
+      branch: master
+      path: cntk/tests/function_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 32
+  syntax: {}
+  type: Method
+  uid: cntk.tests.function_test.test_1d_NDArrayView_copy
+- _type: function
+  fullName: cntk.tests.function_test.test_outputs
+  langs:
+  - python
+  module: cntk.tests.function_test
+  name: test_outputs
+  source:
+    id: test_outputs
+    path: cntk/tests/function_test.py
+    remote:
+      branch: master
+      path: cntk/tests/function_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 11
+  syntax: {}
+  type: Method
+  uid: cntk.tests.function_test.test_outputs
+- _type: function
+  fullName: cntk.tests.function_test.test_sequences_packed_in_single_ndarray
+  langs:
+  - python
+  module: cntk.tests.function_test
+  name: test_sequences_packed_in_single_ndarray
+  source:
+    id: test_sequences_packed_in_single_ndarray
+    path: cntk/tests/function_test.py
+    remote:
+      branch: master
+      path: cntk/tests/function_test.py
+      repo: https://github.com/Microsoft/CNTK
+    startLine: 43
+  syntax: {}
+  type: Method
+  uid: cntk.tests.function_test.test_sequences_packed_in_single_ndarray
+references:
+- fullName: cntk.tests.function_test.test_0d_data_1d_sample_shape
+  isExternal: false
+  name: test_0d_data_1d_sample_shape
+  parent: cntk.tests.function_test
+  uid: cntk.tests.function_test.test_0d_data_1d_sample_shape
+- fullName: cntk.tests.function_test.test_1d_NDArrayView_copy
+  isExternal: false
+  name: test_1d_NDArrayView_copy
+  parent: cntk.tests.function_test
+  uid: cntk.tests.function_test.test_1d_NDArrayView_copy
+- fullName: cntk.tests.function_test.test_outputs
+  isExternal: false
+  name: test_outputs
+  parent: cntk.tests.function_test
+  uid: cntk.tests.function_test.test_outputs
+- fullName: cntk.tests.function_test.test_sequences_packed_in_single_ndarray
+  isExternal: false
+  name: test_sequences_packed_in_single_ndarray
+  parent: cntk.tests.function_test
+  uid: cntk.tests.function_test.test_sequences_packed_in_single_ndarray
