@@ -8,6 +8,16 @@ items:
   - cntk.ops.tests.userfunction_complex_test.MySigmoid.infer_outputs
   class: cntk.ops.tests.userfunction_complex_test.MySigmoid
   fullName: cntk.ops.tests.userfunction_complex_test.MySigmoid
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - inheritance:
+        - inheritance:
+          - type: builtins.object
+          type: cntk.cntk_py.IDictionarySerializable
+        type: cntk.cntk_py.Function
+      type: cntk.ops.functions.Function
+    type: cntk.ops.functions.UserFunction
   langs:
   - python
   module: cntk.ops.tests.userfunction_complex_test
@@ -20,11 +30,13 @@ items:
       path: cntk/ops/tests/userfunction_complex_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 123
-  summary: >+
-    Bases: @cntk.ops.functions.UserFunction
+  summary: 'Bases: [cntk.ops.functions.UserFunction](.md#cntk.ops.functions.UserFunction.md)
 
 
-  syntax: {}
+
+    '
+  syntax:
+    content: MySigmoid(cls)
   type: Class
   uid: cntk.ops.tests.userfunction_complex_test.MySigmoid
 - _type: method
@@ -43,6 +55,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 132
   syntax:
+    content: backward(self, state, root_gradients)
     parameters:
     - id: self
     - id: state
@@ -65,6 +78,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 127
   syntax:
+    content: forward(self, argument, device=None, outputs_to_retain=None)
     parameters:
     - defaultValue: None
       id: self
@@ -90,6 +104,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 137
   syntax:
+    content: infer_outputs(self)
     parameters:
     - id: self
   type: Method

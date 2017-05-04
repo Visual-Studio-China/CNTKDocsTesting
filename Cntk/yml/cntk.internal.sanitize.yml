@@ -47,6 +47,7 @@ items:
     startLine: 19
   summary: Tests whether `s` is a string in a way that works on Python 2 and 3.
   syntax:
+    content: is_string(s)
     parameters:
     - id: s
   type: Method
@@ -67,18 +68,20 @@ items:
     startLine: 391
   summary: Sanitizes the axis.
   syntax:
+    content: sanitize_axis(axis)
     parameters:
-    - description: >-
-        the axis to be used.
+    - description: 'the axis to be used.
 
 
-        * @cntk.axis.Axis: use axis instance directly (will convert row- to col-major in case of static axis).
+        * [Axis](.md#cntk.axis.Axis.md): use axis instance directly (will convert
+        row- to col-major in case of static axis).
 
 
-        * int: if positive, use it as static axis. If negative, count from last to first axis
+        * int: if positive, use it as static axis. If negative, count from last to
+        first axis
 
 
-        * None: denote all available axes
+        * None: denote all available axes'
       id: axis
       type:
       - Axis or int or None
@@ -98,26 +101,30 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 115
-  summary: Convert to @cntk.core.Value.
+  summary: Convert to [Value](.md#cntk.core.Value.md).
   syntax:
+    content: sanitize_batch()
     parameters:
     - description: input variable into which `batch` is passed
       id: var
       type:
       - Variable
-    - description: >-
-        batch input for *var*. It can be
+    - description: 'batch input for *var*. It can be
 
 
         * a single NumPy array denoting the full minibatch
 
 
-        * a list of NumPy arrays or SciPy sparse CSR matrices each representing a sequence
+        * a list of NumPy arrays or SciPy sparse CSR matrices each representing a
+        sequence
 
 
-        * a @cntk.core.Value object (e.g. returned by @one_hot)
+        * a [Value](.md#cntk.core.Value.md) object (e.g. returned by `one_hot()`)'
       id: batch
-    - description: if None, every sequence is treated as a new sequence. Otherwise, it is interpreted as a list of Booleans one for each sequence in the batch that tell whether a sequence is a new sequence (*True*) or a continuation of the sequence in the same slot of the previous minibatch (*False*)
+    - description: if None, every sequence is treated as a new sequence. Otherwise,
+        it is interpreted as a list of Booleans one for each sequence in the batch
+        that tell whether a sequence is a new sequence (*True*) or a continuation
+        of the sequence in the same slot of the previous minibatch (*False*)
       id: seq_starts
       type:
       - list of bools or None
@@ -126,7 +133,8 @@ items:
       type:
       - DeviceDescriptor, default None
     return:
-      description: batch converted to a @cntk.core.Value instance that can be passed to the core API
+      description: batch converted to a [Value](.md#cntk.core.Value.md) instance that
+        can be passed to the core API
   type: Method
   uid: cntk.internal.sanitize.sanitize_batch
 - _type: function
@@ -144,6 +152,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 374
   syntax:
+    content: sanitize_dtype_cntk(dtype)
     parameters:
     - id: dtype
   type: Method
@@ -163,6 +172,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 359
   syntax:
+    content: sanitize_dtype_numpy(dtype)
     parameters:
     - id: dtype
   type: Method
@@ -182,6 +192,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 414
   syntax:
+    content: sanitize_dynamic_axes(axes)
     parameters:
     - id: axes
   type: Method
@@ -200,8 +211,10 @@ items:
       path: cntk/internal/sanitize.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 193
-  summary: Tries to retrieve a Function from the argument or throws an exception if that's not possible.
+  summary: Tries to retrieve a Function from the argument or throws an exception if
+    that's not possible.
   syntax:
+    content: sanitize_function(arg)
     parameters:
     - id: arg
   type: Method
@@ -220,13 +233,12 @@ items:
       path: cntk/internal/sanitize.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 69
-  summary: >-
-    Convert to @cntk.ops.variables.Variable so that it can be passed as Variable to the CNTK operators.
-
-    * If `arg` is a NumPy array and its type is neither *np.float32* nor *np.float64*, it sets it to *np.float32*.
-
-       * If `arg` is an op, it is assumed that it has only one output, which will be returned.
+  summary: "Convert to `Variable` so that it can be passed as Variable to the CNTK\
+    \ operators.\n* If `arg` is a NumPy array and its type is neither *np.float32*\
+    \ nor *np.float64*, it sets it to *np.float32*.\n\n   * If `arg` is an op, it\
+    \ is assumed that it has only one output, which will be returned."
   syntax:
+    content: sanitize_input(arg, fallback_dtype=<class 'numpy.float32'>, reshape=None)
     parameters:
     - id: arg
     - defaultValue: None
@@ -240,7 +252,8 @@ items:
       type:
       - NumPy dtype
     return:
-      description: Leaves Constant, Parameter, and Variable as is. Returns Constant, if `arg` is a number or NumPy array. Variable otherwise.
+      description: Leaves Constant, Parameter, and Variable as is. Returns Constant,
+        if `arg` is a number or NumPy array. Variable otherwise.
   type: Method
   uid: cntk.internal.sanitize.sanitize_input
 - _type: function
@@ -259,8 +272,10 @@ items:
     startLine: 41
   summary: Converts precision to NumPy precision
   syntax:
+    content: sanitize_precision(precision)
     parameters:
-    - description: precision, if string it can be one of 'float' 'float32, 'double', or 'float64'
+    - description: precision, if string it can be one of 'float' 'float32, 'double',
+        or 'float64'
       id: precision
       type:
       - str or np.float32 or np.float64
@@ -284,6 +299,7 @@ items:
     startLine: 62
   summary: If shape is scalar, it creates a tuple out of it.
   syntax:
+    content: sanitize_shape(shape)
     parameters:
     - id: shape
   type: Method
@@ -302,8 +318,10 @@ items:
       path: cntk/internal/sanitize.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 158
-  summary: Converts a given `value` to an @cntk.core.NDArrayView object that can be passed to the CNTK core.
+  summary: Converts a given `value` to an [NDArrayView](.md#cntk.core.NDArrayView.md)
+    object that can be passed to the CNTK core.
   syntax:
+    content: sanitize_value(shape, value, dtype, device)
     parameters:
     - description: shape of the value
       id: shape
@@ -320,7 +338,8 @@ items:
       type:
       - DeviceDescriptor
     return:
-      description: '@cntk.core.NDArrayView object representing `value`'
+      description: '[NDArrayView](.md#cntk.core.NDArrayView.md) object representing
+        `value`'
   type: Method
   uid: cntk.internal.sanitize.sanitize_value
 - _type: function
@@ -337,46 +356,54 @@ items:
       path: cntk/internal/sanitize.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 212
-  summary: Sanitizes a dictionary of *Variable* s to input data such that it can be handed off to the evaluation methods (@cntk.ops.functions.Function.forward, @cntk.ops.functions.Function.backward, @cntk.train.trainer.Trainer.train_minibatch and @cntk.train.trainer.Trainer.test_minibatch).
+  summary: Sanitizes a dictionary of *Variable* s to input data such that it can be
+    handed off to the evaluation methods (`forward()`, `backward()`, `train_minibatch()`
+    and `test_minibatch()`).
   syntax:
+    content: sanitize_var_map(op_arguments, arguments, precision=None, device=None,
+      extract_values_from_minibatch_data=True)
     parameters:
     - defaultValue: None
-      description: arguments of the root function. In @cntk.ops.functions.Function.forward pass it is typically *op.arguments*, in @cntk.ops.functions.Function.backward pass it is *op.outputs*
+      description: arguments of the root function. In `forward()` pass it is typically
+        *op.arguments*, in `backward()` pass it is *op.outputs*
       id: op_arguments
       type:
       - Function
-    - description: >-
-        maps variables to their input data. The interpretation depends on the input type:
-
-           * dict: keys are input variable or names, and values are the input data.
-
-           * any other type: if node has a unique input, arguments is mapped to this input.
-
-        For nodes with more than one input, only dict is allowed.
-
-
-        In both cases, every sample in the data will be interpreted as a new sequence.
-
-
-        Sequences can be marked as continuations of the same sequence in the previous minibatch (that is the sequence in the same slot). There are two possibilities for this:
-
-           * specifying arguments as a *tuple* where the first element is used as arguments and the second one will be used as a list of bools, denoting whether a sequence is a new one (*True*) or a continuation of the sequence in the same slot of the previous minibatch (*False*). This will be applied to all batches.
-
-           * specifying arguments as a dictionary of variables to tuples where the first element is used as arguments and the second one will be used as a list of bools, denoting whether a sequence is a new one (*True*) or a continuation of the sequence in the same slot of the previous minibatch (*False*). This will be applied to all batches.
-
-        Data should be either NumPy arrays or a @cntk.io.MinibatchData instance.
+    - description: "maps variables to their input data. The interpretation depends\
+        \ on the input type:\n\n   * dict: keys are input variable or names, and values\
+        \ are the input data.\n\n   * any other type: if node has a unique input,\
+        \ arguments is mapped to this input.\n\nFor nodes with more than one input,\
+        \ only dict is allowed.\n\nIn both cases, every sample in the data will be\
+        \ interpreted as a new sequence.\n\nSequences can be marked as continuations\
+        \ of the same sequence in the previous minibatch (that is the sequence in\
+        \ the same slot). There are two possibilities for this:\n\n   * specifying\
+        \ arguments as a *tuple* where the first element is used as arguments and\
+        \ the second one will be used as a list of bools, denoting whether a sequence\
+        \ is a new one (*True*) or a continuation of the sequence in the same slot\
+        \ of the previous minibatch (*False*). This will be applied to all batches.\n\
+        \n   * specifying arguments as a dictionary of variables to tuples where the\
+        \ first element is used as arguments and the second one will be used as a\
+        \ list of bools, denoting whether a sequence is a new one (*True*) or a continuation\
+        \ of the sequence in the same slot of the previous minibatch (*False*). This\
+        \ will be applied to all batches.\n\nData should be either NumPy arrays or\
+        \ a `MinibatchData` instance."
       id: arguments
-    - description: if string it can be one of 'float' 'float32, 'double', 'float64', or None
+    - description: if string it can be one of 'float' 'float32, 'double', 'float64',
+        or None
       id: precision
       type:
       - str or np.float32 or np.float64
-    - defaultValue: "True"
+    - defaultValue: 'True'
       description: device this value should be put on
       id: device
       type:
       - DeviceDescriptor, default None
     - defaultValue: None
-      description: specifies if @cntk.io.MinibatchData instances in the arguments map are converted to the underlying value (@cntk.core.Value) instances (default), or if they should remain intact, as they contain additional meta information required by the Trainer (specifically, by the @cntk.train.trainer.Trainer.train_minibatch method).
+      description: specifies if `MinibatchData` instances in the arguments map are
+        converted to the underlying value ([Value](.md#cntk.core.Value.md)) instances
+        (default), or if they should remain intact, as they contain additional meta
+        information required by the Trainer (specifically, by the `train_minibatch()`
+        method).
       id: extract_values_from_minibatch_data
       type:
       - bool, defaults to True
@@ -399,6 +426,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 424
   syntax:
+    content: sanitize_variable_value_dict(var_value_dict)
     parameters:
     - id: var_value_dict
   type: Method

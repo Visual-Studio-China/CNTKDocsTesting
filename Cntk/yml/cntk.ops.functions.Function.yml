@@ -42,6 +42,12 @@ items:
   - cntk.ops.functions.Function.update_signature
   class: cntk.ops.functions.Function
   fullName: cntk.ops.functions.Function
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: cntk.cntk_py.IDictionarySerializable
+    type: cntk.cntk_py.Function
   langs:
   - python
   module: cntk.ops.functions
@@ -54,12 +60,12 @@ items:
       path: cntk/ops/functions.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 34
-  summary: >+
-    Bases: @cntk.cntk_py.Function
+  summary: 'Bases: `cntk.cntk_py.Function`
 
     Base class of all primitive tensor operators.
 
-    If it has only one output, one can invoke Variable methods on it, which it will relay to its only output.
+    If it has only one output, one can invoke Variable methods on it, which it will
+    relay to its only output.
 
 
 
@@ -97,7 +103,10 @@ items:
 
 
 
-  syntax: {}
+
+    '
+  syntax:
+    content: Function(cls)
   type: Class
   uid: cntk.ops.functions.Function
 - _type: method
@@ -115,8 +124,14 @@ items:
       path: cntk/ops/functions.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 214
-  summary: "determine the {placeholder: variable} map for use with various call operations Returns a dictionary from this function's placeholders to whatever arguments are passed. Accepted are both positional and keyword arguments. This mimics Python's argument interpretation, except that keyword arguments are not optional. This does not require the arguments to be Variables or Functions. It is also called by train_minibatch()."
+  summary: 'determine the {placeholder: variable} map for use with various call operations
+    Returns a dictionary from this function''s placeholders to whatever arguments
+    are passed. Accepted are both positional and keyword arguments. This mimics Python''s
+    argument interpretation, except that keyword arguments are not optional. This
+    does not require the arguments to be Variables or Functions. It is also called
+    by train_minibatch().'
   syntax:
+    content: argument_map(self)
     parameters:
     - id: self
   type: Method
@@ -130,13 +145,14 @@ items:
   name: arguments
   source:
     id: arguments
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
-  summary: List of all input variables of the Function that are not of type Parameter or Constant
+    startLine: null
+  summary: List of all input variables of the Function that are not of type Parameter
+    or Constant
   syntax: {}
   type: Property
   uid: cntk.ops.functions.Function.arguments
@@ -149,12 +165,12 @@ items:
   name: attributes
   source:
     id: attributes
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
+    startLine: null
   summary: List of the attributes of the function
   syntax: {}
   type: Property
@@ -174,8 +190,10 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 655
-  summary: >-
-    Backpropagates supplied `root_gradients` for one or more of the output variables of the Function, to calculate gradients with respect to `variables`. Formally, multiplies the values of `root_gradients` by the Jacobian of the Function and returns the subset of the output that corresponds to `variables`.
+  summary: 'Backpropagates supplied `root_gradients` for one or more of the output
+    variables of the Function, to calculate gradients with respect to `variables`.
+    Formally, multiplies the values of `root_gradients` by the Jacobian of the Function
+    and returns the subset of the output that corresponds to `variables`.
 
     -[ Example ]-
 
@@ -199,11 +217,13 @@ items:
 
     array([[[ 0.25]]], dtype=float32)
 
-    Note: See @cntk.ops.functions.Function.forward for more examples on passing input data.
+    Note: See `forward()` for more examples on passing input data.'
   syntax:
+    content: backward()
     return:
       description: mapping of `variables` to NumPy arrays
-      type: dict
+      type:
+      - dict
   type: Method
   uid: cntk.ops.functions.Function.backward
 - _type: attribute
@@ -215,13 +235,15 @@ items:
   name: block_arguments_mapping
   source:
     id: block_arguments_mapping
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
-  summary: Returns the mapping from the arguments of the composite underlying this block function to the Variables that they are bound to in the outer graph of Functions that this block Function is part of.
+    startLine: null
+  summary: Returns the mapping from the arguments of the composite underlying this
+    block function to the Variables that they are bound to in the outer graph of Functions
+    that this block Function is part of.
   syntax: {}
   type: Property
   uid: cntk.ops.functions.Function.block_arguments_mapping
@@ -234,13 +256,14 @@ items:
   name: block_root
   source:
     id: block_root
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
-  summary: Returns the root of the Function graph underlying this block Function. Throws an exception if this is not a block Function.
+    startLine: null
+  summary: Returns the root of the Function graph underlying this block Function.
+    Throws an exception if this is not a block Function.
   syntax: {}
   type: Property
   uid: cntk.ops.functions.Function.block_root
@@ -259,30 +282,34 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 424
-  summary: Clones the function. The parameters of the Function are either cloned, shared or frozen as specified by the method argument and any variable substitutions requested are applied in the cloned Function instance.
+  summary: Clones the function. The parameters of the Function are either cloned,
+    shared or frozen as specified by the method argument and any variable substitutions
+    requested are applied in the cloned Function instance.
   syntax:
+    content: clone()
     parameters:
-    - description: >-
-        one of
+    - description: 'one of
 
 
-        * 'clone': the returned function gets its own copy of parameters (default)
+        * ''clone'': the returned function gets its own copy of parameters (default)
 
 
-        * 'share': the returned function shares its parameters with this function
+        * ''share'': the returned function shares its parameters with this function
 
 
-        * 'freeze': parameters are cloned and made immutable (constant).
+        * ''freeze'': parameters are cloned and made immutable (constant).'
       id: method
       type:
       - CloneMethod
-    - description: a dictionary mapping variables in this function to variables in the cloned function
+    - description: a dictionary mapping variables in this function to variables in
+        the cloned function
       id: substitutions
       type:
       - dict
     return:
       description: the cloned Function
-      type: Function
+      type:
+      - Function
   type: Method
   uid: cntk.ops.functions.Function.clone
 - _type: attribute
@@ -294,12 +321,12 @@ items:
   name: constants
   source:
     id: constants
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
+    startLine: null
   summary: List of all *Constant* variables of this @cntk.ops.functions.Function
   syntax: {}
   type: Property
@@ -321,6 +348,7 @@ items:
     startLine: 255
   summary: Back-compat wrapper for update_signature() (beta12 and before).
   syntax:
+    content: declare_args(self)
     parameters:
     - id: self
   type: Method
@@ -340,22 +368,24 @@ items:
       path: cntk/ops/functions.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 464
-  summary: >-
-    Evaluate the node using the specified `arguments` as input.
+  summary: 'Evaluate the node using the specified `arguments` as input.
 
-    Note: See @cntk.ops.functions.Function.forward for examples on passing input data.
+    Note: See `forward()` for examples on passing input data.'
   syntax:
+    content: eval(self, arguments=None, device=None, as_numpy=True)
     parameters:
     - id: self
-    - defaultValue: "True"
+    - defaultValue: 'True'
       id: arguments
     - defaultValue: None
       id: device
     - defaultValue: None
       id: as_numpy
     return:
-      description: Dict with keys of ouput variable names and values of output variable. A single NumPy array if there is only one output value.
-      type: dict or NumPy Array
+      description: Dict with keys of ouput variable names and values of output variable.
+        A single NumPy array if there is only one output value.
+      type:
+      - dict or NumPy Array
   type: Method
   uid: cntk.ops.functions.Function.eval
 - _type: method
@@ -365,6 +395,7 @@ items:
   - python
   module: cntk.ops.functions
   name: find_all_with_name
+  seealso: 'See also: `find_by_name()`'
   source:
     id: find_all_with_name
     path: cntk/internal/swig_helper.py
@@ -373,33 +404,34 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 937
-  summary: >-
-    Returns a list of primitive function with `name` in the graph starting from this node. Throws an exception if `name` occurs multiple times. If you expect only one function to be returned, use @find_by_name.
+  summary: 'Returns a list of primitive function with `name` in the graph starting
+    from this node. Throws an exception if `name` occurs multiple times. If you expect
+    only one function to be returned, use `find_by_name()`.
 
     -[ Example ]-
 
-    >>> a = C.input_variable(shape=1, name='i')
+    >>> a = C.input_variable(shape=1, name=''i'')
 
-    >>> b = C.input_variable(shape=1, name='i')
+    >>> b = C.input_variable(shape=1, name=''i'')
 
-    >>> c = C.plus(a, b, name='c')
+    >>> c = C.plus(a, b, name=''c'')
 
-    >>> len(c.find_all_with_name('i'))
+    >>> len(c.find_all_with_name(''i''))
 
     2
 
-    >>> c.find_all_with_name('z')
+    >>> c.find_all_with_name(''z'')
 
-    []
+    []'
   syntax:
+    content: find_all_with_name()
     parameters:
     - description: names to look for
       id: name
       type:
       - str
     return:
-      description: list of @Function objects matching `name`
-    seealso: 'See also: @find_by_name'
+      description: list of @cntk.ops.functions.Function objects matching `name`
   type: Method
   uid: cntk.ops.functions.Function.find_all_with_name
 - _type: method
@@ -409,6 +441,7 @@ items:
   - python
   module: cntk.ops.functions
   name: find_by_name
+  seealso: 'See also: @cntk.ops.functions.Function.find_all_with_name'
   source:
     id: find_by_name
     path: cntk/internal/swig_helper.py
@@ -417,41 +450,43 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 967
-  summary: >-
-    Returns a primitive function with `name` in the graph starting from this node. Throws an exception if `name` occurs multiple times. If you expect multiple functions to be returned, use @find_all_with_name.
+  summary: 'Returns a primitive function with `name` in the graph starting from this
+    node. Throws an exception if `name` occurs multiple times. If you expect multiple
+    functions to be returned, use @cntk.ops.functions.Function.find_all_with_name.
 
     -[ Example ]-
 
-    >>> a = C.input_variable(shape=1, name='a')
+    >>> a = C.input_variable(shape=1, name=''a'')
 
-    >>> b = C.input_variable(shape=1, name='b')
+    >>> b = C.input_variable(shape=1, name=''b'')
 
-    >>> c = C.plus(a, b, name='c')
+    >>> c = C.plus(a, b, name=''c'')
 
-    >>> print(c.find_by_name('b').name)
+    >>> print(c.find_by_name(''b'').name)
 
     b
 
-    >>> c.find_by_name('z') is None
+    >>> c.find_by_name(''z'') is None
 
     True
 
-    If you need a full function out of it that can be evaluated, you need to upcast it (currently done via combine):
+    If you need a full function out of it that can be evaluated, you need to upcast
+    it (currently done via combine):
 
     >>> d = c * 5
 
-    >>> C.combine([d.find_by_name('c')]).eval({a:[[1]], b:[[2]]})
+    >>> C.combine([d.find_by_name(''c'')]).eval({a:[[1]], b:[[2]]})
 
-    array([[[ 3.]]], dtype=float32)
+    array([[[ 3.]]], dtype=float32)'
   syntax:
+    content: find_by_name()
     parameters:
     - description: names to look for
       id: name
       type:
       - str
     return:
-      description: '@Function object matching `name`'
-    seealso: 'See also: @find_all_with_name'
+      description: '@cntk.ops.functions.Function object matching `name`'
   type: Method
   uid: cntk.ops.functions.Function.find_by_name
 - _type: method
@@ -469,146 +504,87 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 521
-  summary: >-
-    Computes the values of speficied variables in `outputs`, using values provided in `arguments` that correspond to each input *Variable* of the function (i.e. those that have `is_input = True`).
-
-    -[ Example ]-
-
-    >>> # Example of passing dense data
-
-    >>> v = C.input_variable(shape=(3,))
-
-    >>> f = C.reciprocal(v)
-
-    >>> _, fv = f.forward({v:[[1, 2, 4]]})
-
-    >>> list(fv.values())[0]
-
-    array([[[ 1.  ,  0.5 ,  0.25]]], dtype=float32)
-
-    -[ Example ]-
-
-    >>> # Passing sparse values as one-hot with a vocabulary size of 5
-
-    >>> vocab_size = 5
-
-    >>> v = C.input_variable(shape=(vocab_size,), is_sparse=True)
-
-    >>> f = C.times(v, np.eye(vocab_size))
-
-    >>> # Passing a batch of two sequences:
-
-    >>> # 1st sequence: word 1
-
-    >>> # 2nd sequence: words 2 and 4
-
-    >>> batch = [[1],[2,4]]
-
-    >>> sparse_batch = C.one_hot(batch, vocab_size)
-
-    >>> _, fv = f.forward({v:sparse_batch})
-
-    >>> list(fv.values())[0]
-
-    [array([[ 0.,  1.,  0.,  0.,  0.]], dtype=float32),
-     array([[ 0.,  0.,  1.,  0.,  0.], [ 0.,  0.,  0.,  0.,  1.]], dtype=float32)]
-    -[ Example ]-
-
-    >>> # Doing the same, but with a CSR matrix from scipy.sparse
-
-    >>> vocab_size = 5
-
-    >>> from scipy.sparse import csr_matrix
-
-    >>> v = C.input_variable(shape=(vocab_size,), is_sparse=True)
-
-    >>> f = C.times(v, np.eye(vocab_size))
-
-    >>> # Note that csr_matrix automatically uses a sparse representation underneath.
-
-    >>> sparse_batch = [csr_matrix([[0,1,0,0,0]]), csr_matrix([[0,0,1,0,0], [0,0,0,0,1]])]
-
-    >>> _, fv = f.forward({v:sparse_batch})
-
-    >>> list(fv.values())[0]
-
-    [array([[ 0.,  1.,  0.,  0.,  0.]], dtype=float32),
-     array([[ 0.,  0.,  1.,  0.,  0.], [ 0.,  0.,  0.,  0.,  1.]], dtype=float32)]
-    <BLANKLINE>
-
-    >>> # Much more efficient, however, is to incrementally create CSR arrays.
-
-    >>> # See https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.csr_matrix.html
-
-    >>> # for more information.
-
-    >>> def seq_to_csr_matrix(seq, vocab_size):
-
-    ...     indptr = [0]
-
-    ...     indices = []
-
-    ...     data = []
-
-    ...     for term_idx in seq:
-
-    ...         indices.append(term_idx)
-
-    ...         data.append(1)
-
-    ...         indptr.append(len(indices))
-
-    ...     return csr_matrix((data, indices, indptr), shape=(len(seq), vocab_size))
-
-    >>> sparse_batch = [seq_to_csr_matrix(seq, vocab_size) for seq in batch]
-
-    >>> _, fv = f.forward({v:sparse_batch})
-
-    >>> list(fv.values())[0]
-
-    [array([[ 0.,  1.,  0.,  0.,  0.]], dtype=float32),
-     array([[ 0.,  0.,  1.,  0.,  0.], [ 0.,  0.,  0.,  0.,  1.]], dtype=float32)]
+  summary: "Computes the values of speficied variables in `outputs`, using values\
+    \ provided in `arguments` that correspond to each input *Variable* of the function\
+    \ (i.e. those that have `is_input = True`).\n-[ Example ]-\n>>> # Example of passing\
+    \ dense data\n>>> v = C.input_variable(shape=(3,))\n>>> f = C.reciprocal(v)\n\
+    >>> _, fv = f.forward({v:[[1, 2, 4]]})\n>>> list(fv.values())[0]\narray([[[ 1.\
+    \  ,  0.5 ,  0.25]]], dtype=float32)\n-[ Example ]-\n>>> # Passing sparse values\
+    \ as one-hot with a vocabulary size of 5\n>>> vocab_size = 5\n>>> v = C.input_variable(shape=(vocab_size,),\
+    \ is_sparse=True)\n>>> f = C.times(v, np.eye(vocab_size))\n>>> # Passing a batch\
+    \ of two sequences:\n>>> # 1st sequence: word 1\n>>> # 2nd sequence: words 2 and\
+    \ 4\n>>> batch = [[1],[2,4]]\n>>> sparse_batch = C.one_hot(batch, vocab_size)\n\
+    >>> _, fv = f.forward({v:sparse_batch})\n>>> list(fv.values())[0]\n[array([[ 0.,\
+    \  1.,  0.,  0.,  0.]], dtype=float32),\n array([[ 0.,  0.,  1.,  0.,  0.], [\
+    \ 0.,  0.,  0.,  0.,  1.]], dtype=float32)]\n-[ Example ]-\n>>> # Doing the same,\
+    \ but with a CSR matrix from scipy.sparse\n>>> vocab_size = 5\n>>> from scipy.sparse\
+    \ import csr_matrix\n>>> v = C.input_variable(shape=(vocab_size,), is_sparse=True)\n\
+    >>> f = C.times(v, np.eye(vocab_size))\n>>> # Note that csr_matrix automatically\
+    \ uses a sparse representation underneath.\n>>> sparse_batch = [csr_matrix([[0,1,0,0,0]]),\
+    \ csr_matrix([[0,0,1,0,0], [0,0,0,0,1]])]\n>>> _, fv = f.forward({v:sparse_batch})\n\
+    >>> list(fv.values())[0]\n[array([[ 0.,  1.,  0.,  0.,  0.]], dtype=float32),\n\
+    \ array([[ 0.,  0.,  1.,  0.,  0.], [ 0.,  0.,  0.,  0.,  1.]], dtype=float32)]\n\
+    <BLANKLINE>\n>>> # Much more efficient, however, is to incrementally create CSR\
+    \ arrays.\n>>> # See https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.csr_matrix.html\n\
+    >>> # for more information.\n>>> def seq_to_csr_matrix(seq, vocab_size):\n...\
+    \     indptr = [0]\n...     indices = []\n...     data = []\n...     for term_idx\
+    \ in seq:\n...         indices.append(term_idx)\n...         data.append(1)\n\
+    ...         indptr.append(len(indices))\n...     return csr_matrix((data, indices,\
+    \ indptr), shape=(len(seq), vocab_size))\n>>> sparse_batch = [seq_to_csr_matrix(seq,\
+    \ vocab_size) for seq in batch]\n>>> _, fv = f.forward({v:sparse_batch})\n>>>\
+    \ list(fv.values())[0]\n[array([[ 0.,  1.,  0.,  0.,  0.]], dtype=float32),\n\
+    \ array([[ 0.,  0.,  1.,  0.,  0.], [ 0.,  0.,  0.,  0.,  1.]], dtype=float32)]"
   syntax:
+    content: forward()
     parameters:
-    - description: >-
-        maps variables to their input data. The interpretation depends on the input type:
-
-           * dict: keys are input variable or names, and values are the input data. To specify a minibatch, provide a list of arrays. The shape of each array must be compatible with the shape of the dictionary key. If the array denotes a sequence then the elements of the sequence are grouped along axis 0.
-
-           * any other type: if node has an unique input, arguments is mapped to this input.
-
-        For nodes with more than one input, only dict is allowed.
-
-
-        In both cases, every sample in the data will be interpreted as a new sequence.
-
-
-        Sequences can be marked as continuations of the same sequence in the previous minibatch (that is the sequence in the same slot). There are two possibilities for this:
-
-           * specifying arguments as a *tuple* where the first element is used as arguments and the second one will be used as a list of bools, denoting whether a sequence is a new one (*True*) or a continuation of the sequence in the same slot of the previous minibatch (*False*). This will be applied to all batches.
-
-           * specifying arguments as a dictionary of variables to tuples where the first element is used as arguments and the second one will be used as a list of bools, denoting whether a sequence is a new one (*True*) or a continuation of the sequence in the same slot of the previous minibatch (*False*). This will be applied to all batches.
-
-        Data should be either NumPy arrays or a @cntk.io.MinibatchData instance.
+    - description: "maps variables to their input data. The interpretation depends\
+        \ on the input type:\n\n   * dict: keys are input variable or names, and values\
+        \ are the input data. To specify a minibatch, provide a list of arrays. The\
+        \ shape of each array must be compatible with the shape of the dictionary\
+        \ key. If the array denotes a sequence then the elements of the sequence are\
+        \ grouped along axis 0.\n\n   * any other type: if node has an unique input,\
+        \ arguments is mapped to this input.\n\nFor nodes with more than one input,\
+        \ only dict is allowed.\n\nIn both cases, every sample in the data will be\
+        \ interpreted as a new sequence.\n\nSequences can be marked as continuations\
+        \ of the same sequence in the previous minibatch (that is the sequence in\
+        \ the same slot). There are two possibilities for this:\n\n   * specifying\
+        \ arguments as a *tuple* where the first element is used as arguments and\
+        \ the second one will be used as a list of bools, denoting whether a sequence\
+        \ is a new one (*True*) or a continuation of the sequence in the same slot\
+        \ of the previous minibatch (*False*). This will be applied to all batches.\n\
+        \n   * specifying arguments as a dictionary of variables to tuples where the\
+        \ first element is used as arguments and the second one will be used as a\
+        \ list of bools, denoting whether a sequence is a new one (*True*) or a continuation\
+        \ of the sequence in the same slot of the previous minibatch (*False*). This\
+        \ will be applied to all batches.\n\nData should be either NumPy arrays or\
+        \ a [MinibatchData](.md#cntk.io.MinibatchData.md) instance."
       id: arguments
-    - description: outputs to fetch values for. If not set, all outputs of the function will be fetched.
+    - description: outputs to fetch values for. If not set, all outputs of the function
+        will be fetched.
       id: outputs
       type:
       - iterable, optional
-    - description: the subset of the Function's output variables for which gradients shall be calculated in a subsequent backward call. If *None*, the returned state will be *None* and a subsequent call to @backward will not be possible.
+    - description: the subset of the Function's output variables for which gradients
+        shall be calculated in a subsequent backward call. If *None*, the returned
+        state will be *None* and a subsequent call to @cntk.ops.functions.Function.backward
+        will not be possible.
       id: keep_for_backward
       type:
       - set, default None
-    - description: the device descriptor that contains the type and id of the device on which the computation is. If *None*, the default device is used.
+    - description: the device descriptor that contains the type and id of the device
+        on which the computation is. If *None*, the default device is used.
       id: device
       type:
       - DeviceDescriptor, default None
-    - description: whether to return the result as a NumPy array. Default True. Specifying this as False returns a CNTK Value which avoids a costly conversion but returns a somewhat opaque object.
+    - description: whether to return the result as a NumPy array. Default True. Specifying
+        this as False returns a CNTK Value which avoids a costly conversion but returns
+        a somewhat opaque object.
       id: as_numpy
       type:
       - bool
     return:
-      description: A tuple (BackPropState, map of outputs to NumPy arrays). The BackPropState is a handle taken by @backward.
+      description: A tuple (BackPropState, map of outputs to NumPy arrays). The BackPropState
+        is a handle taken by @cntk.ops.functions.Function.backward.
   type: Method
   uid: cntk.ops.functions.Function.forward
 - _type: method
@@ -626,52 +602,51 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 708
-  summary: >-
-    Computes the gradient of this Function at location `at` with respect to `wrt`. The Function must have a single output.
-
-    -[ Example ]-
-
-    >>> x = C.input_variable(shape=(1,), needs_gradient=True)
-
-    >>> y = C.sqrt(x)
-
-    >>> a = np.asarray([1,4,16],dtype=np.float32).reshape(3,1,1)
-
-    >>> y.grad({x:a})
-
-    array([[[ 0.5  ]],
-
-    <BLANKLINE>
-           [[ 0.25 ]],
-    <BLANKLINE>
-           [[ 0.125]]], dtype=float32)
+  summary: "Computes the gradient of this Function at location `at` with respect to\
+    \ `wrt`. The Function must have a single output.\n-[ Example ]-\n>>> x = C.input_variable(shape=(1,),\
+    \ needs_gradient=True)\n>>> y = C.sqrt(x)\n>>> a = np.asarray([1,4,16],dtype=np.float32).reshape(3,1,1)\n\
+    >>> y.grad({x:a})\narray([[[ 0.5  ]],\n<BLANKLINE>\n       [[ 0.25 ]],\n<BLANKLINE>\n\
+    \       [[ 0.125]]], dtype=float32)"
   syntax:
+    content: grad()
     parameters:
     - description: mapping of the Function's arguments to values
       id: at
       type:
       - dict
-    - description: list of Variables with respect to which the gradient will be computed. If omitted, the gradients with respect to all arguments of this Function that need gradient will be computed.
+    - description: list of Variables with respect to which the gradient will be computed.
+        If omitted, the gradients with respect to all arguments of this Function that
+        need gradient will be computed.
       id: wrt
       type:
       - list, default None
-    - description: outputs (including intermediate outputs in the graph) to fetch values for. If not specified, values for none of the outputs are fetched.
+    - description: outputs (including intermediate outputs in the graph) to fetch
+        values for. If not specified, values for none of the outputs are fetched.
       id: outputs
       type:
       - iterable, optional
-    - description: the device descriptor that contains the type and id of the device on which the computation is performed. If *None*, the default device is used.
+    - description: the device descriptor that contains the type and id of the device
+        on which the computation is performed. If *None*, the default device is used.
       id: device
       type:
       - DeviceDescriptor, default None
-    - description: whether to return the gradients as a NumPy array. Default True. Specifying this as False returns a CNTK Value which avoids a costly conversion but returns a somewhat opaque object.
+    - description: whether to return the gradients as a NumPy array. Default True.
+        Specifying this as False returns a CNTK Value which avoids a costly conversion
+        but returns a somewhat opaque object.
       id: as_numpy
       type:
       - bool, default True
     return:
-      description: >-
-        Dict with keys of `wrt` variables and gradient values of
-           `wrt` variables. A single NumPy array if there is only one gradient value. If `outputs` were specified (to fetch values for), this method returns a tuple where the 2nd element of the tuple is the `outputs` values; a dict with keys of specified `outputs` variables and values of computed `outputs`, or a single NumPy array if there is only one output value. Each element has the same shape as the `wrt` or `outputs` variables including dynamic axes (such as the batch axis).
-      type: dict or NumPy Array or a tuple of these
+      description: "Dict with keys of `wrt` variables and gradient values of\n   `wrt`\
+        \ variables. A single NumPy array if there is only one gradient value. If\
+        \ `outputs` were specified (to fetch values for), this method returns a tuple\
+        \ where the 2nd element of the tuple is the `outputs` values; a dict with\
+        \ keys of specified `outputs` variables and values of computed `outputs`,\
+        \ or a single NumPy array if there is only one output value. Each element\
+        \ has the same shape as the `wrt` or `outputs` variables including dynamic\
+        \ axes (such as the batch axis)."
+      type:
+      - dict or NumPy Array or a tuple of these
   type: Method
   uid: cntk.ops.functions.Function.grad
 - _type: attribute
@@ -683,12 +658,12 @@ items:
   name: inputs
   source:
     id: inputs
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
+    startLine: null
   summary: List of all input variables of this function.
   syntax: {}
   type: Property
@@ -702,13 +677,15 @@ items:
   name: is_block
   source:
     id: is_block
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
-  summary: Returns a boolean indicating if this Function is a block function which is basically a composite encapsulated as an opaque block which appears as a primitive during traversing the graph of Functions that this block is part of.
+    startLine: null
+  summary: Returns a boolean indicating if this Function is a block function which
+    is basically a composite encapsulated as an opaque block which appears as a primitive
+    during traversing the graph of Functions that this block is part of.
   syntax: {}
   type: Property
   uid: cntk.ops.functions.Function.is_block
@@ -721,13 +698,14 @@ items:
   name: is_composite
   source:
     id: is_composite
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
-  summary: Returns a boolean indicating if this Function is a composite Function. A composite Function is a Function that is composed of primitive Functions.
+    startLine: null
+  summary: Returns a boolean indicating if this Function is a composite Function.
+    A composite Function is a Function that is composed of primitive Functions.
   syntax: {}
   type: Property
   uid: cntk.ops.functions.Function.is_composite
@@ -740,13 +718,16 @@ items:
   name: is_primitive
   source:
     id: is_primitive
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
-  summary: Returns a boolean indicating if this Function is a primitive Function. A primitive Function is the lowest level building block for composite Function graphs and is either a CNTK built-in operator, a composite Function encapsulated as a Block or a user-defined Function
+    startLine: null
+  summary: Returns a boolean indicating if this Function is a primitive Function.
+    A primitive Function is the lowest level building block for composite Function
+    graphs and is either a CNTK built-in operator, a composite Function encapsulated
+    as a Block or a user-defined Function
   syntax: {}
   type: Property
   uid: cntk.ops.functions.Function.is_primitive
@@ -765,8 +746,9 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 1042
-  summary: Load the model in `filename`, that has been saved using @cntk.ops.functions.Function.save.
+  summary: Load the model in `filename`, that has been saved using `save()`.
   syntax:
+    content: load()
     parameters:
     - description: filename to load the model from
       id: filename
@@ -789,12 +771,12 @@ items:
   name: name
   source:
     id: name
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
+    startLine: null
   summary: Name of this function
   syntax: {}
   type: Property
@@ -808,12 +790,12 @@ items:
   name: op_name
   source:
     id: op_name
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
+    startLine: null
   summary: Name of the operation that this Function performs
   syntax: {}
   type: Property
@@ -827,12 +809,12 @@ items:
   name: output
   source:
     id: output
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
+    startLine: null
   summary: The single output variable if there is only one, or raises an exception.
   syntax: {}
   type: Property
@@ -846,12 +828,12 @@ items:
   name: outputs
   source:
     id: outputs
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
+    startLine: null
   summary: List consisting of all output variables of this function.
   syntax: {}
   type: Property
@@ -865,12 +847,12 @@ items:
   name: parameters
   source:
     id: parameters
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
+    startLine: null
   summary: List of all parameter variables of this function.
   syntax: {}
   type: Property
@@ -884,12 +866,12 @@ items:
   name: placeholders
   source:
     id: placeholders
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
+    startLine: null
   summary: List of all placeholders variables of this function.
   syntax: {}
   type: Property
@@ -909,8 +891,10 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 920
-  summary: In-place replace the only placeholder in the function graph with the specified substitution.
+  summary: In-place replace the only placeholder in the function graph with the specified
+    substitution.
   syntax:
+    content: replace_placeholder()
     exceptions:
     - description: when the function has multiple placeholders.
       type: ExceptionType
@@ -921,7 +905,8 @@ items:
       - Variable
     return:
       description: itself
-      type: Function
+      type:
+      - Function
   type: Method
   uid: cntk.ops.functions.Function.replace_placeholder
 - _type: method
@@ -939,8 +924,10 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 903
-  summary: In-place replace specified placeholders in the Function graph with the specified replacements in the map.
+  summary: In-place replace specified placeholders in the Function graph with the
+    specified replacements in the map.
   syntax:
+    content: replace_placeholders()
     parameters:
     - description: map from placeholder to variables
       id: substitutions
@@ -948,7 +935,8 @@ items:
       - dict
     return:
       description: itself
-      type: Function
+      type:
+      - Function
   type: Method
   uid: cntk.ops.functions.Function.replace_placeholders
 - _type: method
@@ -968,14 +956,17 @@ items:
     startLine: 1023
   summary: Restore the models parameters (in-place) from a saved model file
   syntax:
+    content: restore()
     parameters:
     - description: saved model path
       id: filename
       type:
       - str
     return:
-      description: this method only has the side-effect of loading the model parameters from the file
-      type: None
+      description: this method only has the side-effect of loading the model parameters
+        from the file
+      type:
+      - None
   type: Method
   uid: cntk.ops.functions.Function.restore
 - _type: method
@@ -994,6 +985,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 1036
   syntax:
+    content: restore_model(self, filename)
     parameters:
     - id: self
     - id: filename
@@ -1008,13 +1000,14 @@ items:
   name: root_function
   source:
     id: root_function
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
-  summary: The primitive function at the root of the graph of functions underlying this function.
+    startLine: null
+  summary: The primitive function at the root of the graph of functions underlying
+    this function.
   syntax: {}
   type: Property
   uid: cntk.ops.functions.Function.root_function
@@ -1033,11 +1026,12 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 1003
-  summary: >-
-    Save this function graph into a model file using protobuf-based serialization.
+  summary: 'Save this function graph into a model file using protobuf-based serialization.
 
-    Use distributed.Communicator.is_main() to gate your call to save() in distributed environment.
+    Use distributed.Communicator.is_main() to gate your call to save() in distributed
+    environment.'
   syntax:
+    content: save()
     parameters:
     - description: model path
       id: filename
@@ -1061,6 +1055,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 1017
   syntax:
+    content: save_model(self, filename)
     parameters:
     - id: self
     - id: filename
@@ -1075,13 +1070,14 @@ items:
   name: signature
   source:
     id: signature
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
-  summary: Returns the signature of a Function. This is the .arguments[] list without placeholders that belong to an outer, not yet completed @Function def.
+    startLine: null
+  summary: Returns the signature of a Function. This is the .arguments[] list without
+    placeholders that belong to an outer, not yet completed @Function def.
   syntax: {}
   type: Property
   uid: cntk.ops.functions.Function.signature
@@ -1100,55 +1096,34 @@ items:
       path: cntk/ops/functions.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 62
-  summary: >-
-    `@Function` constructs a Function from a Python lambda where the Function's input signature is defined by the lambda.
-
-    Use this as a decorator, e.g.:
-
-    <!-- literal_block {"dupnames": [], "xml:space": "preserve", "classes": [], "names": [], "backrefs": [], "ids": []} -->
-
-
-    ````
-
-       @Function
-       def f(x): return x * x
-       ````
-    The above form creates a CNTK Function whose arguments are placeholder variables. Such a function can only be combined with others symbolic functions.
-
-    To train a Function or pass data to it, you need to declare the types of the arguments. In this case, the @Function decorator creates a CNTK Function whose arguments are input variables.
-
-    If you use Python 3, Functions with types are declared using Python annotation syntax, e.g.:
-
-    <!-- literal_block {"dupnames": [], "xml:space": "preserve", "classes": [], "names": [], "backrefs": [], "ids": []} -->
-
-
-    ````
-
-       @Function
-       def f(x:Tensor[13]):
-           return x * x
-       ````
-    If you are working with Python 2.7, use CNTK's @Signature decorator instead:
-
-    <!-- literal_block {"dupnames": [], "xml:space": "preserve", "classes": [], "names": [], "backrefs": [], "ids": []} -->
-
-
-    ````
-
-       @Function
-       @Signature(Tensor[13])
-       def f(x):
-           return x * x
-       ````
-    `make_block=True` is used to implement @BlockFunction(). If given the result will be wrapped in `as_block()`, using the supplied `op_name` and `name` parameters, which are otherwise ignored.
+  summary: "`@Function` constructs a Function from a Python lambda where the Function's\
+    \ input signature is defined by the lambda.\nUse this as a decorator, e.g.:\n\
+    <!-- literal_block {\"xml:space\": \"preserve\", \"dupnames\": [], \"classes\"\
+    : [], \"ids\": [], \"backrefs\": [], \"names\": []} -->\n\n````\n\n   @Function\n\
+    \   def f(x): return x * x\n   ````\nThe above form creates a CNTK Function whose\
+    \ arguments are placeholder variables. Such a function can only be combined with\
+    \ others symbolic functions.\nTo train a Function or pass data to it, you need\
+    \ to declare the types of the arguments. In this case, the @Function decorator\
+    \ creates a CNTK Function whose arguments are input variables.\nIf you use Python\
+    \ 3, Functions with types are declared using Python annotation syntax, e.g.:\n\
+    <!-- literal_block {\"xml:space\": \"preserve\", \"dupnames\": [], \"classes\"\
+    : [], \"ids\": [], \"backrefs\": [], \"names\": []} -->\n\n````\n\n   @Function\n\
+    \   def f(x:Tensor[13]):\n       return x * x\n   ````\nIf you are working with\
+    \ Python 2.7, use CNTK's @Signature decorator instead:\n<!-- literal_block {\"\
+    xml:space\": \"preserve\", \"dupnames\": [], \"classes\": [], \"ids\": [], \"\
+    backrefs\": [], \"names\": []} -->\n\n````\n\n   @Function\n   @Signature(Tensor[13])\n\
+    \   def f(x):\n       return x * x\n   ````\n`make_block=True` is used to implement\
+    \ @BlockFunction(). If given the result will be wrapped in `as_block()`, using\
+    \ the supplied `op_name` and `name` parameters, which are otherwise ignored."
   syntax:
+    content: to_Function(f, make_block=False, op_name=None, name=None)
     parameters:
     - id: f
     - defaultValue: None
       id: make_block
     - defaultValue: None
       id: op_name
-    - defaultValue: "False"
+    - defaultValue: 'False'
       id: name
   type: Method
   uid: cntk.ops.functions.Function.to_Function
@@ -1161,12 +1136,12 @@ items:
   name: type
   source:
     id: type
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
+    startLine: null
   summary: Get type of a Function's output.
   syntax: {}
   type: Property
@@ -1180,12 +1155,12 @@ items:
   name: uid
   source:
     id: uid
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
+    startLine: null
   summary: The internally generated unique name of the function.
   syntax: {}
   type: Property
@@ -1205,8 +1180,11 @@ items:
       path: cntk/ops/functions.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 228
-  summary: define input shapes, in-place e.g. model.update_signature(42) pass a list of objects that define the dimensions etc. of the placeholders Currently you can pass an int, a tuple, an Input, or a dict created with Type()
+  summary: define input shapes, in-place e.g. model.update_signature(42) pass a list
+    of objects that define the dimensions etc. of the placeholders Currently you can
+    pass an int, a tuple, an Input, or a dict created with Type()
   syntax:
+    content: update_signature(self)
     parameters:
     - id: self
   type: Method

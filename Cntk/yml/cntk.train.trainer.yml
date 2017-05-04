@@ -17,7 +17,9 @@ items:
       path: cntk/train/trainer.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: A trainer encapsulates the overall training process and employs one or more :doc:`learners <cntk.learner>` to tune the parameters of a specified model using gradients of parameters w.r.t. a training objective.
+  summary: A trainer encapsulates the overall training process and employs one or
+    more :doc:`learners <cntk.learner>` to tune the parameters of a specified model
+    using gradients of parameters w.r.t. a training objective.
   type: Namespace
   uid: cntk.train.trainer
 references:

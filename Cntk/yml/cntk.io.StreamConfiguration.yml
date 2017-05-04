@@ -5,6 +5,10 @@ items:
   children: []
   class: cntk.io.StreamConfiguration
   fullName: cntk.io.StreamConfiguration
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.StreamConfiguration
   langs:
   - python
   module: cntk.io
@@ -17,17 +21,18 @@ items:
       path: cntk/io/__init__.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 478
-  summary: >-
-    Bases: @cntk.cntk_py.StreamConfiguration
+  summary: 'Bases: `cntk.cntk_py.StreamConfiguration`
 
-    Configuration of a stream in a text format reader.
+    Configuration of a stream in a text format reader.'
   syntax:
+    content: StreamConfiguration(self, name, dim, is_sparse=False, stream_alias="")
     parameters:
     - description: name of this stream
       id: name
       type:
       - str
-    - description: dimensions of this stream. A text format reader reads data as flat arrays. If you need different shapes you can @cntk.ops.reshape it later.
+    - description: dimensions of this stream. A text format reader reads data as flat
+        arrays. If you need different shapes you can `reshape()` it later.
       id: dim
       type:
       - int

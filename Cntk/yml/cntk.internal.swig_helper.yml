@@ -35,6 +35,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 9
   syntax:
+    content: map_if_possible(obj)
     parameters:
     - id: obj
   type: Method
@@ -53,8 +54,12 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 54
-  summary: Decorator that upcasts return types from Swig types to cntk types that inherit from Swig. It does so recursively, e.g. if the return type is a tuple containing a dictionary, it will try to upcast every element in the tuple and all the keys and values in the dictionary.
+  summary: Decorator that upcasts return types from Swig types to cntk types that
+    inherit from Swig. It does so recursively, e.g. if the return type is a tuple
+    containing a dictionary, it will try to upcast every element in the tuple and
+    all the keys and values in the dictionary.
   syntax:
+    content: typemap(f)
     parameters:
     - id: f
   type: Method

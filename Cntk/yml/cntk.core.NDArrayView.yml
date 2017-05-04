@@ -10,6 +10,10 @@ items:
   - cntk.core.NDArrayView.slice_view
   class: cntk.core.NDArrayView
   fullName: cntk.core.NDArrayView
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.NDArrayView
   langs:
   - python
   module: cntk.core
@@ -22,15 +26,19 @@ items:
       path: cntk/core.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 23
-  summary: >+
-    Bases: @cntk.cntk_py.NDArrayView
+  summary: 'Bases: `cntk.cntk_py.NDArrayView`
 
-    Creates an empty dense internal data representation of a @cntk.core.Value object. To create an NDArrayView from a NumPy array, use @from_dense. To create an NDArrayView from a sparse array, use @from_csr.
+    Creates an empty dense internal data representation of a `Value` object. To create
+    an NDArrayView from a NumPy array, use @cntk.core.NDArrayView.from_dense. To create
+    an NDArrayView from a sparse array, use @cntk.core.NDArrayView.from_csr.
 
 
 
 
+
+    '
   syntax:
+    content: NDArrayView(self, shape, data_type, device=None)
     parameters:
     - description: shape of the data
       id: shape
@@ -61,8 +69,10 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 79
-  summary: Create a @NDArrayView instance from a SciPy sparse array in CSR format.
+  summary: Create a @cntk.core.NDArrayView instance from a SciPy sparse array in CSR
+    format.
   syntax:
+    content: from_csr()
     parameters:
     - description: SciPy sparse matrix in CSR format
       id: csr_array
@@ -76,12 +86,13 @@ items:
       id: read_only
       type:
       - bool, optional
-    - description: whether nd_arrary memory can be borrowed internally to speed up the data creation
+    - description: whether nd_arrary memory can be borrowed internally to speed up
+        the data creation
       id: borrow
       type:
       - bool, default False
     return:
-      description: '@NDArrayView instance'
+      description: '@cntk.core.NDArrayView instance'
   type: Method
   uid: cntk.core.NDArrayView.from_csr
 - _type: method
@@ -99,8 +110,10 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 110
-  summary: Create a @NDArrayView instance from a NumPy or SciPy sparse array in CSR format.
+  summary: Create a @cntk.core.NDArrayView instance from a NumPy or SciPy sparse array
+    in CSR format.
   syntax:
+    content: from_data()
     parameters:
     - description: data
       id: data
@@ -114,12 +127,13 @@ items:
       id: read_only
       type:
       - bool, optional
-    - description: whether nd_arrary memory can be borrowed internally to speed up the data creation
+    - description: whether nd_arrary memory can be borrowed internally to speed up
+        the data creation
       id: borrow
       type:
       - bool, default False
     return:
-      description: '@NDArrayView instance'
+      description: '@cntk.core.NDArrayView instance'
   type: Method
   uid: cntk.core.NDArrayView.from_data
 - _type: method
@@ -137,8 +151,9 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 46
-  summary: Create a @NDArrayView instance from a NumPy array.
+  summary: Create a @cntk.core.NDArrayView instance from a NumPy array.
   syntax:
+    content: from_dense()
     parameters:
     - description: NumPy array
       id: np_array
@@ -148,7 +163,8 @@ items:
       id: device
       type:
       - DeviceDescriptor
-    - description: whether nd_arrary memory can be borrowed internally to speed up the data creation
+    - description: whether nd_arrary memory can be borrowed internally to speed up
+        the data creation
       id: borrow
       type:
       - bool, default False
@@ -157,7 +173,7 @@ items:
       type:
       - bool, optional
     return:
-      description: '@NDArrayView instance'
+      description: '@cntk.core.NDArrayView instance'
   type: Method
   uid: cntk.core.NDArrayView.from_dense
 - _type: attribute
@@ -169,12 +185,12 @@ items:
   name: shape
   source:
     id: shape
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
+    startLine: null
   summary: The shape of this instance.
   syntax: {}
   type: Property
@@ -194,30 +210,17 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 153
-  summary: >-
-    Returns a sliced view of the instance.
-
-    -[ Example ]-
-
-    >>> # Creating an array of shape (1, 1, 2, 3)
-
-    >>> np_array = np.asarray([[[[10, 20, 30], [40, 50, 60]]]],                                       dtype=np.float32)
-
-    >>> nd = NDArrayView.from_dense(np_array)
-
-    >>> sliced = nd.slice_view([0, 0, 0, 0], [2, 3])
-
-    >>> np_sliced = np.asarray(sliced)
-
-    >>> # Result is an array of shape (2, 3)
-
-    >>> print(np_sliced)
-
-    [[ 10.  20.  30.]
-     [ 40.  50.  60.]]
+  summary: "Returns a sliced view of the instance.\n-[ Example ]-\n>>> # Creating\
+    \ an array of shape (1, 1, 2, 3)\n>>> np_array = np.asarray([[[[10, 20, 30], [40,\
+    \ 50, 60]]]],                                       dtype=np.float32)\n>>> nd\
+    \ = NDArrayView.from_dense(np_array)\n>>> sliced = nd.slice_view([0, 0, 0, 0],\
+    \ [2, 3])\n>>> np_sliced = np.asarray(sliced)\n>>> # Result is an array of shape\
+    \ (2, 3)\n>>> print(np_sliced)\n[[ 10.  20.  30.]\n [ 40.  50.  60.]]"
   syntax:
+    content: slice_view()
     parameters:
-    - description: shape of the same rank as this Value instance that denotes the start of the slicing
+    - description: shape of the same rank as this Value instance that denotes the
+        start of the slicing
       id: start_offset
       type:
       - tuple or list

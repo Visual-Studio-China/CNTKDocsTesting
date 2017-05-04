@@ -21,7 +21,8 @@ items:
       path: cntk/layers/higher_order_layers.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: higher_order_layers -- higher-order functions, like Sequential() and ResNetBlock(). Note that sequential higher-order functions like Recurrence() are in sequence.py.
+  summary: higher_order_layers -- higher-order functions, like Sequential() and ResNetBlock().
+    Note that sequential higher-order functions like Recurrence() are in sequence.py.
   type: Namespace
   uid: cntk.layers.higher_order_layers
 - _type: function
@@ -38,18 +39,13 @@ items:
       path: cntk/layers/higher_order_layers.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 35
-  summary: >-
-    Layer factory function to create a composite that applies a sequence of layers constructed with a constructor lambda(layer). For example:
-
-    <!-- literal_block {"dupnames": [], "xml:space": "preserve", "classes": [], "names": [], "backrefs": [], "ids": []} -->
-
-
-    ````
-
-       For(range(3), lambda i: Dense(2000))
-       For(range(3), lambda: Dense(2000))
-       ````
+  summary: "Layer factory function to create a composite that applies a sequence of\
+    \ layers constructed with a constructor lambda(layer). For example:\n<!-- literal_block\
+    \ {\"xml:space\": \"preserve\", \"dupnames\": [], \"classes\": [], \"ids\": [],\
+    \ \"backrefs\": [], \"names\": []} -->\n\n````\n\n   For(range(3), lambda i: Dense(2000))\n\
+    \   For(range(3), lambda: Dense(2000))\n   ````"
   syntax:
+    content: For(rng, constructor, name="")
     parameters:
     - defaultValue: ''
       id: rng
@@ -72,6 +68,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 60
   syntax:
+    content: LayerStack(N, constructor)
     parameters:
     - id: N
     - id: constructor
@@ -91,8 +88,10 @@ items:
       path: cntk/layers/higher_order_layers.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 87
-  summary: Layer factory function to create a composite that adds a skip connection to a function. This is equivalent to `SequentialClique([f, identity])`.
+  summary: Layer factory function to create a composite that adds a skip connection
+    to a function. This is equivalent to `SequentialClique([f, identity])`.
   syntax:
+    content: ResNetBlock(f, name="")
     parameters:
     - id: f
     - defaultValue: ''
@@ -113,8 +112,11 @@ items:
       path: cntk/layers/higher_order_layers.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 20
-  summary: Layer factory function to create a composite that applies a sequence of layers (or any functions) onto an input. Sequential ([F, G, H]) === F >> G >> H
+  summary: Layer factory function to create a composite that applies a sequence of
+    layers (or any functions) onto an input. Sequential ([F, G, H]) === F >> G >>
+    H
   syntax:
+    content: Sequential(layers, name="")
     parameters:
     - id: layers
     - defaultValue: ''
@@ -135,8 +137,11 @@ items:
       path: cntk/layers/higher_order_layers.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 67
-  summary: Layer factory function to create a composite that applies a sequence of or any functions onto an input, with skip connections between all function. I.e. each function receives a sum of the input and all prior functions' outputs.
+  summary: Layer factory function to create a composite that applies a sequence of
+    or any functions onto an input, with skip connections between all function. I.e.
+    each function receives a sum of the input and all prior functions' outputs.
   syntax:
+    content: SequentialClique(functions, name="")
     parameters:
     - id: functions
     - defaultValue: ''

@@ -21,6 +21,10 @@ items:
   - cntk.logging.progress_print.ProgressPrinter.update_with_trainer
   class: cntk.logging.progress_print.ProgressPrinter
   fullName: cntk.logging.progress_print.ProgressPrinter
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.ProgressWriter
   langs:
   - python
   module: cntk.logging.progress_print
@@ -33,12 +37,10 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 27
-  summary: >+
-    Bases: @cntk.cntk_py.ProgressWriter
+  summary: 'Bases: `cntk.cntk_py.ProgressWriter`
 
-    Allows printing various statistics (e.g. loss and metric) as training/evaluation progresses.
-
-
+    Allows printing various statistics (e.g. loss and metric) as training/evaluation
+    progresses.
 
 
 
@@ -52,13 +54,24 @@ items:
 
 
 
+
+
+
+    '
   syntax:
+    content: ProgressPrinter(self, freq=None, first=0, tag="", log_to_file=None, rank=None,
+      gen_heartbeat=False, num_epochs=300, test_freq=None, test_first=0, metric_is_pct=True)
     parameters:
-    - description: 'determines how often printing of training progress will occur. A value of 0 means a geometric schedule (1,2,4,...). A value > 0 means an arithmetic schedule (print for minibatch number: `freq`, print for minibatch number: 2*``freq``, print for minibatch number: 3*``freq``,...). A value of None means no per-minibatch log.'
+    - description: 'determines how often printing of training progress will occur.
+        A value of 0 means a geometric schedule (1,2,4,...). A value > 0 means an
+        arithmetic schedule (print for minibatch number: `freq`, print for minibatch
+        number: 2*``freq``, print for minibatch number: 3*``freq``,...). A value of
+        None means no per-minibatch log.'
       id: freq
       type:
       - int or None, default None
-    - description: Only start printing after the training minibatch number is greater or equal to `first`.
+    - description: Only start printing after the training minibatch number is greater
+        or equal to `first`.
       id: first
       type:
       - int, default 0
@@ -66,11 +79,13 @@ items:
       id: tag
       type:
       - string, default EmptyString
-    - description: if None, output log data to stdout. If a string is passed, the string is path to a file for log data.
+    - description: if None, output log data to stdout. If a string is passed, the
+        string is path to a file for log data.
       id: log_to_file
       type:
       - string or None, default None
-    - description: set this to distributed.rank if you are using distributed parallelism -- each rank's log will go to separate file.
+    - description: set this to distributed.rank if you are using distributed parallelism
+        -- each rank's log will go to separate file.
       id: rank
       type:
       - int or None, default None
@@ -78,7 +93,8 @@ items:
       id: gen_heartbeat
       type:
       - bool, default False
-    - description: The total number of epochs to be trained.  Used for some metadata. This parameter is optional.
+    - description: The total number of epochs to be trained.  Used for some metadata.
+        This parameter is optional.
       id: num_epochs
       type:
       - int, default 300
@@ -111,11 +127,11 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 153
-  summary: >-
-    DEPRECATED.
+  summary: 'DEPRECATED.
 
-    Returns: the average loss since the last print
+    Returns: the average loss since the last print'
   syntax:
+    content: avg_loss_since_last(self)
     parameters:
     - id: self
   type: Method
@@ -135,11 +151,11 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 135
-  summary: >-
-    DEPRECATED.
+  summary: 'DEPRECATED.
 
-    Returns: the average loss since the start of accumulation
+    Returns: the average loss since the start of accumulation'
   syntax:
+    content: avg_loss_since_start(self)
     parameters:
     - id: self
   type: Method
@@ -159,11 +175,11 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 162
-  summary: >-
-    DEPRECATED.
+  summary: 'DEPRECATED.
 
-    Returns: the average metric since the last print
+    Returns: the average metric since the last print'
   syntax:
+    content: avg_metric_since_last(self)
     parameters:
     - id: self
   type: Method
@@ -183,11 +199,11 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 144
-  summary: >-
-    DEPRECATED.
+  summary: 'DEPRECATED.
 
-    Returns: the average metric since the start of accumulation
+    Returns: the average metric since the start of accumulation'
   syntax:
+    content: avg_metric_since_start(self)
     parameters:
     - id: self
   type: Method
@@ -209,6 +225,7 @@ items:
     startLine: 115
   summary: Prints the given message signifying the end of training.
   syntax:
+    content: end_progress_print(self, msg="")
     parameters:
     - id: self
     - defaultValue: ''
@@ -233,15 +250,17 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 213
-  summary: >-
-    DEPRECATED.
+  summary: 'DEPRECATED.
 
-    If on an arithmetic schedule print an epoch summary using the 'start' accumulators. If on a geometric schedule does nothing.
+    If on an arithmetic schedule print an epoch summary using the ''start'' accumulators.
+    If on a geometric schedule does nothing.'
   syntax:
+    content: epoch_summary(self, with_metric=False)
     parameters:
     - id: self
-    - defaultValue: "False"
-      description: if *False* it only prints the loss, otherwise it prints both the loss and the metric
+    - defaultValue: 'False'
+      description: if *False* it only prints the loss, otherwise it prints both the
+        loss and the metric
       id: with_metric
       type:
       - bool
@@ -264,6 +283,7 @@ items:
     startLine: 126
   summary: Prints any message the user wishes to place in the log.
   syntax:
+    content: log(self, message)
     parameters:
     - id: self
     - description: message to print.
@@ -288,6 +308,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 323
   syntax:
+    content: on_training_update_end(self)
     parameters:
     - id: self
   type: Method
@@ -308,6 +329,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 399
   syntax:
+    content: on_write_test_summary(self, samples, updates, summaries, aggregate_metric,
+      elapsed_milliseconds)
     parameters:
     - id: self
     - id: samples
@@ -333,6 +356,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 327
   syntax:
+    content: on_write_test_update(self, samples, updates, aggregate_metric)
     parameters:
     - id: self
     - id: samples
@@ -356,6 +380,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 374
   syntax:
+    content: on_write_training_summary(self, samples, updates, summaries, aggregate_loss,
+      aggregate_metric, elapsed_milliseconds)
     parameters:
     - id: self
     - id: samples
@@ -382,6 +408,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 319
   syntax:
+    content: on_write_training_update(self, samples, updates, aggregate_loss, aggregate_metric)
     parameters:
     - id: self
     - id: samples
@@ -405,13 +432,14 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 187
-  summary: >-
-    DEPRECATED.
+  summary: 'DEPRECATED.
 
-    Resets the 'last' accumulators
+    Resets the ''last'' accumulators
 
-    Returns: tuple of (average loss since last, average metric since last, samples since last)
+    Returns: tuple of (average loss since last, average metric since last, samples
+    since last)'
   syntax:
+    content: reset_last(self)
     parameters:
     - id: self
   type: Method
@@ -431,13 +459,14 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 171
-  summary: >-
-    DEPRECATED.
+  summary: 'DEPRECATED.
 
-    Resets the 'start' accumulators
+    Resets the ''start'' accumulators
 
-    Returns: tuple of (average loss since start, average metric since start, samples since start)
+    Returns: tuple of (average loss since start, average metric since start, samples
+    since start)'
   syntax:
+    content: reset_start(self)
     parameters:
     - id: self
   type: Method
@@ -457,11 +486,11 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 245
-  summary: >-
-    DEPRECATED.
+  summary: 'DEPRECATED.
 
-    Updates the accumulators using the loss, the minibatch_size and the optional metric.
+    Updates the accumulators using the loss, the minibatch_size and the optional metric.'
   syntax:
+    content: update(self, loss, minibatch_size, metric=None)
     parameters:
     - id: self
     - defaultValue: None
@@ -473,7 +502,8 @@ items:
       id: minibatch_size
       type:
       - int
-    - description: if *None* do not update the metric accumulators, otherwise update with the given value
+    - description: if *None* do not update the metric accumulators, otherwise update
+        with the given value
       id: metric
       type:
       - float or None
@@ -494,13 +524,14 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 297
-  summary: >-
-    DEPRECATED.
+  summary: 'DEPRECATED.
 
-    Update the current loss, the minibatch size and optionally the metric using the information from the `trainer`.
+    Update the current loss, the minibatch size and optionally the metric using the
+    information from the `trainer`.'
   syntax:
+    content: update_with_trainer(self, trainer, with_metric=False)
     parameters:
-    - defaultValue: "False"
+    - defaultValue: 'False'
       id: self
     - description: trainer from which information is gathered
       id: trainer

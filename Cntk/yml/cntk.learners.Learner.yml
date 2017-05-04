@@ -9,6 +9,10 @@ items:
   - cntk.learners.Learner.update
   class: cntk.learners.Learner
   fullName: cntk.learners.Learner
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.Learner
   langs:
   - python
   module: cntk.learners
@@ -21,14 +25,20 @@ items:
       path: cntk/learners/__init__.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 104
-  summary: >+
-    Bases: @cntk.cntk_py.Learner
+  summary: 'Bases: `cntk.cntk_py.Learner`
 
-    Abstraction for learning a subset of parameters of a learnable function using first order gradient values. For example momentum, AdaGrad, RMSProp, etc. are different types of learners with their own algorithms for learning parameter values using first order gradients. To instantiate a concrete learner, use the factory methods in this module.
+    Abstraction for learning a subset of parameters of a learnable function using
+    first order gradient values. For example momentum, AdaGrad, RMSProp, etc. are
+    different types of learners with their own algorithms for learning parameter values
+    using first order gradients. To instantiate a concrete learner, use the factory
+    methods in this module.
 
 
 
-  syntax: {}
+
+    '
+  syntax:
+    content: Learner(self, parameters, learningRateSchedule)
   type: Class
   uid: cntk.learners.Learner
 - _type: method
@@ -48,6 +58,7 @@ items:
     startLine: 153
   summary: Current learning rate.
   syntax:
+    content: learning_rate(self)
     parameters:
     - id: self
   type: Method
@@ -61,12 +72,12 @@ items:
   name: parameters
   source:
     id: parameters
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
+    startLine: null
   summary: The set of parameters associated with this learner.
   syntax: {}
   type: Property
@@ -86,8 +97,12 @@ items:
       path: cntk/learners/__init__.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 139
-  summary: 'Resets the learning rate. The new schedule is adjusted to be relative to the current number of elapsed samples/sweeps: the 0 offset in the new schedule corresponds to the current value of elapsed samples/sweeps, and it takes effect from the current position in the training process onwards.'
+  summary: 'Resets the learning rate. The new schedule is adjusted to be relative
+    to the current number of elapsed samples/sweeps: the 0 offset in the new schedule
+    corresponds to the current value of elapsed samples/sweeps, and it takes effect
+    from the current position in the training process onwards.'
   syntax:
+    content: reset_learning_rate(self, learning_rate)
     parameters:
     - id: self
     - description: learning rate to reset to
@@ -113,9 +128,11 @@ items:
     startLine: 113
   summary: Update the parameters associated with this learner.
   syntax:
+    content: update(self, gradient_values, training_sample_count)
     parameters:
     - id: self
-    - description: maps @cntk.ops.variables.Parameter to a NumPy array containing the first order gradient values for the Parameter w.r.t. the training objective.
+    - description: maps `Parameter` to a NumPy array containing the first order gradient
+        values for the Parameter w.r.t. the training objective.
       id: gradient_values
       type:
       - dict
@@ -124,7 +141,8 @@ items:
       type:
       - int
     return:
-      description: '*False* to indicate that learning has stopped for all of the parameters associated with this learner'
+      description: '*False* to indicate that learning has stopped for all of the parameters
+        associated with this learner'
   type: Method
   uid: cntk.learners.Learner.update
 references:

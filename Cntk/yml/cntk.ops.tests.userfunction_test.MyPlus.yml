@@ -9,6 +9,16 @@ items:
   - cntk.ops.tests.userfunction_test.MyPlus.infer_outputs
   class: cntk.ops.tests.userfunction_test.MyPlus
   fullName: cntk.ops.tests.userfunction_test.MyPlus
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - inheritance:
+        - inheritance:
+          - type: builtins.object
+          type: cntk.cntk_py.IDictionarySerializable
+        type: cntk.cntk_py.Function
+      type: cntk.ops.functions.Function
+    type: cntk.ops.functions.UserFunction
   langs:
   - python
   module: cntk.ops.tests.userfunction_test
@@ -21,12 +31,14 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 20
-  summary: >+
-    Bases: @cntk.ops.functions.UserFunction
+  summary: 'Bases: [cntk.ops.functions.UserFunction](.md#cntk.ops.functions.UserFunction.md)
 
 
 
-  syntax: {}
+
+    '
+  syntax:
+    content: MyPlus(cls)
   type: Class
   uid: cntk.ops.tests.userfunction_test.MyPlus
 - _type: method
@@ -45,6 +57,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 43
   syntax:
+    content: backward(self, state, root_gradients)
     parameters:
     - id: self
     - id: state
@@ -67,6 +80,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 31
   syntax:
+    content: clone(self, cloned_inputs)
     parameters:
     - id: self
     - id: cloned_inputs
@@ -88,6 +102,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 34
   syntax:
+    content: forward(self, arguments, device=None, outputs_to_retain=None)
     parameters:
     - defaultValue: None
       id: self
@@ -113,6 +128,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 27
   syntax:
+    content: infer_outputs(self)
     parameters:
     - id: self
   type: Method

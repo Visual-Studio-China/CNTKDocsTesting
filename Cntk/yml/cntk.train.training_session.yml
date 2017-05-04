@@ -21,7 +21,10 @@ items:
       path: cntk/train/training_session.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: A training session encapsulates a typical training loop and binds together a minibatch source that is used for training, a :doc:`trainer <cntk.train.trainer>` and an optional cross validation minibatch source. A training session takes care of consistent checkpointing and progress printing with specified frequencies.
+  summary: A training session encapsulates a typical training loop and binds together
+    a minibatch source that is used for training, a :doc:`trainer <cntk.train.trainer>`
+    and an optional cross validation minibatch source. A training session takes care
+    of consistent checkpointing and progress printing with specified frequencies.
   type: Namespace
   uid: cntk.train.training_session
 - _type: function
@@ -38,8 +41,7 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 187
-  summary: >-
-    Create a minibatch size schedule
+  summary: 'Create a minibatch size schedule
 
     -[ Examples ]-
 
@@ -51,7 +53,8 @@ items:
 
     (32, 32)
 
-    >>> # Use minibatches of size 32 for the first 1000 samples, then 64 for the remaining ones
+    >>> # Use minibatches of size 32 for the first 1000 samples, then 64 for the remaining
+    ones
 
     >>> s = minibatch_size_schedule([32, 64], 1000)
 
@@ -67,10 +70,14 @@ items:
 
     >>> s[0], s[1199], s[1200], s[2699], s[2700], s[5000]
 
-    (32, 32, 64, 64, 128, 128)
+    (32, 32, 64, 64, 128, 128)'
   syntax:
+    content: minibatch_size_schedule()
     parameters:
-    - description: if integer, it this minibatch size will be used for the whole training. In case of list of integers, the elements are used as the values for `epoch_size` samples. If list contains pair, the second element is used as a value for (`epoch_size` x first element) samples
+    - description: if integer, it this minibatch size will be used for the whole training.
+        In case of list of integers, the elements are used as the values for `epoch_size`
+        samples. If list contains pair, the second element is used as a value for
+        (`epoch_size` x first element) samples
       id: schedule
       type:
       - integer or list
@@ -98,6 +105,7 @@ items:
     startLine: 230
   summary: A factory function to create a training session object.
   syntax:
+    content: training_session()
     parameters:
     - description: '!DEPRECATED! use mb_source instead'
       id: training_minibatch_source
@@ -111,7 +119,7 @@ items:
       id: mb_size_schedule
       type:
       - minibatch_size_schedule
-    - description: '!DEPRECATED! list of progress writers from @cntk.utils'
+    - description: '!DEPRECATED! list of progress writers from `cntk.utils`'
       id: progress_printer
       type:
       - list
@@ -123,15 +131,19 @@ items:
       id: checkpoint_filename
       type:
       - str
-    - description: '!DEPRECATED! checkpoint frequency in samples. If 0, no checkpointing takes place. If `sys.maxsize`, a single checkpoint is taken at the end of the training.'
+    - description: '!DEPRECATED! checkpoint frequency in samples. If 0, no checkpointing
+        takes place. If `sys.maxsize`, a single checkpoint is taken at the end of
+        the training.'
       id: checkpoint_frequency
       type:
       - int
-    - description: '!DEPRECATED! saves all checkpoints, using `checkpoint_filename` as prefix and checkpoint index as a suffix.'
+    - description: '!DEPRECATED! saves all checkpoints, using `checkpoint_filename`
+        as prefix and checkpoint index as a suffix.'
       id: save_all_checkpoints
       type:
       - bool
-    - description: flag, indicating whether to restore from available checkpoint before the start of the training
+    - description: flag, indicating whether to restore from available checkpoint before
+        the start of the training
       id: restore
       type:
       - bool
@@ -147,7 +159,8 @@ items:
       id: cv_frequency
       type:
       - int
-    - description: '!DEPRECATED! minibatch schedule for cross validation If `sys.maxsize`, a single cross validation is performed at the end of training.'
+    - description: '!DEPRECATED! minibatch schedule for cross validation If `sys.maxsize`,
+        a single cross validation is performed at the end of training.'
       id: cv_mb_size_schedule
       type:
       - minibatch_size_schedule
@@ -180,7 +193,7 @@ items:
       type:
       - CrossValidationConfig
     return:
-      description: Instance of @TrainingSession
+      description: Instance of @cntk.train.training_session.TrainingSession
   type: Method
   uid: cntk.train.training_session.training_session
 references:

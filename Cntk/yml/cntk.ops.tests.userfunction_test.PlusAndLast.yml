@@ -7,6 +7,16 @@ items:
   - cntk.ops.tests.userfunction_test.PlusAndLast.infer_outputs
   class: cntk.ops.tests.userfunction_test.PlusAndLast
   fullName: cntk.ops.tests.userfunction_test.PlusAndLast
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - inheritance:
+        - inheritance:
+          - type: builtins.object
+          type: cntk.cntk_py.IDictionarySerializable
+        type: cntk.cntk_py.Function
+      type: cntk.ops.functions.Function
+    type: cntk.ops.functions.UserFunction
   langs:
   - python
   module: cntk.ops.tests.userfunction_test
@@ -19,11 +29,13 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 275
-  summary: >+
-    Bases: @cntk.ops.functions.UserFunction
+  summary: 'Bases: [cntk.ops.functions.UserFunction](.md#cntk.ops.functions.UserFunction.md)
 
 
-  syntax: {}
+
+    '
+  syntax:
+    content: PlusAndLast(cls)
   type: Class
   uid: cntk.ops.tests.userfunction_test.PlusAndLast
 - _type: method
@@ -42,6 +54,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 289
   syntax:
+    content: forward(self, arguments, device=None, outputs_to_retain=None)
     parameters:
     - defaultValue: None
       id: self
@@ -67,6 +80,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 285
   syntax:
+    content: infer_outputs(self)
     parameters:
     - id: self
   type: Method

@@ -17,7 +17,8 @@ items:
       path: cntk/ops/tests/comparison_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: Unit tests for comparison operations, each operation is tested for the forward and the backward pass
+  summary: Unit tests for comparison operations, each operation is tested for the
+    forward and the backward pass
   type: Namespace
   uid: cntk.ops.tests.comparison_test
 - _type: function
@@ -35,6 +36,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 40
   syntax:
+    content: test_op_comparison(left_operand, right_operand, cntk_function, numpy_function,
+      device_id, precision)
     parameters:
     - id: left_operand
     - id: right_operand

@@ -6,6 +6,12 @@ items:
   - cntk.debugging.tests.userlearner_test.MySgdFast.update
   class: cntk.debugging.tests.userlearner_test.MySgdFast
   fullName: cntk.debugging.tests.userlearner_test.MySgdFast
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: cntk.cntk_py.Learner
+    type: cntk.learners.UserLearner
   langs:
   - python
   module: cntk.debugging.tests.userlearner_test
@@ -18,9 +24,11 @@ items:
       path: cntk/debugging/tests/userlearner_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 42
-  summary: >
-    Bases: @cntk.learners.UserLearner
-  syntax: {}
+  summary: 'Bases: `cntk.learners.UserLearner`
+
+    '
+  syntax:
+    content: MySgdFast(self, parameters, lr_schedule)
   type: Class
   uid: cntk.debugging.tests.userlearner_test.MySgdFast
 - _type: method
@@ -39,6 +47,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 64
   syntax:
+    content: update(self, gradient_values, training_sample_count, sweep_end)
     parameters:
     - id: self
     - id: gradient_values

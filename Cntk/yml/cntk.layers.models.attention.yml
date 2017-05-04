@@ -34,17 +34,23 @@ items:
       path: cntk/layers/models/attention.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 18
-  summary: Layer factory function to create a function object that implements an attention model as described in Bahdanau, et al., "Neural machine translation by jointly learning to align and translate."
+  summary: Layer factory function to create a function object that implements an attention
+    model as described in Bahdanau, et al., "Neural machine translation by jointly
+    learning to align and translate."
   syntax:
+    content: AttentionModel(attention_dim, attention_span=None, attention_axis=None,
+      init=<cntk.default_options.default_override_or object at 0x2b1e628df5c0>, go_backwards=<cntk.default_options.default_override_or
+      object at 0x2b1e628df5f8>, enable_self_stabilization=<cntk.default_options.default_override_or
+      object at 0x2b1e628df630>, name="")
     parameters:
     - id: attention_dim
     - defaultValue: ''
       id: attention_span
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b5182630>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b1e628df630>
       id: attention_axis
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b51825f8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b1e628df5f8>
       id: init
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b51825c0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b1e628df5c0>
       id: go_backwards
     - defaultValue: None
       id: enable_self_stabilization

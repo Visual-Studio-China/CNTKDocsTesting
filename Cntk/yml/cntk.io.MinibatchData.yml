@@ -12,6 +12,13 @@ items:
   - cntk.io.MinibatchData.value
   class: cntk.io.MinibatchData
   fullName: cntk.io.MinibatchData
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.MinibatchData
+  - inheritance:
+    - type: builtins.object
+    type: cntk.tensor.ArrayMixin
   langs:
   - python
   module: cntk.io
@@ -24,17 +31,20 @@ items:
       path: cntk/io/__init__.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 20
-  summary: >+
-    Bases: @cntk.cntk_py.MinibatchData, @cntk.tensor.ArrayMixin
+  summary: 'Bases: `cntk.cntk_py.MinibatchData`, [cntk.tensor.ArrayMixin](.md#cntk.tensor.ArrayMixin.md)
 
-    Holds a minibatch of input data. This is never directly created, but only returned by @MinibatchSource instances.
-
-
+    Holds a minibatch of input data. This is never directly created, but only returned
+    by `MinibatchSource` instances.
 
 
 
 
-  syntax: {}
+
+
+
+    '
+  syntax:
+    content: MinibatchData(self)
   type: Class
   uid: cntk.io.MinibatchData
 - _type: attribute
@@ -46,13 +56,14 @@ items:
   name: end_of_sweep
   source:
     id: end_of_sweep
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
-  summary: Indicates whether the data in this minibatch comes from a sweep end or crosses a sweep boundary (and as a result includes data from different sweeps).
+    startLine: null
+  summary: Indicates whether the data in this minibatch comes from a sweep end or
+    crosses a sweep boundary (and as a result includes data from different sweeps).
   syntax: {}
   type: Property
   uid: cntk.io.MinibatchData.end_of_sweep
@@ -65,12 +76,12 @@ items:
   name: is_sparse
   source:
     id: is_sparse
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
+    startLine: null
   summary: Whether the data in this minibatch is sparse.
   syntax: {}
   type: Property
@@ -84,13 +95,14 @@ items:
   name: mask
   source:
     id: mask
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
-  summary: The mask object of the minibatch. In it, *2* marks the beginning of a sequence, *1* marks a sequence element as valid, and *0* marks it as invalid.
+    startLine: null
+  summary: The mask object of the minibatch. In it, *2* marks the beginning of a sequence,
+    *1* marks a sequence element as valid, and *0* marks it as invalid.
   syntax: {}
   type: Property
   uid: cntk.io.MinibatchData.mask
@@ -103,12 +115,12 @@ items:
   name: num_samples
   source:
     id: num_samples
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
+    startLine: null
   summary: The number of samples in this minibatch
   syntax: {}
   type: Property
@@ -122,12 +134,12 @@ items:
   name: num_sequences
   source:
     id: num_sequences
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
+    startLine: null
   summary: The number of sequences in this minibatch
   syntax: {}
   type: Property
@@ -141,12 +153,12 @@ items:
   name: shape
   source:
     id: shape
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
+    startLine: null
   summary: The shape of the data in this minibatch as tuple.
   syntax: {}
   type: Property
@@ -160,12 +172,12 @@ items:
   name: value
   source:
     id: value
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
+    startLine: null
   summary: The value of the minibatch as a NumPy array.
   syntax: {}
   type: Property

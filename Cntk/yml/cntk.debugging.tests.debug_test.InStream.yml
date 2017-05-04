@@ -6,6 +6,8 @@ items:
   - cntk.debugging.tests.debug_test.InStream.readline
   class: cntk.debugging.tests.debug_test.InStream
   fullName: cntk.debugging.tests.debug_test.InStream
+  inheritance:
+  - type: builtins.object
   langs:
   - python
   module: cntk.debugging.tests.debug_test
@@ -18,9 +20,11 @@ items:
       path: cntk/debugging/tests/debug_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 48
-  summary: >
-    Bases: @object
-  syntax: {}
+  summary: 'Bases: `object`
+
+    '
+  syntax:
+    content: InStream(self, to_be_read)
   type: Class
   uid: cntk.debugging.tests.debug_test.InStream
 - _type: method
@@ -39,6 +43,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 52
   syntax:
+    content: readline(self)
     parameters:
     - id: self
   type: Method

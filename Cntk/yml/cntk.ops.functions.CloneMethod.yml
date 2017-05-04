@@ -8,6 +8,10 @@ items:
   - cntk.ops.functions.CloneMethod.share
   class: cntk.ops.functions.CloneMethod
   fullName: cntk.ops.functions.CloneMethod
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
   langs:
   - python
   module: cntk.ops.functions
@@ -20,12 +24,13 @@ items:
       path: cntk/ops/functions.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 11
-  summary: >+
-    Bases: @enum.Enum
+  summary: 'Bases: `enum.Enum`
 
-    Describes different ways how @cntk.ops.functions.Function.clone works.
+    Describes different ways how `clone()` works.
 
 
+
+    '
   syntax: {}
   type: Class
   uid: cntk.ops.functions.CloneMethod
@@ -38,13 +43,14 @@ items:
   name: clone
   source:
     id: clone
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
-  summary: New learnable parameters are created and initialized with the current values of the corresponding parameters of the Function being cloned
+    startLine: null
+  summary: New learnable parameters are created and initialized with the current values
+    of the corresponding parameters of the Function being cloned
   syntax: {}
   type: Property
   uid: cntk.ops.functions.CloneMethod.clone
@@ -57,13 +63,14 @@ items:
   name: freeze
   source:
     id: freeze
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
-  summary: Parameters are cloned and made immutable; i.e. Constants in the new clone (e.g. for use as a fixed feature extractor)
+    startLine: null
+  summary: Parameters are cloned and made immutable; i.e. Constants in the new clone
+    (e.g. for use as a fixed feature extractor)
   syntax: {}
   type: Property
   uid: cntk.ops.functions.CloneMethod.freeze
@@ -76,12 +83,12 @@ items:
   name: share
   source:
     id: share
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
+    startLine: null
   summary: Parameters are shared between the Function being cloned and the new clone
   syntax: {}
   type: Property

@@ -10,6 +10,10 @@ items:
   - cntk.core.Value.shape
   class: cntk.core.Value
   fullName: cntk.core.Value
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.Value
   langs:
   - python
   module: cntk.core
@@ -22,15 +26,17 @@ items:
       path: cntk/core.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 182
-  summary: >+
-    Bases: @cntk.cntk_py.Value
+  summary: 'Bases: `cntk.cntk_py.Value`
 
     Internal representation of minibatch data.
 
 
 
 
+
+    '
   syntax:
+    content: Value(self, shape=None, dtype=None, batch=None, seq_starts=None, device=None)
     parameters:
     - description: shape of the value
       id: shape
@@ -42,16 +48,14 @@ items:
       - None or value that can be cast to NumPy array
     - description: data type (np.float32 or np.float64)
       id: dtype
-    - description: >-
-        batch input for *var*. It can be:
-
-           * a pure Python structure (list of lists, ...),
-
-           * a list of NumPy arrays or SciPy sparse CSR matrices
-
-           * a @cntk.core.Value object (e.g. returned by @one_hot)
+    - description: "batch input for *var*. It can be:\n\n   * a pure Python structure\
+        \ (list of lists, ...),\n\n   * a list of NumPy arrays or SciPy sparse CSR\
+        \ matrices\n\n   * a @cntk.core.Value object (e.g. returned by @cntk.core.Value.one_hot)"
       id: batch
-    - description: if None, every sequence is treated as a new sequence. Otherwise, it is interpreted as a list of Booleans that tell whether a sequence is a new sequence (*True*) or a continuation of the sequence in the same slot of the previous minibatch (*False*)
+    - description: if None, every sequence is treated as a new sequence. Otherwise,
+        it is interpreted as a list of Booleans that tell whether a sequence is a
+        new sequence (*True*) or a continuation of the sequence in the same slot of
+        the previous minibatch (*False*)
       id: seq_starts
       type:
       - list of bools or None
@@ -78,21 +82,20 @@ items:
     startLine: 272
   summary: Creates a @cntk.core.Value object.
   syntax:
+    content: create()
     parameters:
     - description: variable into which `data` is passed
       id: var
       type:
       - Variable
-    - description: >-
-        data for *var*. It can be:
-
-           * a single NumPy array denoting the full minibatch
-
-           * a list of NumPy arrays or SciPy sparse CSR matrices
-
-           * a single NumPy array denoting one parameter or constant
+    - description: "data for *var*. It can be:\n\n   * a single NumPy array denoting\
+        \ the full minibatch\n\n   * a list of NumPy arrays or SciPy sparse CSR matrices\n\
+        \n   * a single NumPy array denoting one parameter or constant"
       id: data
-    - description: if None, every sequence is treated as a new sequence. Otherwise, it is interpreted as a list of Booleans that tell whether a sequence is a new sequence (*True*) or a continuation of the sequence in the same slot of the previous minibatch (*False*)
+    - description: if None, every sequence is treated as a new sequence. Otherwise,
+        it is interpreted as a list of Booleans that tell whether a sequence is a
+        new sequence (*True*) or a continuation of the sequence in the same slot of
+        the previous minibatch (*False*)
       id: seq_starts
       type:
       - list of bools or None
@@ -117,13 +120,13 @@ items:
   name: data
   source:
     id: data
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
-  summary: Retrieves the underlying @NDArrayView instance.
+    startLine: null
+  summary: Retrieves the underlying @cntk.core.NDArrayView instance.
   syntax: {}
   type: Property
   uid: cntk.core.Value.data
@@ -136,23 +139,20 @@ items:
   name: mask
   source:
     id: mask
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
-  summary: >-
-    The mask matrix of this value. Each row denotes a sequence with its elements describing the mask of the element:
-
-    * 2: beginning of sequence (e.g. an LSTM would be reset)
-
-       * 1: valid element
-
-       * 0: invalid element
-    -[ Example ]-
-
-    A mask of `[[2, 1, 1], [1, 1, 0]]` describes a batch of two sequences. The first has three elements, of which the first element (2) signals the beginning of a sequence. The second sequence has two elements (last element marked 'invalid' by '0'). As it starts with (1), it is a continuation of the 2nd sequence in the previous minibatch.
+    startLine: null
+  summary: "The mask matrix of this value. Each row denotes a sequence with its elements\
+    \ describing the mask of the element:\n* 2: beginning of sequence (e.g. an LSTM\
+    \ would be reset)\n\n   * 1: valid element\n\n   * 0: invalid element\n-[ Example\
+    \ ]-\nA mask of `[[2, 1, 1], [1, 1, 0]]` describes a batch of two sequences. The\
+    \ first has three elements, of which the first element (2) signals the beginning\
+    \ of a sequence. The second sequence has two elements (last element marked 'invalid'\
+    \ by '0'). As it starts with (1), it is a continuation of the 2nd sequence in\
+    \ the previous minibatch."
   syntax: {}
   type: Property
   uid: cntk.core.Value.mask
@@ -171,55 +171,29 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 365
-  summary: >-
-    Converts `batch` into a @cntk.core.Value object of `dtype` such that the integer data in `batch` is interpreted as the indices representing one-hot vectors.
-
-    -[ Example ]-
-
-    >>> num_classes = 6
-
-    >>> sparse_indices = [[1,5],[4]]
-
-    >>> i0 = C.input_variable(shape=num_classes, is_sparse=True)
-
-    >>> z = C.times(i0, np.eye(num_classes))
-
-    >>> value = C.one_hot(sparse_indices, num_classes)
-
-    >>> z.eval({i0: value})
-
-    [array([[ 0.,  1.,  0.,  0.,  0.,  0.],
-            [ 0.,  0.,  0.,  0.,  0.,  1.]], dtype=float32),
-     array([[ 0.,  0.,  0.,  0.,  1.,  0.]], dtype=float32)]
-    <BLANKLINE>
-
-    >>> num_classes = 6
-
-    >>> sample_shape = (2, num_classes)
-
-    >>> sparse_indices = [[1,5,3,2],[4,1]]
-
-    >>> i0 = C.input_variable(shape=sample_shape, is_sparse=True)
-
-    >>> z = C.times(i0, np.eye(num_classes))
-
-    >>> value = C.one_hot(sparse_indices, sample_shape)
-
-    >>> z.eval({i0: value})
-
-    [array([[[ 0.,  1.,  0.,  0.,  0.,  0.],
-             [ 0.,  0.,  0.,  0.,  0.,  1.]],
-            [[ 0.,  0.,  0.,  1.,  0.,  0.],
-             [ 0.,  0.,  1.,  0.,  0.,  0.]]], dtype=float32),
-     array([[[ 0.,  0.,  0.,  0.,  1.,  0.],
-             [ 0.,  1.,  0.,  0.,  0.,  0.]]], dtype=float32)]
+  summary: "Converts `batch` into a @cntk.core.Value object of `dtype` such that the\
+    \ integer data in `batch` is interpreted as the indices representing one-hot vectors.\n\
+    -[ Example ]-\n>>> num_classes = 6\n>>> sparse_indices = [[1,5],[4]]\n>>> i0 =\
+    \ C.input_variable(shape=num_classes, is_sparse=True)\n>>> z = C.times(i0, np.eye(num_classes))\n\
+    >>> value = C.one_hot(sparse_indices, num_classes)\n>>> z.eval({i0: value})\n\
+    [array([[ 0.,  1.,  0.,  0.,  0.,  0.],\n        [ 0.,  0.,  0.,  0.,  0.,  1.]],\
+    \ dtype=float32),\n array([[ 0.,  0.,  0.,  0.,  1.,  0.]], dtype=float32)]\n\
+    <BLANKLINE>\n>>> num_classes = 6\n>>> sample_shape = (2, num_classes)\n>>> sparse_indices\
+    \ = [[1,5,3,2],[4,1]]\n>>> i0 = C.input_variable(shape=sample_shape, is_sparse=True)\n\
+    >>> z = C.times(i0, np.eye(num_classes))\n>>> value = C.one_hot(sparse_indices,\
+    \ sample_shape)\n>>> z.eval({i0: value})\n[array([[[ 0.,  1.,  0.,  0.,  0., \
+    \ 0.],\n         [ 0.,  0.,  0.,  0.,  0.,  1.]],\n        [[ 0.,  0.,  0.,  1.,\
+    \  0.,  0.],\n         [ 0.,  0.,  1.,  0.,  0.,  0.]]], dtype=float32),\n array([[[\
+    \ 0.,  0.,  0.,  0.,  1.,  0.],\n         [ 0.,  1.,  0.,  0.,  0.,  0.]]], dtype=float32)]"
   syntax:
+    content: one_hot()
     parameters:
     - description: batch input data of indices
       id: batch
       type:
       - list of lists of integers
-    - description: number of classes or shape of each sample whose trailing axis is one_hot
+    - description: number of classes or shape of each sample whose trailing axis is
+        one_hot
       id: sample_shape
       type:
       - integer or tuple
@@ -232,7 +206,8 @@ items:
       type:
       - DeviceDescriptor, default None
     return:
-      description: '`batch` converted into a @Value object that can be passed to the forward or eval function.'
+      description: '`batch` converted into a @cntk.core.Value object that can be passed
+        to the forward or eval function.'
   type: Method
   uid: cntk.core.Value.one_hot
 - _type: attribute
@@ -244,13 +219,15 @@ items:
   name: shape
   source:
     id: shape
-    path: 
+    path: null
     remote:
       branch: master
-      path: 
+      path: null
       repo: https://github.com/Microsoft/CNTK
-    startLine: 
-  summary: The rectangular shape of this value. I.e., if this value has sequences of varying lengths, the shape will have the max sequence length in the sequence dimension.
+    startLine: null
+  summary: The rectangular shape of this value. I.e., if this value has sequences
+    of varying lengths, the shape will have the max sequence length in the sequence
+    dimension.
   syntax: {}
   type: Property
   uid: cntk.core.Value.shape

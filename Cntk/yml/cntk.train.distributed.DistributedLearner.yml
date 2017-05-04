@@ -6,6 +6,12 @@ items:
   - cntk.train.distributed.DistributedLearner.communicator
   class: cntk.train.distributed.DistributedLearner
   fullName: cntk.train.distributed.DistributedLearner
+  inheritance:
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: cntk.cntk_py.Learner
+    type: cntk.cntk_py.DistributedLearner
   langs:
   - python
   module: cntk.train.distributed
@@ -18,11 +24,14 @@ items:
       path: cntk/train/distributed.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 100
-  summary: >
-    Bases: @cntk.cntk_py.DistributedLearner
+  summary: 'Bases: `cntk.cntk_py.DistributedLearner`
 
-    A distributed learner that handles data like gradients/momentums across multiple MPI workers
-  syntax: {}
+    A distributed learner that handles data like gradients/momentums across multiple
+    MPI workers
+
+    '
+  syntax:
+    content: DistributedLearner(self)
   type: Class
   uid: cntk.train.distributed.DistributedLearner
 - _type: method
@@ -42,9 +51,11 @@ items:
     startLine: 105
   summary: Returns the distributed communicator that talks to other MPI workers
   syntax:
+    content: communicator()
     return:
       description: descriptor of current process.
-      type: Communicator
+      type:
+      - Communicator
   type: Method
   uid: cntk.train.distributed.DistributedLearner.communicator
 references:

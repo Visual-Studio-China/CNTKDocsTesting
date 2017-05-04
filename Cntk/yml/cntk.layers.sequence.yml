@@ -38,12 +38,16 @@ items:
       path: cntk/layers/sequence.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 15
-  summary: Layer factory function to create a layer that delays input the input by a given number of time steps. Negative means future. This is provided as a layer instead of a function so that it can easily be used in a Sequential() expression.
+  summary: Layer factory function to create a layer that delays input the input by
+    a given number of time steps. Negative means future. This is provided as a layer
+    instead of a function so that it can easily be used in a Sequential() expression.
   syntax:
+    content: Delay(T=1, initial_state=<cntk.default_options.default_override_or object
+      at 0x2b1e628d96a0>, name="")
     parameters:
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517c6a0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b1e628d96a0>
       id: T
-    - defaultValue: "1"
+    - defaultValue: '1'
       id: initial_state
     - id: name
   type: Method
@@ -62,22 +66,31 @@ items:
       path: cntk/layers/sequence.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 189
-  summary: >-
-    Layer factory function to create a function that implements the fold() catamorphism. It is like `Recurrence()` except that it returns only the final state. This is often used for embeddings of sequences, e.g. in a sequence-to-sequence model.
+  summary: 'Layer factory function to create a function that implements the fold()
+    catamorphism. It is like `Recurrence()` except that it returns only the final
+    state. This is often used for embeddings of sequences, e.g. in a sequence-to-sequence
+    model.
 
-    Commonly, the `folder_function` is a recurrent block such as an LSTM. One can, however, pass any binary function. E.g. passing `plus` will sum up all items of a sequence; while `element_max` would perform a max-pooling over all items of the sequence.
+    Commonly, the `folder_function` is a recurrent block such as an LSTM. One can,
+    however, pass any binary function. E.g. passing `plus` will sum up all items of
+    a sequence; while `element_max` would perform a max-pooling over all items of
+    the sequence.
 
-    `go_backwards=False` selects a fold-left, while `True` a fold-right, but note that the `folder_function` signature is always the one of fold-left.
+    `go_backwards=False` selects a fold-left, while `True` a fold-right, but note
+    that the `folder_function` signature is always the one of fold-left.'
   syntax:
+    content: Fold(folder_function, go_backwards=<cntk.default_options.default_override_or
+      object at 0x2b1e628d97b8>, initial_state=<cntk.default_options.default_override_or
+      object at 0x2b1e628d97f0>, return_full_state=False, name="")
     parameters:
     - id: folder_function
     - defaultValue: ''
       id: go_backwards
-    - defaultValue: "False"
+    - defaultValue: 'False'
       id: initial_state
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517c7f0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b1e628d97f0>
       id: return_full_state
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517c7b8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b1e628d97b8>
       id: name
   type: Method
   uid: cntk.layers.sequence.Fold
@@ -95,10 +108,14 @@ items:
       path: cntk/layers/sequence.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 40
-  summary: "Layer factory function to create a function that returns a static, maskable view for N past steps over a sequence along the given 'axis'. It returns two matrices: a value matrix, shape=(N,dim), and a valid window, shape=(1,dim)"
+  summary: 'Layer factory function to create a function that returns a static, maskable
+    view for N past steps over a sequence along the given ''axis''. It returns two
+    matrices: a value matrix, shape=(N,dim), and a valid window, shape=(1,dim)'
   syntax:
+    content: PastValueWindow(window_size, axis, go_backwards=<cntk.default_options.default_override_or
+      object at 0x2b1e628d96d8>, name="")
     parameters:
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517c6d8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b1e628d96d8>
       id: window_size
     - id: axis
     - id: go_backwards
@@ -120,17 +137,25 @@ items:
       path: cntk/layers/sequence.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 151
-  summary: 'Layer factory function to create a function that runs a cell function recurrently over a time sequence. This form is meant for use in regular recurrent-model scenarios. `initial_state` must be a constant (or at least have known shape). To pass initial_state as a data input, use RecurrenceFrom() instead. TODO: Can bidirectionality be an option of this? bidirectional=True? What was the reason it cannot?'
+  summary: 'Layer factory function to create a function that runs a cell function
+    recurrently over a time sequence. This form is meant for use in regular recurrent-model
+    scenarios. `initial_state` must be a constant (or at least have known shape).
+    To pass initial_state as a data input, use RecurrenceFrom() instead. TODO: Can
+    bidirectionality be an option of this? bidirectional=True? What was the reason
+    it cannot?'
   syntax:
+    content: Recurrence(step_function, go_backwards=<cntk.default_options.default_override_or
+      object at 0x2b1e628d9748>, initial_state=<cntk.default_options.default_override_or
+      object at 0x2b1e628d9780>, return_full_state=False, name="")
     parameters:
     - id: step_function
     - defaultValue: ''
       id: go_backwards
-    - defaultValue: "False"
+    - defaultValue: 'False'
       id: initial_state
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517c780>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b1e628d9780>
       id: return_full_state
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517c748>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b1e628d9748>
       id: name
   type: Method
   uid: cntk.layers.sequence.Recurrence
@@ -148,15 +173,21 @@ items:
       path: cntk/layers/sequence.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 86
-  summary: Layer factory function to create a function that runs a cell function recurrently over a time sequence, with initial state. This form is meant for use in sequence-to-sequence scenarios. The difference to Recurrence() is that this returns a function that accepts the initial state as data argument(s). Initial state consists of N arguments, matching 'over'.
+  summary: Layer factory function to create a function that runs a cell function recurrently
+    over a time sequence, with initial state. This form is meant for use in sequence-to-sequence
+    scenarios. The difference to Recurrence() is that this returns a function that
+    accepts the initial state as data argument(s). Initial state consists of N arguments,
+    matching 'over'.
   syntax:
+    content: RecurrenceFrom(step_function, go_backwards=<cntk.default_options.default_override_or
+      object at 0x2b1e628d9710>, return_full_state=False, name="")
     parameters:
     - id: step_function
     - defaultValue: ''
       id: go_backwards
-    - defaultValue: "False"
+    - defaultValue: 'False'
       id: return_full_state
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517c710>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b1e628d9710>
       id: name
   type: Method
   uid: cntk.layers.sequence.RecurrenceFrom
@@ -174,38 +205,37 @@ items:
       path: cntk/layers/sequence.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 217
-  summary: >-
-    Layer factory function to create a function that implements the unfold() anamorphism. It creates a function that, starting with a seed input, applies 'generator_function' repeatedly and emits the sequence of results. Depending on the recurrent block, it may have this form:
-
-    <!-- literal_block {"dupnames": [], "xml:space": "preserve", "classes": [], "names": [], "backrefs": [], "ids": []} -->
-
-
-    ````
-
-       result = f(... f(f([g(input), initial_state])) ... )
-       ````
-    or this form:
-
-    <!-- literal_block {"dupnames": [], "xml:space": "preserve", "classes": [], "names": [], "backrefs": [], "ids": []} -->
-
-
-    ````
-
-       result = f(g(input), ... f(g(input), f(g(input), initial_state)) ... )
-       ````
-    where *f* is *generator_function*. An example use of this is sequence-to-sequence decoding, where *g(input)* is the sequence encoder, *initial_state* is the sentence-start symbol, and *f* is the decoder. The first of the two forms above is a plain sequence-to-sequence model where encoder output is the start state for the output recursion. The second form is an attention-based decoder, where the encoded input affects every application of *f* differently.
+  summary: "Layer factory function to create a function that implements the unfold()\
+    \ anamorphism. It creates a function that, starting with a seed input, applies\
+    \ 'generator_function' repeatedly and emits the sequence of results. Depending\
+    \ on the recurrent block, it may have this form:\n<!-- literal_block {\"xml:space\"\
+    : \"preserve\", \"dupnames\": [], \"classes\": [], \"ids\": [], \"backrefs\":\
+    \ [], \"names\": []} -->\n\n````\n\n   result = f(... f(f([g(input), initial_state]))\
+    \ ... )\n   ````\nor this form:\n<!-- literal_block {\"xml:space\": \"preserve\"\
+    , \"dupnames\": [], \"classes\": [], \"ids\": [], \"backrefs\": [], \"names\"\
+    : []} -->\n\n````\n\n   result = f(g(input), ... f(g(input), f(g(input), initial_state))\
+    \ ... )\n   ````\nwhere *f* is *generator_function*. An example use of this is\
+    \ sequence-to-sequence decoding, where *g(input)* is the sequence encoder, *initial_state*\
+    \ is the sentence-start symbol, and *f* is the decoder. The first of the two forms\
+    \ above is a plain sequence-to-sequence model where encoder output is the start\
+    \ state for the output recursion. The second form is an attention-based decoder,\
+    \ where the encoded input affects every application of *f* differently."
   syntax:
+    content: 'UnfoldFrom(generator_function, map_state_function=Composite(Combine):
+      Placeholder(''keep'', [???], [???]) -> Placeholder(''keep'', [???], [???]),
+      until_predicate=None, length_increase=1, initial_state=None, name="")'
     parameters:
     - id: generator_function
     - defaultValue: ''
       id: map_state_function
     - defaultValue: None
       id: until_predicate
-    - defaultValue: "1"
+    - defaultValue: '1'
       id: length_increase
     - defaultValue: None
       id: initial_state
-    - defaultValue: "Composite(Combine): Placeholder('keep', [???], [???]) -> Placeholder('keep', [???], [???])"
+    - defaultValue: 'Composite(Combine): Placeholder(''keep'', [???], [???]) -> Placeholder(''keep'',
+        [???], [???])'
       id: name
   type: Method
   uid: cntk.layers.sequence.UnfoldFrom

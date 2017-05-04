@@ -7,6 +7,10 @@ items:
   - cntk.train.training_session.TrainingSession.train
   class: cntk.train.training_session.TrainingSession
   fullName: cntk.train.training_session.TrainingSession
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.TrainingSession
   langs:
   - python
   module: cntk.train.training_session
@@ -19,14 +23,19 @@ items:
       path: cntk/train/training_session.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 95
-  summary: >+
-    Bases: @cntk.cntk_py.TrainingSession
+  summary: 'Bases: `cntk.cntk_py.TrainingSession`
 
-    The instance of the class should be created by using @cntk.train.training_session.training_session function.
+    The instance of the class should be created by using `training_session()` function.
 
-    A training session trains a model using the specified `trainer` and configs. Different aspects of training such as data sources, checkpointing, cross validation, progress printing can be configured using the corresponding config classes.
+    A training session trains a model using the specified `trainer` and configs. Different
+    aspects of training such as data sources, checkpointing, cross validation, progress
+    printing can be configured using the corresponding config classes.
 
+
+    '
   syntax:
+    content: TrainingSession(self, trainer, mb_source, mb_size, var_to_stream, max_samples,
+      progress_frequency, checkpoint_config, cv_config)
     parameters:
     - description: trainer
       id: trainer
@@ -79,6 +88,7 @@ items:
     startLine: 169
   summary: Callback that gets executed at the end of cross validation.
   syntax:
+    content: on_cross_validation_end(self, index, average_error, num_samples, num_minibatches)
     parameters:
     - id: self
     - description: index of the current callback.
@@ -118,8 +128,10 @@ items:
     startLine: 154
   summary: Perform training on a specified device.
   syntax:
+    content: train()
     parameters:
-    - description: the device descriptor containing the type and id of the device where training takes place.
+    - description: the device descriptor containing the type and id of the device
+        where training takes place.
       id: device
       type:
       - DeviceDescriptor

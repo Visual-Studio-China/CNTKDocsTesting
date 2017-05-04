@@ -5,6 +5,8 @@ items:
   children: []
   class: cntk.ops.functions.Function.NamedOutput
   fullName: cntk.ops.functions.Function.NamedOutput
+  inheritance:
+  - type: builtins.object
   langs:
   - python
   module: cntk.ops.functions.Function
@@ -17,8 +19,9 @@ items:
       path: cntk/ops/functions.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 54
-  summary: 'Bases: @object'
-  syntax: {}
+  summary: 'Bases: `object`'
+  syntax:
+    content: NamedOutput(self)
   type: Class
   uid: cntk.ops.functions.Function.NamedOutput
 references: []
