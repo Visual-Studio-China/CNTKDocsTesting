@@ -1,0 +1,294 @@
+#YamlMime:PythonReference
+api_name: []
+items:
+- _type: module
+  children:
+  - cntk.internal.tests.utils_test.test_axes
+  - cntk.internal.tests.utils_test.test_get_data_type
+  - cntk.internal.tests.utils_test.test_mask
+  - cntk.internal.tests.utils_test.test_one_hot_int_types
+  - cntk.internal.tests.utils_test.test_one_hot_raises
+  - cntk.internal.tests.utils_test.test_one_hot_skip
+  - cntk.internal.tests.utils_test.test_sanitize_batch_contiguity
+  - cntk.internal.tests.utils_test.test_sanitize_batch_sparse
+  - cntk.internal.tests.utils_test.test_sanitize_dtype_cntk
+  - cntk.internal.tests.utils_test.test_sanitize_dtype_numpy
+  - cntk.internal.tests.utils_test.test_sanitize_input
+  fullName: cntk.internal.tests.utils_test
+  langs:
+  - python
+  module: cntk.internal.tests.utils_test
+  name: utils_test
+  source:
+    id: utils_test
+    path: \cntk\internal\tests\utils_test.py
+    remote:
+      branch: master
+      path: \cntk\internal\tests\utils_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 0
+  type: Namespace
+  uid: cntk.internal.tests.utils_test
+- _type: function
+  fullName: cntk.internal.tests.utils_test.test_axes
+  langs:
+  - python
+  module: cntk.internal.tests.utils_test
+  name: test_axes
+  source:
+    id: test_axes
+    path: \cntk\internal\tests\utils_test.py
+    remote:
+      branch: master
+      path: \cntk\internal\tests\utils_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 43
+  syntax:
+    content: test_axes()
+  type: Method
+  uid: cntk.internal.tests.utils_test.test_axes
+- _type: function
+  fullName: cntk.internal.tests.utils_test.test_get_data_type
+  langs:
+  - python
+  module: cntk.internal.tests.utils_test
+  name: test_get_data_type
+  source:
+    id: test_get_data_type
+    path: \cntk\internal\tests\utils_test.py
+    remote:
+      branch: master
+      path: \cntk\internal\tests\utils_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 52
+  syntax:
+    content: test_get_data_type()
+  type: Method
+  uid: cntk.internal.tests.utils_test.test_get_data_type
+- _type: function
+  fullName: cntk.internal.tests.utils_test.test_mask
+  langs:
+  - python
+  module: cntk.internal.tests.utils_test
+  name: test_mask
+  source:
+    id: test_mask
+    path: \cntk\internal\tests\utils_test.py
+    remote:
+      branch: master
+      path: \cntk\internal\tests\utils_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 82
+  syntax:
+    content: test_mask(batch, seq_starts, expected)
+    parameters:
+    - id: batch
+    - id: seq_starts
+    - id: expected
+  type: Method
+  uid: cntk.internal.tests.utils_test.test_mask
+- _type: function
+  fullName: cntk.internal.tests.utils_test.test_one_hot_int_types
+  langs:
+  - python
+  module: cntk.internal.tests.utils_test
+  name: test_one_hot_int_types
+  source:
+    id: test_one_hot_int_types
+    path: \cntk\internal\tests\utils_test.py
+    remote:
+      branch: master
+      path: \cntk\internal\tests\utils_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 116
+  syntax:
+    content: test_one_hot_int_types(dtype)
+    parameters:
+    - id: dtype
+  type: Method
+  uid: cntk.internal.tests.utils_test.test_one_hot_int_types
+- _type: function
+  fullName: cntk.internal.tests.utils_test.test_one_hot_raises
+  langs:
+  - python
+  module: cntk.internal.tests.utils_test
+  name: test_one_hot_raises
+  source:
+    id: test_one_hot_raises
+    path: \cntk\internal\tests\utils_test.py
+    remote:
+      branch: master
+      path: \cntk\internal\tests\utils_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 109
+  syntax:
+    content: test_one_hot_raises()
+  type: Method
+  uid: cntk.internal.tests.utils_test.test_one_hot_raises
+- _type: function
+  fullName: cntk.internal.tests.utils_test.test_one_hot_skip
+  langs:
+  - python
+  module: cntk.internal.tests.utils_test
+  name: test_one_hot_skip
+  source:
+    id: test_one_hot_skip
+    path: \cntk\internal\tests\utils_test.py
+    remote:
+      branch: master
+      path: \cntk\internal\tests\utils_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 140
+  syntax:
+    content: test_one_hot_skip()
+  type: Method
+  uid: cntk.internal.tests.utils_test.test_one_hot_skip
+- _type: function
+  fullName: cntk.internal.tests.utils_test.test_sanitize_batch_contiguity
+  langs:
+  - python
+  module: cntk.internal.tests.utils_test
+  name: test_sanitize_batch_contiguity
+  source:
+    id: test_sanitize_batch_contiguity
+    path: \cntk\internal\tests\utils_test.py
+    remote:
+      branch: master
+      path: \cntk\internal\tests\utils_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 149
+  syntax:
+    content: test_sanitize_batch_contiguity()
+  type: Method
+  uid: cntk.internal.tests.utils_test.test_sanitize_batch_contiguity
+- _type: function
+  fullName: cntk.internal.tests.utils_test.test_sanitize_batch_sparse
+  langs:
+  - python
+  module: cntk.internal.tests.utils_test
+  name: test_sanitize_batch_sparse
+  source:
+    id: test_sanitize_batch_sparse
+    path: \cntk\internal\tests\utils_test.py
+    remote:
+      branch: master
+      path: \cntk\internal\tests\utils_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 73
+  syntax:
+    content: test_sanitize_batch_sparse()
+  type: Method
+  uid: cntk.internal.tests.utils_test.test_sanitize_batch_sparse
+- _type: function
+  fullName: cntk.internal.tests.utils_test.test_sanitize_dtype_cntk
+  langs:
+  - python
+  module: cntk.internal.tests.utils_test
+  name: test_sanitize_dtype_cntk
+  source:
+    id: test_sanitize_dtype_cntk
+    path: \cntk\internal\tests\utils_test.py
+    remote:
+      branch: master
+      path: \cntk\internal\tests\utils_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 26
+  syntax:
+    content: test_sanitize_dtype_cntk()
+  type: Method
+  uid: cntk.internal.tests.utils_test.test_sanitize_dtype_cntk
+- _type: function
+  fullName: cntk.internal.tests.utils_test.test_sanitize_dtype_numpy
+  langs:
+  - python
+  module: cntk.internal.tests.utils_test
+  name: test_sanitize_dtype_numpy
+  source:
+    id: test_sanitize_dtype_numpy
+    path: \cntk\internal\tests\utils_test.py
+    remote:
+      branch: master
+      path: \cntk\internal\tests\utils_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 20
+  syntax:
+    content: test_sanitize_dtype_numpy()
+  type: Method
+  uid: cntk.internal.tests.utils_test.test_sanitize_dtype_numpy
+- _type: function
+  fullName: cntk.internal.tests.utils_test.test_sanitize_input
+  langs:
+  - python
+  module: cntk.internal.tests.utils_test
+  name: test_sanitize_input
+  source:
+    id: test_sanitize_input
+    path: \cntk\internal\tests\utils_test.py
+    remote:
+      branch: master
+      path: \cntk\internal\tests\utils_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 32
+  syntax:
+    content: test_sanitize_input(data, dtype)
+    parameters:
+    - id: data
+    - id: dtype
+  type: Method
+  uid: cntk.internal.tests.utils_test.test_sanitize_input
+references:
+- fullName: cntk.internal.tests.utils_test.test_axes
+  isExternal: false
+  name: test_axes
+  parent: cntk.internal.tests.utils_test
+  uid: cntk.internal.tests.utils_test.test_axes
+- fullName: cntk.internal.tests.utils_test.test_get_data_type
+  isExternal: false
+  name: test_get_data_type
+  parent: cntk.internal.tests.utils_test
+  uid: cntk.internal.tests.utils_test.test_get_data_type
+- fullName: cntk.internal.tests.utils_test.test_mask
+  isExternal: false
+  name: test_mask
+  parent: cntk.internal.tests.utils_test
+  uid: cntk.internal.tests.utils_test.test_mask
+- fullName: cntk.internal.tests.utils_test.test_one_hot_int_types
+  isExternal: false
+  name: test_one_hot_int_types
+  parent: cntk.internal.tests.utils_test
+  uid: cntk.internal.tests.utils_test.test_one_hot_int_types
+- fullName: cntk.internal.tests.utils_test.test_one_hot_raises
+  isExternal: false
+  name: test_one_hot_raises
+  parent: cntk.internal.tests.utils_test
+  uid: cntk.internal.tests.utils_test.test_one_hot_raises
+- fullName: cntk.internal.tests.utils_test.test_one_hot_skip
+  isExternal: false
+  name: test_one_hot_skip
+  parent: cntk.internal.tests.utils_test
+  uid: cntk.internal.tests.utils_test.test_one_hot_skip
+- fullName: cntk.internal.tests.utils_test.test_sanitize_batch_contiguity
+  isExternal: false
+  name: test_sanitize_batch_contiguity
+  parent: cntk.internal.tests.utils_test
+  uid: cntk.internal.tests.utils_test.test_sanitize_batch_contiguity
+- fullName: cntk.internal.tests.utils_test.test_sanitize_batch_sparse
+  isExternal: false
+  name: test_sanitize_batch_sparse
+  parent: cntk.internal.tests.utils_test
+  uid: cntk.internal.tests.utils_test.test_sanitize_batch_sparse
+- fullName: cntk.internal.tests.utils_test.test_sanitize_dtype_cntk
+  isExternal: false
+  name: test_sanitize_dtype_cntk
+  parent: cntk.internal.tests.utils_test
+  uid: cntk.internal.tests.utils_test.test_sanitize_dtype_cntk
+- fullName: cntk.internal.tests.utils_test.test_sanitize_dtype_numpy
+  isExternal: false
+  name: test_sanitize_dtype_numpy
+  parent: cntk.internal.tests.utils_test
+  uid: cntk.internal.tests.utils_test.test_sanitize_dtype_numpy
+- fullName: cntk.internal.tests.utils_test.test_sanitize_input
+  isExternal: false
+  name: test_sanitize_input
+  parent: cntk.internal.tests.utils_test
+  uid: cntk.internal.tests.utils_test.test_sanitize_input

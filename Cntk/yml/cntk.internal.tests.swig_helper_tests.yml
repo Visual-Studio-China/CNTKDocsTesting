@@ -11,11 +11,11 @@ items:
   name: swig_helper_tests
   source:
     id: swig_helper_tests
-    path: cntk/internal/tests/swig_helper_tests.py
+    path: \cntk\internal\tests\swig_helper_tests.py
     remote:
       branch: master
-      path: cntk/internal/tests/swig_helper_tests.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\internal\tests\swig_helper_tests.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.internal.tests.swig_helper_tests
@@ -27,12 +27,12 @@ items:
   name: test_typemap
   source:
     id: test_typemap
-    path: cntk/internal/tests/swig_helper_tests.py
+    path: \cntk\internal\tests\swig_helper_tests.py
     remote:
       branch: master
-      path: cntk/internal/tests/swig_helper_tests.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 16
+      path: \cntk\internal\tests\swig_helper_tests.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 15
   syntax:
     content: test_typemap()
   type: Method

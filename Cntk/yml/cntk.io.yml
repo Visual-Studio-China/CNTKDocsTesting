@@ -11,6 +11,8 @@ items:
   - cntk.io.MinibatchSource
   - cntk.io.StreamConfiguration
   - cntk.io.StreamDef
+  - cntk.io.StreamInformation
+  - cntk.io.UserMinibatchSource
   - cntk.io.sequence_to_cntk_text_format
   fullName: cntk.io
   langs:
@@ -19,11 +21,11 @@ items:
   name: io
   source:
     id: io
-    path: cntk/io/__init__.py
+    path: \cntk\io\__init__.py
     remote:
       branch: master
-      path: cntk/io/__init__.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\io\__init__.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.io
@@ -33,21 +35,27 @@ items:
   - python
   module: cntk.io
   name: CTFDeserializer
-  seealso: 'See also: [CNTKTextReader format](https://github.com/microsoft/cntk/wiki/BrainScript-CNTKTextFormat-Reader)'
+  seealsoContent: "See also: >>:cntkwiki:`CNTKTextReader format <BrainScript-CNTKTextFormat-Reader>`<<\n\
+    \n  <SYSTEM MESSAGE: c:\\local\\anaconda3-4.1.1-windows-x86_64\\lib\\site-packages\\\
+    cntk\\io\\__init__.py:docstring of cntk.io.CTFDeserializer:13: (INFO/1) No role\
+    \ entry for \"cntkwiki\" in module \"docutils.parsers.rst.languages.en\". Trying\
+    \ \"cntkwiki\" as canonical role name.>\n\n  <SYSTEM MESSAGE: c:\\local\\anaconda3-4.1.1-windows-x86_64\\\
+    lib\\site-packages\\cntk\\io\\__init__.py:docstring of cntk.io.CTFDeserializer:13:\
+    \ (ERROR/3) Unknown interpreted text role \"cntkwiki\".>"
   source:
     id: CTFDeserializer
-    path: cntk/io/__init__.py
+    path: \cntk\io\__init__.py
     remote:
       branch: master
-      path: cntk/io/__init__.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 455
+      path: \cntk\io\__init__.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 613
   summary: "Configures the CNTK text-format reader that reads text-based files with\
-    \ lines of the form:\n<!-- literal_block {\"xml:space\": \"preserve\", \"dupnames\"\
-    : [], \"classes\": [], \"ids\": [], \"backrefs\": [], \"names\": []} -->\n\n````\n\
-    \n   [Sequence_Id] (Sample)+\n   ````\nwhere:\n<!-- literal_block {\"xml:space\"\
-    : \"preserve\", \"dupnames\": [], \"classes\": [], \"ids\": [], \"backrefs\":\
-    \ [], \"names\": []} -->\n\n````\n\n   Sample=|Input_Name (Value )*\n   ````"
+    \ lines of the form:\n<!-- literal_block {\"ids\": [], \"xml:space\": \"preserve\"\
+    , \"names\": [], \"dupnames\": [], \"classes\": [], \"backrefs\": []} -->\n\n\
+    ````\n\n   [Sequence_Id] (Sample)+\n   ````\nwhere:\n<!-- literal_block {\"ids\"\
+    : [], \"xml:space\": \"preserve\", \"names\": [], \"dupnames\": [], \"classes\"\
+    : [], \"backrefs\": []} -->\n\n````\n\n   Sample=|Input_Name (Value )*\n   ````"
   syntax:
     content: CTFDeserializer(filename, streams)
     parameters:
@@ -66,12 +74,12 @@ items:
   name: HTKFeatureDeserializer
   source:
     id: HTKFeatureDeserializer
-    path: cntk/io/__init__.py
+    path: \cntk\io\__init__.py
     remote:
       branch: master
-      path: cntk/io/__init__.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 377
+      path: \cntk\io\__init__.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 511
   summary: Configures the HTK feature reader that reads speech data from scp files.
   syntax:
     content: HTKFeatureDeserializer(streams)
@@ -89,12 +97,12 @@ items:
   name: HTKMLFDeserializer
   source:
     id: HTKMLFDeserializer
-    path: cntk/io/__init__.py
+    path: \cntk\io\__init__.py
     remote:
       branch: master
-      path: cntk/io/__init__.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 398
+      path: \cntk\io\__init__.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 541
   summary: Configures an HTK label reader that reads speech HTK format MLF (Master
     Label File)
   syntax:
@@ -115,22 +123,28 @@ items:
   - python
   module: cntk.io
   name: ImageDeserializer
-  seealso: 'See also: [Image reader definition](https://github.com/microsoft/cntk/wiki/Image-reader)'
+  seealsoContent: "See also: >>:cntkwiki:`Image reader definition <BrainScript-Image-reader>`<<\n\
+    \n  <SYSTEM MESSAGE: c:\\local\\anaconda3-4.1.1-windows-x86_64\\lib\\site-packages\\\
+    cntk\\io\\__init__.py:docstring of cntk.io.ImageDeserializer:14: (INFO/1) No role\
+    \ entry for \"cntkwiki\" in module \"docutils.parsers.rst.languages.en\". Trying\
+    \ \"cntkwiki\" as canonical role name.>\n\n  <SYSTEM MESSAGE: c:\\local\\anaconda3-4.1.1-windows-x86_64\\\
+    lib\\site-packages\\cntk\\io\\__init__.py:docstring of cntk.io.ImageDeserializer:14:\
+    \ (ERROR/3) Unknown interpreted text role \"cntkwiki\".>"
   source:
     id: ImageDeserializer
-    path: cntk/io/__init__.py
+    path: \cntk\io\__init__.py
     remote:
       branch: master
-      path: cntk/io/__init__.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 418
+      path: \cntk\io\__init__.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 567
   summary: "Configures the image reader that reads images and corresponding labels\
-    \ from a file of the form:\n<!-- literal_block {\"xml:space\": \"preserve\", \"\
-    dupnames\": [], \"classes\": [], \"ids\": [], \"backrefs\": [], \"names\": []}\
+    \ from a file of the form:\n<!-- literal_block {\"ids\": [], \"xml:space\": \"\
+    preserve\", \"names\": [], \"dupnames\": [], \"classes\": [], \"backrefs\": []}\
     \ -->\n\n````\n\n   <full path to image> <tab> <numerical label (0-based class\
-    \ id)>\n   ````\nor:\n<!-- literal_block {\"xml:space\": \"preserve\", \"dupnames\"\
-    : [], \"classes\": [], \"ids\": [], \"backrefs\": [], \"names\": []} -->\n\n````\n\
-    \n   sequenceId <tab> path <tab> label\n   ````"
+    \ id)>\n   ````\nor:\n<!-- literal_block {\"ids\": [], \"xml:space\": \"preserve\"\
+    , \"names\": [], \"dupnames\": [], \"classes\": [], \"backrefs\": []} -->\n\n\
+    ````\n\n   sequenceId <tab> path <tab> label\n   ````"
   syntax:
     content: ImageDeserializer(filename, streams)
     parameters:
@@ -149,12 +163,12 @@ items:
   name: StreamDef
   source:
     id: StreamDef
-    path: cntk/io/__init__.py
+    path: \cntk\io\__init__.py
     remote:
       branch: master
-      path: cntk/io/__init__.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 497
+      path: \cntk\io\__init__.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 662
   summary: Configuration of a stream for use with the builtin Deserializers. The meanings
     of some configuration keys have a mild dependency on the exact deserializer, and
     certain keys are meaningless for certain deserializers.
@@ -227,12 +241,12 @@ items:
   name: sequence_to_cntk_text_format
   source:
     id: sequence_to_cntk_text_format
-    path: cntk/io/__init__.py
+    path: \cntk\io\__init__.py
     remote:
       branch: master
-      path: cntk/io/__init__.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 598
+      path: \cntk\io\__init__.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 770
   summary: Converts a list of NumPy arrays representing tensors of inputs into a format
     that is readable by @cntk.io.CTFDeserializer.
   syntax:
@@ -248,11 +262,7 @@ items:
       type:
       - dict
     return:
-      description: '<SYSTEM MESSAGE: /root/CNTK/bindings/python/doc/cntk.io.rst:2:
-        (INFO/1) Duplicate explicit target name: "cntktextreader format".>
-
-
-        String representation in [CNTKTextReader format](https://github.com/microsoft/cntk/wiki/BrainScript-CNTKTextFormat-Reader)'
+      description: String representation in >>:cntkwiki:`CNTKTextReader format <BrainScript-CNTKTextFormat-Reader>`<<
       type:
       - str
   type: Method
@@ -298,6 +308,16 @@ references:
   name: StreamDef
   parent: cntk.io
   uid: cntk.io.StreamDef
+- fullName: cntk.io.StreamInformation
+  isExternal: false
+  name: StreamInformation
+  parent: cntk.io
+  uid: cntk.io.StreamInformation
+- fullName: cntk.io.UserMinibatchSource
+  isExternal: false
+  name: UserMinibatchSource
+  parent: cntk.io
+  uid: cntk.io.UserMinibatchSource
 - fullName: cntk.io.sequence_to_cntk_text_format
   isExternal: false
   name: sequence_to_cntk_text_format

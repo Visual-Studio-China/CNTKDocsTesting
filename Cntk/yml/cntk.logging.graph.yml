@@ -16,11 +16,11 @@ items:
   name: graph
   source:
     id: graph
-    path: cntk/logging/graph.py
+    path: \cntk\logging\graph.py
     remote:
       branch: master
-      path: cntk/logging/graph.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\logging\graph.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.logging.graph
@@ -32,18 +32,19 @@ items:
   name: depth_first_search
   source:
     id: depth_first_search
-    path: cntk/logging/graph.py
+    path: \cntk\logging\graph.py
     remote:
       branch: master
-      path: cntk/logging/graph.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\logging\graph.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 11
   summary: Generic function that walks through the graph starting at `root` and uses
     function `visitor` on each node to check whether it should be returned.
   syntax:
-    content: depth_first_search(root, visitor)
+    content: depth_first_search(root, visitor, depth=0)
     parameters:
-    - description: the root to start the journey from
+    - defaultValue: '0'
+      description: the root to start the journey from
       id: root
       type:
       - Function or Variable
@@ -52,6 +53,11 @@ items:
       id: visitor
       type:
       - Python function or lambda
+    - description: how deep into the block hierarchy the DFS algorithm should go into.
+        Set to -1 for infinite depth.
+      id: depth
+      type:
+      - int, default 0
     return:
       description: List of functions, for which `visitor` was `True`
   type: Method
@@ -62,21 +68,22 @@ items:
   - python
   module: cntk.logging.graph
   name: find_all_with_name
-  seealso: 'See also: `find_all_with_name()` in class `Function`.'
+  seealsoContent: 'See also: `find_all_with_name()` in class `Function`.'
   source:
     id: find_all_with_name
-    path: cntk/logging/graph.py
+    path: \cntk\logging\graph.py
     remote:
       branch: master
-      path: cntk/logging/graph.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 72
+      path: \cntk\logging\graph.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 76
   summary: Finds functions in the graph starting from `node` and doing a depth-first
     search.
   syntax:
-    content: find_all_with_name(node, node_name)
+    content: find_all_with_name(node, node_name, depth=0)
     parameters:
-    - description: the node to start the journey from
+    - defaultValue: '0'
+      description: the node to start the journey from
       id: node
       type:
       - Function or Variable
@@ -84,6 +91,11 @@ items:
       id: node_name
       type:
       - str
+    - description: how deep into the block hierarchy the DFS algorithm should go into.
+        Set to -1 for infinite depth.
+      id: depth
+      type:
+      - int, default 0
     return:
       description: List of primitive (or block) functions having the specified name
   type: Method
@@ -94,21 +106,22 @@ items:
   - python
   module: cntk.logging.graph
   name: find_by_name
-  seealso: 'See also: `find_by_name()` in class `Function`.'
+  seealsoContent: 'See also: `find_by_name()` in class `Function`.'
   source:
     id: find_by_name
-    path: cntk/logging/graph.py
+    path: \cntk\logging\graph.py
     remote:
       branch: master
-      path: cntk/logging/graph.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 90
+      path: \cntk\logging\graph.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 97
   summary: Finds a function in the graph starting from `node` and doing a depth-first
     search. It assumes that the name occurs only once.
   syntax:
-    content: find_by_name(node, node_name)
+    content: find_by_name(node, node_name, depth=0)
     parameters:
-    - description: the node to start the journey from
+    - defaultValue: '0'
+      description: the node to start the journey from
       id: node
       type:
       - Function or Variable
@@ -116,6 +129,11 @@ items:
       id: node_name
       type:
       - str
+    - description: how deep into the block hierarchy the DFS algorithm should go into.
+        Set to -1 for infinite depth.
+      id: depth
+      type:
+      - int, default 0
     return:
       description: Primitive (or block) function having the specified name
   type: Method
@@ -128,18 +146,20 @@ items:
   name: get_node_outputs
   source:
     id: get_node_outputs
-    path: cntk/logging/graph.py
+    path: \cntk\logging\graph.py
     remote:
       branch: master
-      path: cntk/logging/graph.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 348
+      path: \cntk\logging\graph.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 358
   summary: Walks through every node of the graph starting at `node` and returns a
     list of all node outputs.
   syntax:
-    content: get_node_outputs(node)
+    content: get_node_outputs(node, depth=0)
     parameters:
-    - description: the node to start the journey from
+    - id: node
+    - defaultValue: '0'
+      description: the node to start the journey from
       id: node
       type:
       - graph node
@@ -155,12 +175,12 @@ items:
   name: output_function_graph
   source:
     id: output_function_graph
-    path: cntk/logging/graph.py
+    path: \cntk\logging\graph.py
     remote:
       branch: master
-      path: cntk/logging/graph.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 334
+      path: \cntk\logging\graph.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 344
   syntax:
     content: output_function_graph(node, dot_file_path=None, png_file_path=None)
     parameters:
@@ -179,20 +199,20 @@ items:
   name: plot
   source:
     id: plot
-    path: cntk/logging/graph.py
+    path: \cntk\logging\graph.py
     remote:
       branch: master
-      path: cntk/logging/graph.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 123
+      path: \cntk\logging\graph.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 133
   summary: "Walks through every node of the graph starting at `root`, creates a network\
     \ graph, and returns a network description. If `filename` is specified, it outputs\
     \ a DOT, PNG, PDF, or SVG file depending on the file name's suffix.\nRequirements:\n\
     * for DOT output: [pydot_ng](https://pypi.python.org/pypi/pydot-ng)\n\n   * <SYSTEM\
-    \ MESSAGE: /root/CNTK/bindings/python/doc/cntk.logging.rst:2: (INFO/1) Duplicate\
-    \ explicit target name: \"pydot_ng\".>\n\n     for PNG, PDF, and SVG output: [pydot_ng](https://pypi.python.org/pypi/pydot-ng)\
-    \ and [graphviz](http://graphviz.org) (GraphViz executable has to be in the system's\
-    \ PATH)."
+    \ MESSAGE: D:\\work\\git-code\\cntk\\CNTK\\bindings\\python\\cntk_test\\cntk.logging.graph.rst:2:\
+    \ (INFO/1) Duplicate explicit target name: \"pydot_ng\".>\n\n     for PNG, PDF,\
+    \ and SVG output: [pydot_ng](https://pypi.python.org/pypi/pydot-ng) and [graphviz](http://graphviz.org)\
+    \ (GraphViz executable has to be in the system's PATH)."
   syntax:
     content: plot(root, filename=None)
     parameters:

@@ -15,6 +15,7 @@ items:
   - cntk.ops.tests.linear_test.test_op_times_reduce_sequence_axis
   - cntk.ops.tests.linear_test.test_op_times_sparse_grad
   - cntk.ops.tests.linear_test.test_op_transpose_times
+  - cntk.ops.tests.linear_test.test_per_dim_mean_var_norm
   fullName: cntk.ops.tests.linear_test
   langs:
   - python
@@ -22,11 +23,11 @@ items:
   name: linear_test
   source:
     id: linear_test
-    path: cntk/ops/tests/linear_test.py
+    path: \cntk\ops\tests\linear_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/linear_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\linear_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   summary: Unit tests for linear algebra operations, each operation is tested for
     the forward and the backward pass
@@ -40,12 +41,12 @@ items:
   name: test_op_element_divide
   source:
     id: test_op_element_divide
-    path: cntk/ops/tests/linear_test.py
+    path: \cntk\ops\tests\linear_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/linear_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 197
+      path: \cntk\ops\tests\linear_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 196
   syntax:
     content: test_op_element_divide(left_operand, right_operand, device_id, precision)
     parameters:
@@ -63,12 +64,12 @@ items:
   name: test_op_element_times
   source:
     id: test_op_element_times
-    path: cntk/ops/tests/linear_test.py
+    path: \cntk\ops\tests\linear_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/linear_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 177
+      path: \cntk\ops\tests\linear_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 176
   syntax:
     content: test_op_element_times(left_operand, right_operand, device_id, precision)
     parameters:
@@ -86,12 +87,12 @@ items:
   name: test_op_minus
   source:
     id: test_op_minus
-    path: cntk/ops/tests/linear_test.py
+    path: \cntk\ops\tests\linear_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/linear_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 156
+      path: \cntk\ops\tests\linear_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 155
   syntax:
     content: test_op_minus(left_operand, right_operand, device_id, precision)
     parameters:
@@ -109,12 +110,12 @@ items:
   name: test_op_negate
   source:
     id: test_op_negate
-    path: cntk/ops/tests/linear_test.py
+    path: \cntk\ops\tests\linear_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/linear_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 224
+      path: \cntk\ops\tests\linear_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 223
   syntax:
     content: test_op_negate(operand, device_id, precision)
     parameters:
@@ -131,12 +132,12 @@ items:
   name: test_op_plus
   source:
     id: test_op_plus
-    path: cntk/ops/tests/linear_test.py
+    path: \cntk\ops\tests\linear_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/linear_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 35
+      path: \cntk\ops\tests\linear_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 36
   syntax:
     content: test_op_plus(left_operand, right_operand, device_id, precision)
     parameters:
@@ -154,12 +155,12 @@ items:
   name: test_op_plus_gradient_accumulation
   source:
     id: test_op_plus_gradient_accumulation
-    path: cntk/ops/tests/linear_test.py
+    path: \cntk\ops\tests\linear_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/linear_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 79
+      path: \cntk\ops\tests\linear_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 80
   syntax:
     content: test_op_plus_gradient_accumulation(device_id, precision)
     parameters:
@@ -175,12 +176,12 @@ items:
   name: test_op_plus_sequences
   source:
     id: test_op_plus_sequences
-    path: cntk/ops/tests/linear_test.py
+    path: \cntk\ops\tests\linear_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/linear_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 59
+      path: \cntk\ops\tests\linear_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 60
   syntax:
     content: test_op_plus_sequences(device_id, precision)
     parameters:
@@ -196,12 +197,12 @@ items:
   name: test_op_plus_var_sequences_input_input
   source:
     id: test_op_plus_var_sequences_input_input
-    path: cntk/ops/tests/linear_test.py
+    path: \cntk\ops\tests\linear_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/linear_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 111
+      path: \cntk\ops\tests\linear_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 110
   syntax:
     content: test_op_plus_var_sequences_input_input(left_batch, right_batch, device_id,
       precision)
@@ -220,12 +221,12 @@ items:
   name: test_op_times
   source:
     id: test_op_times
-    path: cntk/ops/tests/linear_test.py
+    path: \cntk\ops\tests\linear_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/linear_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 258
+      path: \cntk\ops\tests\linear_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 257
   syntax:
     content: test_op_times(left_operand, right_operand, device_id, precision)
     parameters:
@@ -243,12 +244,12 @@ items:
   name: test_op_times_reduce_sequence_axis
   source:
     id: test_op_times_reduce_sequence_axis
-    path: cntk/ops/tests/linear_test.py
+    path: \cntk\ops\tests\linear_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/linear_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 331
+      path: \cntk\ops\tests\linear_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 330
   syntax:
     content: test_op_times_reduce_sequence_axis(device_id, precision)
     parameters:
@@ -264,12 +265,12 @@ items:
   name: test_op_times_sparse_grad
   source:
     id: test_op_times_sparse_grad
-    path: cntk/ops/tests/linear_test.py
+    path: \cntk\ops\tests\linear_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/linear_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 315
+      path: \cntk\ops\tests\linear_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 314
   syntax:
     content: test_op_times_sparse_grad(device_id, precision)
     parameters:
@@ -285,12 +286,12 @@ items:
   name: test_op_transpose_times
   source:
     id: test_op_transpose_times
-    path: cntk/ops/tests/linear_test.py
+    path: \cntk\ops\tests\linear_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/linear_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 287
+      path: \cntk\ops\tests\linear_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 286
   syntax:
     content: test_op_transpose_times(left_operand, right_operand, device_id, precision)
     parameters:
@@ -300,6 +301,24 @@ items:
     - id: precision
   type: Method
   uid: cntk.ops.tests.linear_test.test_op_transpose_times
+- _type: function
+  fullName: cntk.ops.tests.linear_test.test_per_dim_mean_var_norm
+  langs:
+  - python
+  module: cntk.ops.tests.linear_test
+  name: test_per_dim_mean_var_norm
+  source:
+    id: test_per_dim_mean_var_norm
+    path: \cntk\ops\tests\linear_test.py
+    remote:
+      branch: master
+      path: \cntk\ops\tests\linear_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 357
+  syntax:
+    content: test_per_dim_mean_var_norm()
+  type: Method
+  uid: cntk.ops.tests.linear_test.test_per_dim_mean_var_norm
 references:
 - fullName: cntk.ops.tests.linear_test.test_op_element_divide
   isExternal: false
@@ -361,3 +380,8 @@ references:
   name: test_op_transpose_times
   parent: cntk.ops.tests.linear_test
   uid: cntk.ops.tests.linear_test.test_op_transpose_times
+- fullName: cntk.ops.tests.linear_test.test_per_dim_mean_var_norm
+  isExternal: false
+  name: test_per_dim_mean_var_norm
+  parent: cntk.ops.tests.linear_test
+  uid: cntk.ops.tests.linear_test.test_per_dim_mean_var_norm

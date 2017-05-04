@@ -4,6 +4,7 @@ items:
 - _type: class
   children:
   - cntk.learners.UserLearner.update
+  - cntk.learners.UserLearner.update
   class: cntk.learners.UserLearner
   fullName: cntk.learners.UserLearner
   inheritance:
@@ -16,12 +17,12 @@ items:
   name: UserLearner
   source:
     id: UserLearner
-    path: cntk/learners/__init__.py
+    path: \cntk\learners\__init__.py
     remote:
       branch: master
-      path: cntk/learners/__init__.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 160
+      path: \cntk\learners\__init__.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 176
   summary: 'Bases: `cntk.cntk_py.Learner`
 
     Base class of all user-defined learners. To implement your own learning algorithm,
@@ -44,12 +45,12 @@ items:
   name: update
   source:
     id: update
-    path: cntk/learners/__init__.py
+    path: \cntk\learners\__init__.py
     remote:
       branch: master
-      path: cntk/learners/__init__.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 201
+      path: \cntk\learners\__init__.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 217
   summary: Update the parameters associated with this learner.
   syntax:
     content: update(self, gradient_values, training_sample_count, sweep_end)
@@ -58,23 +59,103 @@ items:
     - description: maps `Parameter` to a NumPy array containing the first order gradient
         values for the Parameter w.r.t. the training objective.
       id: gradient_values
-      type:
+      type: &id001
       - dict
     - description: number of samples in the minibatch
       id: training_sample_count
-      type:
+      type: &id002
       - int
     - description: if the data is fed by a conforming reader, this indicates whether
         a full pass over the dataset has just occured.
       id: sweep_end
-      type:
+      type: &id003
       - bool
-    return:
+    return: &id004
       description: '*False* to indicate that learning has stopped for all of the parameters
         associated with this learner'
   type: Method
   uid: cntk.learners.UserLearner.update
+- _type: class
+  children:
+  - cntk.learners.UserLearner.update
+  class: cntk.learners.UserLearner
+  fullName: cntk.learners.UserLearner
+  inheritance:
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.Learner
+  langs:
+  - python
+  module: cntk.learners
+  name: UserLearner
+  source:
+    id: UserLearner
+    path: \cntk\learners\__init__.py
+    remote:
+      branch: master
+      path: \cntk\learners\__init__.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 176
+  summary: 'Bases: `cntk.cntk_py.Learner`
+
+    Base class of all user-defined learners. To implement your own learning algorithm,
+    derive from this class and override the @cntk.learners.UserLearner.update.
+
+    Certain optimizers (such as AdaGrad) require additional storage. This can be allocated
+    and initialized during construction.
+
+    '
+  syntax:
+    content: UserLearner(self, parameters, lr_schedule, as_numpy=True)
+  type: Class
+  uid: cntk.learners.UserLearner
+- &id005
+  _type: method
+  class: cntk.learners.UserLearner
+  fullName: cntk.learners.UserLearner.update
+  langs:
+  - python
+  module: cntk.learners
+  name: update
+  source:
+    id: update
+    path: \cntk\learners\__init__.py
+    remote:
+      branch: master
+      path: \cntk\learners\__init__.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 217
+  summary: Update the parameters associated with this learner.
+  syntax:
+    content: update(self, gradient_values, training_sample_count, sweep_end)
+    parameters:
+    - id: self
+    - description: maps `Parameter` to a NumPy array containing the first order gradient
+        values for the Parameter w.r.t. the training objective.
+      id: gradient_values
+      type: *id001
+    - description: number of samples in the minibatch
+      id: training_sample_count
+      type: *id002
+    - description: if the data is fed by a conforming reader, this indicates whether
+        a full pass over the dataset has just occured.
+      id: sweep_end
+      type: *id003
+    return: *id004
+  type: Method
+  uid: cntk.learners.UserLearner.update
+- *id005
 references:
+- fullName: cntk.learners.UserLearner.update
+  isExternal: false
+  name: update
+  parent: cntk.learners.UserLearner
+  uid: cntk.learners.UserLearner.update
+- fullName: cntk.learners.UserLearner.update
+  isExternal: false
+  name: update
+  parent: cntk.learners.UserLearner
+  uid: cntk.learners.UserLearner.update
 - fullName: cntk.learners.UserLearner.update
   isExternal: false
   name: update

@@ -13,12 +13,12 @@ items:
   name: TensorOpsMixin
   source:
     id: TensorOpsMixin
-    path: cntk/tensor.py
+    path: \cntk\tensor.py
     remote:
       branch: master
-      path: cntk/tensor.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 8
+      path: \cntk\tensor.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 10
   summary: 'Bases: `object`
 
     This class defines math overloads so that CNTK nodes can be written in math expressions.'

@@ -24,13 +24,13 @@ items:
   name: MultiOutputUserFunction
   source:
     id: MultiOutputUserFunction
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 309
-  summary: 'Bases: [cntk.ops.functions.UserFunction](.md#cntk.ops.functions.UserFunction.md)
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 312
+  summary: 'Bases: [cntk.ops.functions.UserFunction](cntk.ops.functions.html.md#cntk.ops.functions.UserFunction.md)
 
 
 
@@ -48,12 +48,12 @@ items:
   name: backward
   source:
     id: backward
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 325
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 328
   syntax:
     content: backward(self, state, root_gradients, variables)
     parameters:
@@ -72,12 +72,12 @@ items:
   name: forward
   source:
     id: forward
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 317
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 320
   syntax:
     content: forward(self, arguments, outputs, device=None, outputs_to_retain=None)
     parameters:
@@ -99,12 +99,12 @@ items:
   name: infer_outputs
   source:
     id: infer_outputs
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 313
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 316
   syntax:
     content: infer_outputs(self)
     parameters:

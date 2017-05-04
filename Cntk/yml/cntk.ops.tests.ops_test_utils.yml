@@ -17,11 +17,11 @@ items:
   name: ops_test_utils
   source:
     id: ops_test_utils
-    path: cntk/ops/tests/ops_test_utils.py
+    path: \cntk\ops\tests\ops_test_utils.py
     remote:
       branch: master
-      path: cntk/ops/tests/ops_test_utils.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\ops_test_utils.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   summary: Utils for operations unit tests
   type: Namespace
@@ -34,12 +34,12 @@ items:
   name: batch_dense_to_sparse
   source:
     id: batch_dense_to_sparse
-    path: cntk/ops/tests/ops_test_utils.py
+    path: \cntk\ops\tests\ops_test_utils.py
     remote:
       branch: master
-      path: cntk/ops/tests/ops_test_utils.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 156
+      path: \cntk\ops\tests\ops_test_utils.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 153
   summary: Helper test function that converts a batch of dense tensors into sparse
     representation that can be consumed by `cntk.ops.sparse_input_numpy()`.
   syntax:
@@ -67,13 +67,13 @@ items:
   name: cntk_device
   source:
     id: cntk_device
-    path: cntk/ops/tests/ops_test_utils.py
+    path: \cntk\ops\tests\ops_test_utils.py
     remote:
       branch: master
-      path: cntk/ops/tests/ops_test_utils.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 24
-  summary: Converts the legacy device ID as it was used in CNTK 1 to a [DeviceDescriptor](.md#cntk.device.DeviceDescriptor.md)
+      path: \cntk\ops\tests\ops_test_utils.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 22
+  summary: Converts the legacy device ID as it was used in CNTK 1 to a [DeviceDescriptor](cntk.device.html.md#cntk.device.DeviceDescriptor.md)
     instance.
   syntax:
     content: cntk_device(device_id)
@@ -83,7 +83,7 @@ items:
       type:
       - int
     return:
-      description: '[DeviceDescriptor](.md#cntk.device.DeviceDescriptor.md)'
+      description: '[DeviceDescriptor](cntk.device.html.md#cntk.device.DeviceDescriptor.md)'
   type: Method
   uid: cntk.ops.tests.ops_test_utils.cntk_device
 - _type: function
@@ -94,12 +94,12 @@ items:
   name: compare_lists_of_np_arrays
   source:
     id: compare_lists_of_np_arrays
-    path: cntk/ops/tests/ops_test_utils.py
+    path: \cntk\ops\tests\ops_test_utils.py
     remote:
       branch: master
-      path: cntk/ops/tests/ops_test_utils.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 249
+      path: \cntk\ops\tests\ops_test_utils.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 246
   syntax:
     content: compare_lists_of_np_arrays(first_list, second_list)
     parameters:
@@ -115,12 +115,12 @@ items:
   name: remove_np_array_in_list
   source:
     id: remove_np_array_in_list
-    path: cntk/ops/tests/ops_test_utils.py
+    path: \cntk\ops\tests\ops_test_utils.py
     remote:
       branch: master
-      path: cntk/ops/tests/ops_test_utils.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 238
+      path: \cntk\ops\tests\ops_test_utils.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 235
   syntax:
     content: remove_np_array_in_list(arr, l)
     parameters:
@@ -136,12 +136,12 @@ items:
   name: test_batch_dense_to_sparse_full
   source:
     id: test_batch_dense_to_sparse_full
-    path: cntk/ops/tests/ops_test_utils.py
+    path: \cntk\ops\tests\ops_test_utils.py
     remote:
       branch: master
-      path: cntk/ops/tests/ops_test_utils.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 200
+      path: \cntk\ops\tests\ops_test_utils.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 197
   syntax:
     content: test_batch_dense_to_sparse_full()
   type: Method
@@ -154,12 +154,12 @@ items:
   name: test_batch_dense_to_sparse_zeros
   source:
     id: test_batch_dense_to_sparse_zeros
-    path: cntk/ops/tests/ops_test_utils.py
+    path: \cntk\ops\tests\ops_test_utils.py
     remote:
       branch: master
-      path: cntk/ops/tests/ops_test_utils.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 222
+      path: \cntk\ops\tests\ops_test_utils.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 219
   syntax:
     content: test_batch_dense_to_sparse_zeros()
   type: Method
@@ -172,12 +172,12 @@ items:
   name: unittest_helper
   source:
     id: unittest_helper
-    path: cntk/ops/tests/ops_test_utils.py
+    path: \cntk\ops\tests\ops_test_utils.py
     remote:
       branch: master
-      path: cntk/ops/tests/ops_test_utils.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 121
+      path: \cntk\ops\tests\ops_test_utils.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 118
   syntax:
     content: unittest_helper(root_node, forward_input, expected_forward, expected_backward,
       device_id=-1, precision="float")

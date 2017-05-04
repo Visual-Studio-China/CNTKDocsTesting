@@ -13,12 +13,12 @@ items:
   name: default_override_or
   source:
     id: default_override_or
-    path: cntk/default_options.py
+    path: \cntk\default_options.py
     remote:
       branch: master
-      path: cntk/default_options.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 50
+      path: \cntk\default_options.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 49
   summary: 'Bases: `object`'
   syntax:
     content: default_override_or(self, value)

@@ -13,11 +13,11 @@ items:
   name: tensor_test
   source:
     id: tensor_test
-    path: cntk/tests/tensor_test.py
+    path: \cntk\tests\tensor_test.py
     remote:
       branch: master
-      path: cntk/tests/tensor_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\tensor_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.tests.tensor_test
@@ -29,11 +29,11 @@ items:
   name: test_eval_scalar
   source:
     id: test_eval_scalar
-    path: cntk/tests/tensor_test.py
+    path: \cntk\tests\tensor_test.py
     remote:
       branch: master
-      path: cntk/tests/tensor_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\tensor_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 19
   syntax:
     content: test_eval_scalar()
@@ -47,11 +47,11 @@ items:
   name: test_numpy_conversion
   source:
     id: test_numpy_conversion
-    path: cntk/tests/tensor_test.py
+    path: \cntk\tests\tensor_test.py
     remote:
       branch: master
-      path: cntk/tests/tensor_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\tensor_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 24
   syntax:
     content: test_numpy_conversion()
@@ -65,11 +65,11 @@ items:
   name: test_overload_exception
   source:
     id: test_overload_exception
-    path: cntk/tests/tensor_test.py
+    path: \cntk\tests\tensor_test.py
     remote:
       branch: master
-      path: cntk/tests/tensor_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\tensor_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 13
   syntax:
     content: test_overload_exception()

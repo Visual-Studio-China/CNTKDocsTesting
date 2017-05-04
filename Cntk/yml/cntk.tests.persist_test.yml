@@ -14,11 +14,11 @@ items:
   name: persist_test
   source:
     id: persist_test
-    path: cntk/tests/persist_test.py
+    path: \cntk\tests\persist_test.py
     remote:
       branch: master
-      path: cntk/tests/persist_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\persist_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.tests.persist_test
@@ -30,11 +30,11 @@ items:
   name: test_load_save_constant
   source:
     id: test_load_save_constant
-    path: cntk/tests/persist_test.py
+    path: \cntk\tests\persist_test.py
     remote:
       branch: master
-      path: cntk/tests/persist_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\persist_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 14
   syntax:
     content: test_load_save_constant(tmpdir)
@@ -50,11 +50,11 @@ items:
   name: test_load_save_input_legacy_names
   source:
     id: test_load_save_input_legacy_names
-    path: cntk/tests/persist_test.py
+    path: \cntk\tests\persist_test.py
     remote:
       branch: master
-      path: cntk/tests/persist_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\persist_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 35
   syntax:
     content: test_load_save_input_legacy_names(tmpdir)
@@ -70,11 +70,11 @@ items:
   name: test_load_save_inputs
   source:
     id: test_load_save_inputs
-    path: cntk/tests/persist_test.py
+    path: \cntk\tests\persist_test.py
     remote:
       branch: master
-      path: cntk/tests/persist_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\persist_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 59
   syntax:
     content: test_load_save_inputs(tmpdir)
@@ -90,11 +90,11 @@ items:
   name: test_load_save_unique_input
   source:
     id: test_load_save_unique_input
-    path: cntk/tests/persist_test.py
+    path: \cntk\tests\persist_test.py
     remote:
       branch: master
-      path: cntk/tests/persist_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\persist_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 85
   syntax:
     content: test_load_save_unique_input(tmpdir)

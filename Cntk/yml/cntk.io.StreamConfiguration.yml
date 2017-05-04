@@ -15,12 +15,12 @@ items:
   name: StreamConfiguration
   source:
     id: StreamConfiguration
-    path: cntk/io/__init__.py
+    path: \cntk\io\__init__.py
     remote:
       branch: master
-      path: cntk/io/__init__.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 478
+      path: \cntk\io\__init__.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 641
   summary: 'Bases: `cntk.cntk_py.StreamConfiguration`
 
     Configuration of a stream in a text format reader.'

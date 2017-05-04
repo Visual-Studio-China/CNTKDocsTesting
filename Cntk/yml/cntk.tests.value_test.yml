@@ -1,0 +1,291 @@
+#YamlMime:PythonReference
+api_name: []
+items:
+- _type: module
+  children:
+  - cntk.tests.value_test.test_2d_sparse_sequences_value
+  - cntk.tests.value_test.test_as_shape_to_1d
+  - cntk.tests.value_test.test_asarray_method
+  - cntk.tests.value_test.test_dense_failing_value_to_ndarray
+  - cntk.tests.value_test.test_dense_value_to_ndarray
+  - cntk.tests.value_test.test_ndarray_properties
+  - cntk.tests.value_test.test_ndarrayview_from_csr
+  - cntk.tests.value_test.test_sparse_failing_value_to_csr
+  - cntk.tests.value_test.test_sparse_value_to_csr
+  - cntk.tests.value_test.test_value_properties
+  fullName: cntk.tests.value_test
+  langs:
+  - python
+  module: cntk.tests.value_test
+  name: value_test
+  source:
+    id: value_test
+    path: \cntk\tests\value_test.py
+    remote:
+      branch: master
+      path: \cntk\tests\value_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 0
+  type: Namespace
+  uid: cntk.tests.value_test
+- _type: function
+  fullName: cntk.tests.value_test.test_2d_sparse_sequences_value
+  langs:
+  - python
+  module: cntk.tests.value_test
+  name: test_2d_sparse_sequences_value
+  source:
+    id: test_2d_sparse_sequences_value
+    path: \cntk\tests\value_test.py
+    remote:
+      branch: master
+      path: \cntk\tests\value_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 230
+  syntax:
+    content: test_2d_sparse_sequences_value(device_id)
+    parameters:
+    - id: device_id
+  type: Method
+  uid: cntk.tests.value_test.test_2d_sparse_sequences_value
+- _type: function
+  fullName: cntk.tests.value_test.test_as_shape_to_1d
+  langs:
+  - python
+  module: cntk.tests.value_test
+  name: test_as_shape_to_1d
+  source:
+    id: test_as_shape_to_1d
+    path: \cntk\tests\value_test.py
+    remote:
+      branch: master
+      path: \cntk\tests\value_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 242
+  syntax:
+    content: test_as_shape_to_1d(device_id)
+    parameters:
+    - id: device_id
+  type: Method
+  uid: cntk.tests.value_test.test_as_shape_to_1d
+- _type: function
+  fullName: cntk.tests.value_test.test_asarray_method
+  langs:
+  - python
+  module: cntk.tests.value_test
+  name: test_asarray_method
+  source:
+    id: test_asarray_method
+    path: \cntk\tests\value_test.py
+    remote:
+      branch: master
+      path: \cntk\tests\value_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 156
+  syntax:
+    content: test_asarray_method()
+  type: Method
+  uid: cntk.tests.value_test.test_asarray_method
+- _type: function
+  fullName: cntk.tests.value_test.test_dense_failing_value_to_ndarray
+  langs:
+  - python
+  module: cntk.tests.value_test
+  name: test_dense_failing_value_to_ndarray
+  source:
+    id: test_dense_failing_value_to_ndarray
+    path: \cntk\tests\value_test.py
+    remote:
+      branch: master
+      path: \cntk\tests\value_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 144
+  syntax:
+    content: test_dense_failing_value_to_ndarray(data, num_of_dynamic_axes, expected_value_shape,
+      expected_array_shapes)
+    parameters:
+    - id: data
+    - id: num_of_dynamic_axes
+    - id: expected_value_shape
+    - id: expected_array_shapes
+  type: Method
+  uid: cntk.tests.value_test.test_dense_failing_value_to_ndarray
+- _type: function
+  fullName: cntk.tests.value_test.test_dense_value_to_ndarray
+  langs:
+  - python
+  module: cntk.tests.value_test
+  name: test_dense_value_to_ndarray
+  source:
+    id: test_dense_value_to_ndarray
+    path: \cntk\tests\value_test.py
+    remote:
+      branch: master
+      path: \cntk\tests\value_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 93
+  syntax:
+    content: test_dense_value_to_ndarray(data, num_of_dynamic_axes, expected_value_shape,
+      expected_array_shapes)
+    parameters:
+    - id: data
+    - id: num_of_dynamic_axes
+    - id: expected_value_shape
+    - id: expected_array_shapes
+  type: Method
+  uid: cntk.tests.value_test.test_dense_value_to_ndarray
+- _type: function
+  fullName: cntk.tests.value_test.test_ndarray_properties
+  langs:
+  - python
+  module: cntk.tests.value_test
+  name: test_ndarray_properties
+  source:
+    id: test_ndarray_properties
+    path: \cntk\tests\value_test.py
+    remote:
+      branch: master
+      path: \cntk\tests\value_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 198
+  syntax:
+    content: test_ndarray_properties()
+  type: Method
+  uid: cntk.tests.value_test.test_ndarray_properties
+- _type: function
+  fullName: cntk.tests.value_test.test_ndarrayview_from_csr
+  langs:
+  - python
+  module: cntk.tests.value_test
+  name: test_ndarrayview_from_csr
+  source:
+    id: test_ndarrayview_from_csr
+    path: \cntk\tests\value_test.py
+    remote:
+      branch: master
+      path: \cntk\tests\value_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 217
+  syntax:
+    content: test_ndarrayview_from_csr(device_id)
+    parameters:
+    - id: device_id
+  type: Method
+  uid: cntk.tests.value_test.test_ndarrayview_from_csr
+- _type: function
+  fullName: cntk.tests.value_test.test_sparse_failing_value_to_csr
+  langs:
+  - python
+  module: cntk.tests.value_test
+  name: test_sparse_failing_value_to_csr
+  source:
+    id: test_sparse_failing_value_to_csr
+    path: \cntk\tests\value_test.py
+    remote:
+      branch: master
+      path: \cntk\tests\value_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 150
+  syntax:
+    content: test_sparse_failing_value_to_csr(data, num_of_dynamic_axes, expected_value_shape,
+      expected_csr_shapes)
+    parameters:
+    - id: data
+    - id: num_of_dynamic_axes
+    - id: expected_value_shape
+    - id: expected_csr_shapes
+  type: Method
+  uid: cntk.tests.value_test.test_sparse_failing_value_to_csr
+- _type: function
+  fullName: cntk.tests.value_test.test_sparse_value_to_csr
+  langs:
+  - python
+  module: cntk.tests.value_test
+  name: test_sparse_value_to_csr
+  source:
+    id: test_sparse_value_to_csr
+    path: \cntk\tests\value_test.py
+    remote:
+      branch: master
+      path: \cntk\tests\value_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 113
+  syntax:
+    content: test_sparse_value_to_csr(data, num_of_dynamic_axes, expected_value_shape,
+      expected_csr_shapes)
+    parameters:
+    - id: data
+    - id: num_of_dynamic_axes
+    - id: expected_value_shape
+    - id: expected_csr_shapes
+  type: Method
+  uid: cntk.tests.value_test.test_sparse_value_to_csr
+- _type: function
+  fullName: cntk.tests.value_test.test_value_properties
+  langs:
+  - python
+  module: cntk.tests.value_test
+  name: test_value_properties
+  source:
+    id: test_value_properties
+    path: \cntk\tests\value_test.py
+    remote:
+      branch: master
+      path: \cntk\tests\value_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 183
+  syntax:
+    content: test_value_properties()
+  type: Method
+  uid: cntk.tests.value_test.test_value_properties
+references:
+- fullName: cntk.tests.value_test.test_2d_sparse_sequences_value
+  isExternal: false
+  name: test_2d_sparse_sequences_value
+  parent: cntk.tests.value_test
+  uid: cntk.tests.value_test.test_2d_sparse_sequences_value
+- fullName: cntk.tests.value_test.test_as_shape_to_1d
+  isExternal: false
+  name: test_as_shape_to_1d
+  parent: cntk.tests.value_test
+  uid: cntk.tests.value_test.test_as_shape_to_1d
+- fullName: cntk.tests.value_test.test_asarray_method
+  isExternal: false
+  name: test_asarray_method
+  parent: cntk.tests.value_test
+  uid: cntk.tests.value_test.test_asarray_method
+- fullName: cntk.tests.value_test.test_dense_failing_value_to_ndarray
+  isExternal: false
+  name: test_dense_failing_value_to_ndarray
+  parent: cntk.tests.value_test
+  uid: cntk.tests.value_test.test_dense_failing_value_to_ndarray
+- fullName: cntk.tests.value_test.test_dense_value_to_ndarray
+  isExternal: false
+  name: test_dense_value_to_ndarray
+  parent: cntk.tests.value_test
+  uid: cntk.tests.value_test.test_dense_value_to_ndarray
+- fullName: cntk.tests.value_test.test_ndarray_properties
+  isExternal: false
+  name: test_ndarray_properties
+  parent: cntk.tests.value_test
+  uid: cntk.tests.value_test.test_ndarray_properties
+- fullName: cntk.tests.value_test.test_ndarrayview_from_csr
+  isExternal: false
+  name: test_ndarrayview_from_csr
+  parent: cntk.tests.value_test
+  uid: cntk.tests.value_test.test_ndarrayview_from_csr
+- fullName: cntk.tests.value_test.test_sparse_failing_value_to_csr
+  isExternal: false
+  name: test_sparse_failing_value_to_csr
+  parent: cntk.tests.value_test
+  uid: cntk.tests.value_test.test_sparse_failing_value_to_csr
+- fullName: cntk.tests.value_test.test_sparse_value_to_csr
+  isExternal: false
+  name: test_sparse_value_to_csr
+  parent: cntk.tests.value_test
+  uid: cntk.tests.value_test.test_sparse_value_to_csr
+- fullName: cntk.tests.value_test.test_value_properties
+  isExternal: false
+  name: test_value_properties
+  parent: cntk.tests.value_test
+  uid: cntk.tests.value_test.test_value_properties

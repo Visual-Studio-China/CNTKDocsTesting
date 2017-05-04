@@ -14,11 +14,11 @@ items:
   name: non_diff_test
   source:
     id: non_diff_test
-    path: cntk/ops/tests/non_diff_test.py
+    path: \cntk\ops\tests\non_diff_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/non_diff_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\non_diff_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   summary: Unit tests for operations that are not differentiable.
   type: Namespace
@@ -31,11 +31,11 @@ items:
   name: test_input_variable
   source:
     id: test_input_variable
-    path: cntk/ops/tests/non_diff_test.py
+    path: \cntk\ops\tests\non_diff_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/non_diff_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\non_diff_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 97
   syntax:
     content: test_input_variable()
@@ -49,11 +49,11 @@ items:
   name: test_op_ceil
   source:
     id: test_op_ceil
-    path: cntk/ops/tests/non_diff_test.py
+    path: \cntk\ops\tests\non_diff_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/non_diff_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\non_diff_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 43
   syntax:
     content: test_op_ceil(operand, device_id, precision)
@@ -71,11 +71,11 @@ items:
   name: test_op_floor
   source:
     id: test_op_floor
-    path: cntk/ops/tests/non_diff_test.py
+    path: \cntk\ops\tests\non_diff_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/non_diff_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\non_diff_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 28
   syntax:
     content: test_op_floor(operand, device_id, precision)
@@ -93,11 +93,11 @@ items:
   name: test_op_round
   source:
     id: test_op_round
-    path: cntk/ops/tests/non_diff_test.py
+    path: \cntk\ops\tests\non_diff_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/non_diff_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\non_diff_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 84
   syntax:
     content: test_op_round(operand, expected, device_id, precision)

@@ -11,11 +11,11 @@ items:
   name: axis
   source:
     id: axis
-    path: cntk/axis.py
+    path: \cntk\axis.py
     remote:
       branch: master
-      path: cntk/axis.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\axis.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.axis

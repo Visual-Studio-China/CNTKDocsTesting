@@ -1,0 +1,376 @@
+#YamlMime:PythonReference
+api_name: []
+items:
+- _type: module
+  children:
+  - cntk.learners.tests.learner_test.TestProgressWriter
+  - cntk.learners.tests.learner_test.ffnet
+  - cntk.learners.tests.learner_test.generate_random_data
+  - cntk.learners.tests.learner_test.sweep_based_schedule_fails
+  - cntk.learners.tests.learner_test.test_0d_1d_parameter_set_value
+  - cntk.learners.tests.learner_test.test_learner_empy_parameters_list
+  - cntk.learners.tests.learner_test.test_learner_init
+  - cntk.learners.tests.learner_test.test_learner_logging
+  - cntk.learners.tests.learner_test.test_learner_update
+  - cntk.learners.tests.learner_test.test_learning_rate_schedule
+  - cntk.learners.tests.learner_test.test_momentum_schedule
+  - cntk.learners.tests.learner_test.test_momentum_schedule_per_sample
+  - cntk.learners.tests.learner_test.test_sgd_with_noise
+  - cntk.learners.tests.learner_test.test_sweep_based_schedule
+  - cntk.learners.tests.learner_test.test_training_parameter_schedule
+  fullName: cntk.learners.tests.learner_test
+  langs:
+  - python
+  module: cntk.learners.tests.learner_test
+  name: learner_test
+  source:
+    id: learner_test
+    path: \cntk\learners\tests\learner_test.py
+    remote:
+      branch: master
+      path: \cntk\learners\tests\learner_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 0
+  type: Namespace
+  uid: cntk.learners.tests.learner_test
+- _type: function
+  fullName: cntk.learners.tests.learner_test.ffnet
+  langs:
+  - python
+  module: cntk.learners.tests.learner_test
+  name: ffnet
+  source:
+    id: ffnet
+    path: \cntk\learners\tests\learner_test.py
+    remote:
+      branch: master
+      path: \cntk\learners\tests\learner_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 276
+  syntax:
+    content: ffnet()
+  type: Method
+  uid: cntk.learners.tests.learner_test.ffnet
+- _type: function
+  fullName: cntk.learners.tests.learner_test.generate_random_data
+  langs:
+  - python
+  module: cntk.learners.tests.learner_test
+  name: generate_random_data
+  source:
+    id: generate_random_data
+    path: \cntk\learners\tests\learner_test.py
+    remote:
+      branch: master
+      path: \cntk\learners\tests\learner_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 256
+  syntax:
+    content: generate_random_data(sample_size, feature_dim, num_classes)
+    parameters:
+    - id: sample_size
+    - id: feature_dim
+    - id: num_classes
+  type: Method
+  uid: cntk.learners.tests.learner_test.generate_random_data
+- _type: function
+  fullName: cntk.learners.tests.learner_test.sweep_based_schedule_fails
+  langs:
+  - python
+  module: cntk.learners.tests.learner_test
+  name: sweep_based_schedule_fails
+  source:
+    id: sweep_based_schedule_fails
+    path: \cntk\learners\tests\learner_test.py
+    remote:
+      branch: master
+      path: \cntk\learners\tests\learner_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 39
+  syntax:
+    content: sweep_based_schedule_fails()
+  type: Method
+  uid: cntk.learners.tests.learner_test.sweep_based_schedule_fails
+- _type: function
+  fullName: cntk.learners.tests.learner_test.test_0d_1d_parameter_set_value
+  langs:
+  - python
+  module: cntk.learners.tests.learner_test
+  name: test_0d_1d_parameter_set_value
+  source:
+    id: test_0d_1d_parameter_set_value
+    path: \cntk\learners\tests\learner_test.py
+    remote:
+      branch: master
+      path: \cntk\learners\tests\learner_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 328
+  syntax:
+    content: test_0d_1d_parameter_set_value()
+  type: Method
+  uid: cntk.learners.tests.learner_test.test_0d_1d_parameter_set_value
+- _type: function
+  fullName: cntk.learners.tests.learner_test.test_learner_empy_parameters_list
+  langs:
+  - python
+  module: cntk.learners.tests.learner_test
+  name: test_learner_empy_parameters_list
+  source:
+    id: test_learner_empy_parameters_list
+    path: \cntk\learners\tests\learner_test.py
+    remote:
+      branch: master
+      path: \cntk\learners\tests\learner_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 270
+  syntax:
+    content: test_learner_empy_parameters_list()
+  type: Method
+  uid: cntk.learners.tests.learner_test.test_learner_empy_parameters_list
+- _type: function
+  fullName: cntk.learners.tests.learner_test.test_learner_init
+  langs:
+  - python
+  module: cntk.learners.tests.learner_test
+  name: test_learner_init
+  source:
+    id: test_learner_init
+    path: \cntk\learners\tests\learner_test.py
+    remote:
+      branch: master
+      path: \cntk\learners\tests\learner_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 61
+  syntax:
+    content: test_learner_init()
+  type: Method
+  uid: cntk.learners.tests.learner_test.test_learner_init
+- _type: function
+  fullName: cntk.learners.tests.learner_test.test_learner_logging
+  langs:
+  - python
+  module: cntk.learners.tests.learner_test
+  name: test_learner_logging
+  source:
+    id: test_learner_logging
+    path: \cntk\learners\tests\learner_test.py
+    remote:
+      branch: master
+      path: \cntk\learners\tests\learner_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 152
+  syntax:
+    content: test_learner_logging()
+  type: Method
+  uid: cntk.learners.tests.learner_test.test_learner_logging
+- _type: function
+  fullName: cntk.learners.tests.learner_test.test_learner_update
+  langs:
+  - python
+  module: cntk.learners.tests.learner_test
+  name: test_learner_update
+  source:
+    id: test_learner_update
+    path: \cntk\learners\tests\learner_test.py
+    remote:
+      branch: master
+      path: \cntk\learners\tests\learner_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 124
+  syntax:
+    content: test_learner_update()
+  type: Method
+  uid: cntk.learners.tests.learner_test.test_learner_update
+- _type: function
+  fullName: cntk.learners.tests.learner_test.test_learning_rate_schedule
+  langs:
+  - python
+  module: cntk.learners.tests.learner_test
+  name: test_learning_rate_schedule
+  source:
+    id: test_learning_rate_schedule
+    path: \cntk\learners\tests\learner_test.py
+    remote:
+      branch: master
+      path: \cntk\learners\tests\learner_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 34
+  syntax:
+    content: test_learning_rate_schedule(params, expectation)
+    parameters:
+    - id: params
+    - id: expectation
+  type: Method
+  uid: cntk.learners.tests.learner_test.test_learning_rate_schedule
+- _type: function
+  fullName: cntk.learners.tests.learner_test.test_momentum_schedule
+  langs:
+  - python
+  module: cntk.learners.tests.learner_test
+  name: test_momentum_schedule
+  source:
+    id: test_momentum_schedule
+    path: \cntk\learners\tests\learner_test.py
+    remote:
+      branch: master
+      path: \cntk\learners\tests\learner_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 43
+  syntax:
+    content: test_momentum_schedule()
+  type: Method
+  uid: cntk.learners.tests.learner_test.test_momentum_schedule
+- _type: function
+  fullName: cntk.learners.tests.learner_test.test_momentum_schedule_per_sample
+  langs:
+  - python
+  module: cntk.learners.tests.learner_test
+  name: test_momentum_schedule_per_sample
+  source:
+    id: test_momentum_schedule_per_sample
+    path: \cntk\learners\tests\learner_test.py
+    remote:
+      branch: master
+      path: \cntk\learners\tests\learner_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 56
+  syntax:
+    content: test_momentum_schedule_per_sample(params, expectation)
+    parameters:
+    - id: params
+    - id: expectation
+  type: Method
+  uid: cntk.learners.tests.learner_test.test_momentum_schedule_per_sample
+- _type: function
+  fullName: cntk.learners.tests.learner_test.test_sgd_with_noise
+  langs:
+  - python
+  module: cntk.learners.tests.learner_test
+  name: test_sgd_with_noise
+  source:
+    id: test_sgd_with_noise
+    path: \cntk\learners\tests\learner_test.py
+    remote:
+      branch: master
+      path: \cntk\learners\tests\learner_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 319
+  syntax:
+    content: test_sgd_with_noise()
+  type: Method
+  uid: cntk.learners.tests.learner_test.test_sgd_with_noise
+- _type: function
+  fullName: cntk.learners.tests.learner_test.test_sweep_based_schedule
+  langs:
+  - python
+  module: cntk.learners.tests.learner_test
+  name: test_sweep_based_schedule
+  source:
+    id: test_sweep_based_schedule
+    path: \cntk\learners\tests\learner_test.py
+    remote:
+      branch: master
+      path: \cntk\learners\tests\learner_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 192
+  syntax:
+    content: test_sweep_based_schedule(tmpdir, device_id)
+    parameters:
+    - id: tmpdir
+    - id: device_id
+  type: Method
+  uid: cntk.learners.tests.learner_test.test_sweep_based_schedule
+- _type: function
+  fullName: cntk.learners.tests.learner_test.test_training_parameter_schedule
+  langs:
+  - python
+  module: cntk.learners.tests.learner_test
+  name: test_training_parameter_schedule
+  source:
+    id: test_training_parameter_schedule
+    path: \cntk\learners\tests\learner_test.py
+    remote:
+      branch: master
+      path: \cntk\learners\tests\learner_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 183
+  syntax:
+    content: test_training_parameter_schedule()
+  type: Method
+  uid: cntk.learners.tests.learner_test.test_training_parameter_schedule
+references:
+- fullName: cntk.learners.tests.learner_test.TestProgressWriter
+  isExternal: false
+  name: TestProgressWriter
+  parent: cntk.learners.tests.learner_test
+  uid: cntk.learners.tests.learner_test.TestProgressWriter
+- fullName: cntk.learners.tests.learner_test.ffnet
+  isExternal: false
+  name: ffnet
+  parent: cntk.learners.tests.learner_test
+  uid: cntk.learners.tests.learner_test.ffnet
+- fullName: cntk.learners.tests.learner_test.generate_random_data
+  isExternal: false
+  name: generate_random_data
+  parent: cntk.learners.tests.learner_test
+  uid: cntk.learners.tests.learner_test.generate_random_data
+- fullName: cntk.learners.tests.learner_test.sweep_based_schedule_fails
+  isExternal: false
+  name: sweep_based_schedule_fails
+  parent: cntk.learners.tests.learner_test
+  uid: cntk.learners.tests.learner_test.sweep_based_schedule_fails
+- fullName: cntk.learners.tests.learner_test.test_0d_1d_parameter_set_value
+  isExternal: false
+  name: test_0d_1d_parameter_set_value
+  parent: cntk.learners.tests.learner_test
+  uid: cntk.learners.tests.learner_test.test_0d_1d_parameter_set_value
+- fullName: cntk.learners.tests.learner_test.test_learner_empy_parameters_list
+  isExternal: false
+  name: test_learner_empy_parameters_list
+  parent: cntk.learners.tests.learner_test
+  uid: cntk.learners.tests.learner_test.test_learner_empy_parameters_list
+- fullName: cntk.learners.tests.learner_test.test_learner_init
+  isExternal: false
+  name: test_learner_init
+  parent: cntk.learners.tests.learner_test
+  uid: cntk.learners.tests.learner_test.test_learner_init
+- fullName: cntk.learners.tests.learner_test.test_learner_logging
+  isExternal: false
+  name: test_learner_logging
+  parent: cntk.learners.tests.learner_test
+  uid: cntk.learners.tests.learner_test.test_learner_logging
+- fullName: cntk.learners.tests.learner_test.test_learner_update
+  isExternal: false
+  name: test_learner_update
+  parent: cntk.learners.tests.learner_test
+  uid: cntk.learners.tests.learner_test.test_learner_update
+- fullName: cntk.learners.tests.learner_test.test_learning_rate_schedule
+  isExternal: false
+  name: test_learning_rate_schedule
+  parent: cntk.learners.tests.learner_test
+  uid: cntk.learners.tests.learner_test.test_learning_rate_schedule
+- fullName: cntk.learners.tests.learner_test.test_momentum_schedule
+  isExternal: false
+  name: test_momentum_schedule
+  parent: cntk.learners.tests.learner_test
+  uid: cntk.learners.tests.learner_test.test_momentum_schedule
+- fullName: cntk.learners.tests.learner_test.test_momentum_schedule_per_sample
+  isExternal: false
+  name: test_momentum_schedule_per_sample
+  parent: cntk.learners.tests.learner_test
+  uid: cntk.learners.tests.learner_test.test_momentum_schedule_per_sample
+- fullName: cntk.learners.tests.learner_test.test_sgd_with_noise
+  isExternal: false
+  name: test_sgd_with_noise
+  parent: cntk.learners.tests.learner_test
+  uid: cntk.learners.tests.learner_test.test_sgd_with_noise
+- fullName: cntk.learners.tests.learner_test.test_sweep_based_schedule
+  isExternal: false
+  name: test_sweep_based_schedule
+  parent: cntk.learners.tests.learner_test
+  uid: cntk.learners.tests.learner_test.test_sweep_based_schedule
+- fullName: cntk.learners.tests.learner_test.test_training_parameter_schedule
+  isExternal: false
+  name: test_training_parameter_schedule
+  parent: cntk.learners.tests.learner_test
+  uid: cntk.learners.tests.learner_test.test_training_parameter_schedule

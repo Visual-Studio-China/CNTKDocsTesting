@@ -15,12 +15,12 @@ items:
   name: SequenceOverMeta
   source:
     id: SequenceOverMeta
-    path: cntk/layers/typing.py
+    path: \cntk\layers\typing.py
     remote:
       branch: master
-      path: cntk/layers/typing.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 57
+      path: \cntk\layers\typing.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 158
   summary: 'Bases: `type`'
   syntax: {}
   type: Class

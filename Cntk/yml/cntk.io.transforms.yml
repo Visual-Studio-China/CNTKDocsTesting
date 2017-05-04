@@ -14,11 +14,11 @@ items:
   name: transforms
   source:
     id: transforms
-    path: cntk/io/transforms.py
+    path: \cntk\io\transforms.py
     remote:
       branch: master
-      path: cntk/io/transforms.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\io\transforms.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.io.transforms
@@ -30,12 +30,12 @@ items:
   name: color
   source:
     id: color
-    path: cntk/io/transforms.py
+    path: \cntk\io\transforms.py
     remote:
       branch: master
-      path: cntk/io/transforms.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 96
+      path: \cntk\io\transforms.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 101
   summary: Color transform that can be used to pass to *map_features* for data augmentation.
   syntax:
     content: color(brightness_radius=0.0, contrast_radius=0.0, saturation_radius=0.0)
@@ -74,11 +74,11 @@ items:
   name: crop
   source:
     id: crop
-    path: cntk/io/transforms.py
+    path: \cntk\io\transforms.py
     remote:
       branch: master
-      path: cntk/io/transforms.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\io\transforms.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 9
   summary: Crop transform that can be used to pass to *map_features*
   syntax:
@@ -87,9 +87,13 @@ items:
     parameters:
     - defaultValue: '1.0'
       description: '''center'', ''randomside'', ''randomarea'', or ''multiview10''.  ''randomside''
-        and ''randomarea'' are usually used during training, while ''center'' and
-        ''multiview10'' are usually used during testing. Random cropping is a popular
-        data augmentation technique used to improve generalization of the DNN.'
+        and ''randomarea'' are usually used during training.  If either ''randomside''
+        and ''randomarea'' are set, Horizontal flipping will be enabled and the image
+        will be randomly flipped in horizontal direction. Horizontal flipping is another
+        popular data augmentation technique and should be used if images exhibit vertical
+        symmetry, for example, like many real-world objects. ''center'' and ''multiview10''
+        are usually used during testing. Random cropping is a popular data augmentation
+        technique used to improve generalization of the DNN.'
       id: crop_type
       type:
       - str, default 'center'
@@ -154,12 +158,12 @@ items:
   name: mean
   source:
     id: mean
-    path: cntk/io/transforms.py
+    path: \cntk\io\transforms.py
     remote:
       branch: master
-      path: cntk/io/transforms.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 82
+      path: \cntk\io\transforms.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 87
   summary: Mean transform that can be used to pass to *map_features* for data augmentation.
   syntax:
     content: mean(filename)
@@ -183,12 +187,12 @@ items:
   name: scale
   source:
     id: scale
-    path: cntk/io/transforms.py
+    path: \cntk\io\transforms.py
     remote:
       branch: master
-      path: cntk/io/transforms.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 59
+      path: \cntk\io\transforms.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 64
   summary: Scale transform that can be used to pass to *map_features* for data augmentation.
   syntax:
     content: scale(width, height, channels, interpolations="linear", scale_mode="fill",

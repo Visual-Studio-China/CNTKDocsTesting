@@ -6,6 +6,8 @@ items:
   - cntk.ops.tests.userfunction_test.LambdaFunc
   - cntk.ops.tests.userfunction_test.MultiOutputUserFunction
   - cntk.ops.tests.userfunction_test.MyPlus
+  - cntk.ops.tests.userfunction_test.MyPlusWithNoGradientNeededForOutput
+  - cntk.ops.tests.userfunction_test.MyPlusWithNoGradientToRightOperand
   - cntk.ops.tests.userfunction_test.PlusAndLast
   - cntk.ops.tests.userfunction_test.test_ext_backpropstate
   - cntk.ops.tests.userfunction_test.test_ext_eval_1
@@ -19,7 +21,11 @@ items:
   - cntk.ops.tests.userfunction_test.test_ext_lambdafunc
   - cntk.ops.tests.userfunction_test.test_ext_train
   - cntk.ops.tests.userfunction_test.test_multioutput_udf
+  - cntk.ops.tests.userfunction_test.test_native_user_function
   - cntk.ops.tests.userfunction_test.test_udf_clone
+  - cntk.ops.tests.userfunction_test.test_udf_no_gradient_for_some_inputs
+  - cntk.ops.tests.userfunction_test.test_udf_op_name
+  - cntk.ops.tests.userfunction_test.test_udf_output_needs_no_gradient
   - cntk.ops.tests.userfunction_test.test_udf_plus_and_last
   fullName: cntk.ops.tests.userfunction_test
   langs:
@@ -28,11 +34,11 @@ items:
   name: userfunction_test
   source:
     id: userfunction_test
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   summary: Unit tests for function extension
   type: Namespace
@@ -45,12 +51,12 @@ items:
   name: test_ext_backpropstate
   source:
     id: test_ext_backpropstate
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 179
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 182
   syntax:
     content: test_ext_backpropstate(payload)
     parameters:
@@ -65,12 +71,12 @@ items:
   name: test_ext_eval_1
   source:
     id: test_ext_eval_1
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 48
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 51
   syntax:
     content: test_ext_eval_1()
   type: Method
@@ -83,12 +89,12 @@ items:
   name: test_ext_eval_2_only_param
   source:
     id: test_ext_eval_2_only_param
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 59
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 62
   syntax:
     content: test_ext_eval_2_only_param()
   type: Method
@@ -101,12 +107,12 @@ items:
   name: test_ext_eval_3_no_input
   source:
     id: test_ext_eval_3_no_input
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 72
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 75
   syntax:
     content: test_ext_eval_3_no_input()
   type: Method
@@ -119,12 +125,12 @@ items:
   name: test_ext_eval_4_a_inside_graph
   source:
     id: test_ext_eval_4_a_inside_graph
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 82
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 85
   syntax:
     content: test_ext_eval_4_a_inside_graph()
   type: Method
@@ -137,12 +143,12 @@ items:
   name: test_ext_eval_4_b_inside_graph
   source:
     id: test_ext_eval_4_b_inside_graph
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 93
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 96
   syntax:
     content: test_ext_eval_4_b_inside_graph()
   type: Method
@@ -155,12 +161,12 @@ items:
   name: test_ext_eval_5_times
   source:
     id: test_ext_eval_5_times
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 103
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 106
   syntax:
     content: test_ext_eval_5_times()
   type: Method
@@ -173,12 +179,12 @@ items:
   name: test_ext_eval_6_clone
   source:
     id: test_ext_eval_6_clone
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 114
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 117
   syntax:
     content: test_ext_eval_6_clone()
   type: Method
@@ -191,12 +197,12 @@ items:
   name: test_ext_eval_7_placeholder
   source:
     id: test_ext_eval_7_placeholder
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 129
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 132
   syntax:
     content: test_ext_eval_7_placeholder()
   type: Method
@@ -209,12 +215,12 @@ items:
   name: test_ext_lambdafunc
   source:
     id: test_ext_lambdafunc
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 240
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 243
   syntax:
     content: test_ext_lambdafunc()
   type: Method
@@ -227,12 +233,12 @@ items:
   name: test_ext_train
   source:
     id: test_ext_train
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 142
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 145
   syntax:
     content: test_ext_train()
   type: Method
@@ -245,16 +251,34 @@ items:
   name: test_multioutput_udf
   source:
     id: test_multioutput_udf
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 332
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 335
   syntax:
     content: test_multioutput_udf()
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_multioutput_udf
+- _type: function
+  fullName: cntk.ops.tests.userfunction_test.test_native_user_function
+  langs:
+  - python
+  module: cntk.ops.tests.userfunction_test
+  name: test_native_user_function
+  source:
+    id: test_native_user_function
+    path: \cntk\ops\tests\userfunction_test.py
+    remote:
+      branch: master
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 424
+  syntax:
+    content: test_native_user_function()
+  type: Method
+  uid: cntk.ops.tests.userfunction_test.test_native_user_function
 - _type: function
   fullName: cntk.ops.tests.userfunction_test.test_udf_clone
   langs:
@@ -263,16 +287,70 @@ items:
   name: test_udf_clone
   source:
     id: test_udf_clone
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 165
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 168
   syntax:
     content: test_udf_clone()
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_udf_clone
+- _type: function
+  fullName: cntk.ops.tests.userfunction_test.test_udf_no_gradient_for_some_inputs
+  langs:
+  - python
+  module: cntk.ops.tests.userfunction_test
+  name: test_udf_no_gradient_for_some_inputs
+  source:
+    id: test_udf_no_gradient_for_some_inputs
+    path: \cntk\ops\tests\userfunction_test.py
+    remote:
+      branch: master
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 376
+  syntax:
+    content: test_udf_no_gradient_for_some_inputs()
+  type: Method
+  uid: cntk.ops.tests.userfunction_test.test_udf_no_gradient_for_some_inputs
+- _type: function
+  fullName: cntk.ops.tests.userfunction_test.test_udf_op_name
+  langs:
+  - python
+  module: cntk.ops.tests.userfunction_test
+  name: test_udf_op_name
+  source:
+    id: test_udf_op_name
+    path: \cntk\ops\tests\userfunction_test.py
+    remote:
+      branch: master
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 352
+  syntax:
+    content: test_udf_op_name()
+  type: Method
+  uid: cntk.ops.tests.userfunction_test.test_udf_op_name
+- _type: function
+  fullName: cntk.ops.tests.userfunction_test.test_udf_output_needs_no_gradient
+  langs:
+  - python
+  module: cntk.ops.tests.userfunction_test
+  name: test_udf_output_needs_no_gradient
+  source:
+    id: test_udf_output_needs_no_gradient
+    path: \cntk\ops\tests\userfunction_test.py
+    remote:
+      branch: master
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 408
+  syntax:
+    content: test_udf_output_needs_no_gradient()
+  type: Method
+  uid: cntk.ops.tests.userfunction_test.test_udf_output_needs_no_gradient
 - _type: function
   fullName: cntk.ops.tests.userfunction_test.test_udf_plus_and_last
   langs:
@@ -281,12 +359,12 @@ items:
   name: test_udf_plus_and_last
   source:
     id: test_udf_plus_and_last
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 293
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 296
   syntax:
     content: test_udf_plus_and_last()
   type: Method
@@ -307,6 +385,16 @@ references:
   name: MyPlus
   parent: cntk.ops.tests.userfunction_test
   uid: cntk.ops.tests.userfunction_test.MyPlus
+- fullName: cntk.ops.tests.userfunction_test.MyPlusWithNoGradientNeededForOutput
+  isExternal: false
+  name: MyPlusWithNoGradientNeededForOutput
+  parent: cntk.ops.tests.userfunction_test
+  uid: cntk.ops.tests.userfunction_test.MyPlusWithNoGradientNeededForOutput
+- fullName: cntk.ops.tests.userfunction_test.MyPlusWithNoGradientToRightOperand
+  isExternal: false
+  name: MyPlusWithNoGradientToRightOperand
+  parent: cntk.ops.tests.userfunction_test
+  uid: cntk.ops.tests.userfunction_test.MyPlusWithNoGradientToRightOperand
 - fullName: cntk.ops.tests.userfunction_test.PlusAndLast
   isExternal: false
   name: PlusAndLast
@@ -372,11 +460,31 @@ references:
   name: test_multioutput_udf
   parent: cntk.ops.tests.userfunction_test
   uid: cntk.ops.tests.userfunction_test.test_multioutput_udf
+- fullName: cntk.ops.tests.userfunction_test.test_native_user_function
+  isExternal: false
+  name: test_native_user_function
+  parent: cntk.ops.tests.userfunction_test
+  uid: cntk.ops.tests.userfunction_test.test_native_user_function
 - fullName: cntk.ops.tests.userfunction_test.test_udf_clone
   isExternal: false
   name: test_udf_clone
   parent: cntk.ops.tests.userfunction_test
   uid: cntk.ops.tests.userfunction_test.test_udf_clone
+- fullName: cntk.ops.tests.userfunction_test.test_udf_no_gradient_for_some_inputs
+  isExternal: false
+  name: test_udf_no_gradient_for_some_inputs
+  parent: cntk.ops.tests.userfunction_test
+  uid: cntk.ops.tests.userfunction_test.test_udf_no_gradient_for_some_inputs
+- fullName: cntk.ops.tests.userfunction_test.test_udf_op_name
+  isExternal: false
+  name: test_udf_op_name
+  parent: cntk.ops.tests.userfunction_test
+  uid: cntk.ops.tests.userfunction_test.test_udf_op_name
+- fullName: cntk.ops.tests.userfunction_test.test_udf_output_needs_no_gradient
+  isExternal: false
+  name: test_udf_output_needs_no_gradient
+  parent: cntk.ops.tests.userfunction_test
+  uid: cntk.ops.tests.userfunction_test.test_udf_output_needs_no_gradient
 - fullName: cntk.ops.tests.userfunction_test.test_udf_plus_and_last
   isExternal: false
   name: test_udf_plus_and_last

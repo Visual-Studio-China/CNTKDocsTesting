@@ -11,13 +11,13 @@ items:
   name: attention
   source:
     id: attention
-    path: cntk/layers/models/attention.py
+    path: \cntk\layers\models\attention.py
     remote:
       branch: master
-      path: cntk/layers/models/attention.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\layers\models\attention.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
-  summary: attention -- standard attention model
+  summary: Standard attention model.
   type: Namespace
   uid: cntk.layers.models.attention
 - _type: function
@@ -28,29 +28,30 @@ items:
   name: AttentionModel
   source:
     id: AttentionModel
-    path: cntk/layers/models/attention.py
+    path: \cntk\layers\models\attention.py
     remote:
       branch: master
-      path: cntk/layers/models/attention.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\layers\models\attention.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 18
   summary: Layer factory function to create a function object that implements an attention
     model as described in Bahdanau, et al., "Neural machine translation by jointly
     learning to align and translate."
   syntax:
     content: AttentionModel(attention_dim, attention_span=None, attention_axis=None,
-      init=<cntk.default_options.default_override_or object at 0x2b1e628df5c0>, go_backwards=<cntk.default_options.default_override_or
-      object at 0x2b1e628df5f8>, enable_self_stabilization=<cntk.default_options.default_override_or
-      object at 0x2b1e628df630>, name="")
+      init=<cntk.default_options.default_override_or object at 0x000002741CFAEA90>,
+      go_backwards=<cntk.default_options.default_override_or object at 0x000002741CFAEAC8>,
+      enable_self_stabilization=<cntk.default_options.default_override_or object at
+      0x000002741CFAEB00>, name="")
     parameters:
     - id: attention_dim
     - defaultValue: ''
       id: attention_span
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b1e628df630>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x000002741CFAEB00>
       id: attention_axis
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b1e628df5f8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x000002741CFAEAC8>
       id: init
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b1e628df5c0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x000002741CFAEA90>
       id: go_backwards
     - defaultValue: None
       id: enable_self_stabilization

@@ -11,11 +11,11 @@ items:
   name: test_utils
   source:
     id: test_utils
-    path: cntk/tests/test_utils.py
+    path: \cntk\tests\test_utils.py
     remote:
       branch: master
-      path: cntk/tests/test_utils.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\test_utils.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   summary: Utils for unit tests
   type: Namespace
@@ -28,11 +28,11 @@ items:
   name: precision
   source:
     id: precision
-    path: cntk/tests/test_utils.py
+    path: \cntk\tests\test_utils.py
     remote:
       branch: master
-      path: cntk/tests/test_utils.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\test_utils.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 23
   syntax:
     content: precision(request)

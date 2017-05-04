@@ -12,11 +12,11 @@ items:
   name: tensor
   source:
     id: tensor
-    path: cntk/tensor.py
+    path: \cntk\tensor.py
     remote:
       branch: master
-      path: cntk/tensor.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tensor.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.tensor

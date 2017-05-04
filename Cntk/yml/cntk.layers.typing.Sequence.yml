@@ -17,7 +17,7 @@ items:
     remote:
       branch: master
       path: null
-      repo: https://github.com/Microsoft/CNTK
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: null
   summary: 'Bases: `object`
 

@@ -14,11 +14,11 @@ items:
   name: function_test
   source:
     id: function_test
-    path: cntk/tests/function_test.py
+    path: \cntk\tests\function_test.py
     remote:
       branch: master
-      path: cntk/tests/function_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\function_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.tests.function_test
@@ -30,11 +30,11 @@ items:
   name: test_0d_data_1d_sample_shape
   source:
     id: test_0d_data_1d_sample_shape
-    path: cntk/tests/function_test.py
+    path: \cntk\tests\function_test.py
     remote:
       branch: master
-      path: cntk/tests/function_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\function_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 25
   syntax:
     content: test_0d_data_1d_sample_shape()
@@ -48,11 +48,11 @@ items:
   name: test_1d_NDArrayView_copy
   source:
     id: test_1d_NDArrayView_copy
-    path: cntk/tests/function_test.py
+    path: \cntk\tests\function_test.py
     remote:
       branch: master
-      path: cntk/tests/function_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\function_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 32
   syntax:
     content: test_1d_NDArrayView_copy()
@@ -66,11 +66,11 @@ items:
   name: test_outputs
   source:
     id: test_outputs
-    path: cntk/tests/function_test.py
+    path: \cntk\tests\function_test.py
     remote:
       branch: master
-      path: cntk/tests/function_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\function_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 11
   syntax:
     content: test_outputs()
@@ -84,11 +84,11 @@ items:
   name: test_sequences_packed_in_single_ndarray
   source:
     id: test_sequences_packed_in_single_ndarray
-    path: cntk/tests/function_test.py
+    path: \cntk\tests\function_test.py
     remote:
       branch: master
-      path: cntk/tests/function_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\function_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 43
   syntax:
     content: test_sequences_packed_in_single_ndarray()

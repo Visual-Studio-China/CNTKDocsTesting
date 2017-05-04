@@ -13,11 +13,11 @@ items:
   name: recurrent_test
   source:
     id: recurrent_test
-    path: cntk/ops/tests/recurrent_test.py
+    path: \cntk\ops\tests\recurrent_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/recurrent_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\recurrent_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   summary: Unit tests for recurrent operations, each operation is tested for the forward
     and the backward pass
@@ -31,12 +31,12 @@ items:
   name: test_op_delay_with_initial_state
   source:
     id: test_op_delay_with_initial_state
-    path: cntk/ops/tests/recurrent_test.py
+    path: \cntk\ops\tests\recurrent_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/recurrent_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 116
+      path: \cntk\ops\tests\recurrent_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 114
   syntax:
     content: test_op_delay_with_initial_state(input_size, time_step, initial_state_size,
       device_id, precision)
@@ -56,11 +56,11 @@ items:
   name: test_op_future_value
   source:
     id: test_op_future_value
-    path: cntk/ops/tests/recurrent_test.py
+    path: \cntk\ops\tests\recurrent_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/recurrent_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\recurrent_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 28
   syntax:
     content: test_op_future_value(input_size, time_step, initial_state, device_id,
@@ -81,12 +81,12 @@ items:
   name: test_op_past_value
   source:
     id: test_op_past_value
-    path: cntk/ops/tests/recurrent_test.py
+    path: \cntk\ops\tests\recurrent_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/recurrent_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 68
+      path: \cntk\ops\tests\recurrent_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 67
   syntax:
     content: test_op_past_value(input_size, time_step, initial_state, device_id, precision)
     parameters:

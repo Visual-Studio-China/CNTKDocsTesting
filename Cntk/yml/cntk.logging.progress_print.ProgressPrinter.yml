@@ -11,6 +11,7 @@ items:
   - cntk.logging.progress_print.ProgressPrinter.epoch_summary
   - cntk.logging.progress_print.ProgressPrinter.log
   - cntk.logging.progress_print.ProgressPrinter.on_training_update_end
+  - cntk.logging.progress_print.ProgressPrinter.on_write_distributed_sync_update
   - cntk.logging.progress_print.ProgressPrinter.on_write_test_summary
   - cntk.logging.progress_print.ProgressPrinter.on_write_test_update
   - cntk.logging.progress_print.ProgressPrinter.on_write_training_summary
@@ -19,6 +20,7 @@ items:
   - cntk.logging.progress_print.ProgressPrinter.reset_start
   - cntk.logging.progress_print.ProgressPrinter.update
   - cntk.logging.progress_print.ProgressPrinter.update_with_trainer
+  - cntk.logging.progress_print.ProgressPrinter.write
   class: cntk.logging.progress_print.ProgressPrinter
   fullName: cntk.logging.progress_print.ProgressPrinter
   inheritance:
@@ -31,11 +33,11 @@ items:
   name: ProgressPrinter
   source:
     id: ProgressPrinter
-    path: cntk/logging/progress_print.py
+    path: \cntk\logging\progress_print.py
     remote:
       branch: master
-      path: cntk/logging/progress_print.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\logging\progress_print.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 27
   summary: 'Bases: `cntk.cntk_py.ProgressWriter`
 
@@ -57,15 +59,18 @@ items:
 
 
 
+
+
     '
   syntax:
     content: ProgressPrinter(self, freq=None, first=0, tag="", log_to_file=None, rank=None,
-      gen_heartbeat=False, num_epochs=300, test_freq=None, test_first=0, metric_is_pct=True)
+      gen_heartbeat=False, num_epochs=300, test_freq=None, test_first=0, metric_is_pct=True,
+      distributed_freq=None, distributed_first=0)
     parameters:
     - description: 'determines how often printing of training progress will occur.
         A value of 0 means a geometric schedule (1,2,4,...). A value > 0 means an
         arithmetic schedule (print for minibatch number: `freq`, print for minibatch
-        number: 2*``freq``, print for minibatch number: 3*``freq``,...). A value of
+        number: `2 * freq`, print for minibatch number: `3 * freq`,...). A value of
         None means no per-minibatch log.'
       id: freq
       type:
@@ -110,6 +115,16 @@ items:
       id: metric_is_pct
       type:
       - bool, default True
+    - description: similar to `freq`, but applies to printing distributed-training
+        worker synchronization info.
+      id: distributed_freq
+      type:
+      - int or None, default None
+    - description: similar to `first`, but applies to printing distributed-training
+        worker synchronization info.
+      id: distributed_first
+      type:
+      - int, default 0
   type: Class
   uid: cntk.logging.progress_print.ProgressPrinter
 - _type: method
@@ -121,12 +136,12 @@ items:
   name: avg_loss_since_last
   source:
     id: avg_loss_since_last
-    path: cntk/logging/progress_print.py
+    path: \cntk\logging\progress_print.py
     remote:
       branch: master
-      path: cntk/logging/progress_print.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 153
+      path: \cntk\logging\progress_print.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 162
   summary: 'DEPRECATED.
 
     Returns: the average loss since the last print'
@@ -145,12 +160,12 @@ items:
   name: avg_loss_since_start
   source:
     id: avg_loss_since_start
-    path: cntk/logging/progress_print.py
+    path: \cntk\logging\progress_print.py
     remote:
       branch: master
-      path: cntk/logging/progress_print.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 135
+      path: \cntk\logging\progress_print.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 144
   summary: 'DEPRECATED.
 
     Returns: the average loss since the start of accumulation'
@@ -169,12 +184,12 @@ items:
   name: avg_metric_since_last
   source:
     id: avg_metric_since_last
-    path: cntk/logging/progress_print.py
+    path: \cntk\logging\progress_print.py
     remote:
       branch: master
-      path: cntk/logging/progress_print.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 162
+      path: \cntk\logging\progress_print.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 171
   summary: 'DEPRECATED.
 
     Returns: the average metric since the last print'
@@ -193,12 +208,12 @@ items:
   name: avg_metric_since_start
   source:
     id: avg_metric_since_start
-    path: cntk/logging/progress_print.py
+    path: \cntk\logging\progress_print.py
     remote:
       branch: master
-      path: cntk/logging/progress_print.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 144
+      path: \cntk\logging\progress_print.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 153
   summary: 'DEPRECATED.
 
     Returns: the average metric since the start of accumulation'
@@ -217,12 +232,12 @@ items:
   name: end_progress_print
   source:
     id: end_progress_print
-    path: cntk/logging/progress_print.py
+    path: \cntk\logging\progress_print.py
     remote:
       branch: master
-      path: cntk/logging/progress_print.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 115
+      path: \cntk\logging\progress_print.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 124
   summary: Prints the given message signifying the end of training.
   syntax:
     content: end_progress_print(self, msg="")
@@ -244,12 +259,12 @@ items:
   name: epoch_summary
   source:
     id: epoch_summary
-    path: cntk/logging/progress_print.py
+    path: \cntk\logging\progress_print.py
     remote:
       branch: master
-      path: cntk/logging/progress_print.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 213
+      path: \cntk\logging\progress_print.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 226
   summary: 'DEPRECATED.
 
     If on an arithmetic schedule print an epoch summary using the ''start'' accumulators.
@@ -275,12 +290,12 @@ items:
   name: log
   source:
     id: log
-    path: cntk/logging/progress_print.py
+    path: \cntk\logging\progress_print.py
     remote:
       branch: master
-      path: cntk/logging/progress_print.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 126
+      path: \cntk\logging\progress_print.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 135
   summary: Prints any message the user wishes to place in the log.
   syntax:
     content: log(self, message)
@@ -301,18 +316,42 @@ items:
   name: on_training_update_end
   source:
     id: on_training_update_end
-    path: cntk/logging/progress_print.py
+    path: \cntk\logging\progress_print.py
     remote:
       branch: master
-      path: cntk/logging/progress_print.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 323
+      path: \cntk\logging\progress_print.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 336
   syntax:
     content: on_training_update_end(self)
     parameters:
     - id: self
   type: Method
   uid: cntk.logging.progress_print.ProgressPrinter.on_training_update_end
+- _type: method
+  class: cntk.logging.progress_print.ProgressPrinter
+  fullName: cntk.logging.progress_print.ProgressPrinter.on_write_distributed_sync_update
+  langs:
+  - python
+  module: cntk.logging.progress_print
+  name: on_write_distributed_sync_update
+  source:
+    id: on_write_distributed_sync_update
+    path: \cntk\logging\progress_print.py
+    remote:
+      branch: master
+      path: \cntk\logging\progress_print.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 344
+  syntax:
+    content: on_write_distributed_sync_update(self, samples, updates, aggregate_metric)
+    parameters:
+    - id: self
+    - id: samples
+    - id: updates
+    - id: aggregate_metric
+  type: Method
+  uid: cntk.logging.progress_print.ProgressPrinter.on_write_distributed_sync_update
 - _type: method
   class: cntk.logging.progress_print.ProgressPrinter
   fullName: cntk.logging.progress_print.ProgressPrinter.on_write_test_summary
@@ -322,12 +361,12 @@ items:
   name: on_write_test_summary
   source:
     id: on_write_test_summary
-    path: cntk/logging/progress_print.py
+    path: \cntk\logging\progress_print.py
     remote:
       branch: master
-      path: cntk/logging/progress_print.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 399
+      path: \cntk\logging\progress_print.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 416
   syntax:
     content: on_write_test_summary(self, samples, updates, summaries, aggregate_metric,
       elapsed_milliseconds)
@@ -349,12 +388,12 @@ items:
   name: on_write_test_update
   source:
     id: on_write_test_update
-    path: cntk/logging/progress_print.py
+    path: \cntk\logging\progress_print.py
     remote:
       branch: master
-      path: cntk/logging/progress_print.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 327
+      path: \cntk\logging\progress_print.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 340
   syntax:
     content: on_write_test_update(self, samples, updates, aggregate_metric)
     parameters:
@@ -373,12 +412,12 @@ items:
   name: on_write_training_summary
   source:
     id: on_write_training_summary
-    path: cntk/logging/progress_print.py
+    path: \cntk\logging\progress_print.py
     remote:
       branch: master
-      path: cntk/logging/progress_print.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 374
+      path: \cntk\logging\progress_print.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 391
   syntax:
     content: on_write_training_summary(self, samples, updates, summaries, aggregate_loss,
       aggregate_metric, elapsed_milliseconds)
@@ -401,12 +440,12 @@ items:
   name: on_write_training_update
   source:
     id: on_write_training_update
-    path: cntk/logging/progress_print.py
+    path: \cntk\logging\progress_print.py
     remote:
       branch: master
-      path: cntk/logging/progress_print.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 319
+      path: \cntk\logging\progress_print.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 332
   syntax:
     content: on_write_training_update(self, samples, updates, aggregate_loss, aggregate_metric)
     parameters:
@@ -426,12 +465,12 @@ items:
   name: reset_last
   source:
     id: reset_last
-    path: cntk/logging/progress_print.py
+    path: \cntk\logging\progress_print.py
     remote:
       branch: master
-      path: cntk/logging/progress_print.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 187
+      path: \cntk\logging\progress_print.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 196
   summary: 'DEPRECATED.
 
     Resets the ''last'' accumulators
@@ -453,12 +492,12 @@ items:
   name: reset_start
   source:
     id: reset_start
-    path: cntk/logging/progress_print.py
+    path: \cntk\logging\progress_print.py
     remote:
       branch: master
-      path: cntk/logging/progress_print.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 171
+      path: \cntk\logging\progress_print.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 180
   summary: 'DEPRECATED.
 
     Resets the ''start'' accumulators
@@ -480,12 +519,12 @@ items:
   name: update
   source:
     id: update
-    path: cntk/logging/progress_print.py
+    path: \cntk\logging\progress_print.py
     remote:
       branch: master
-      path: cntk/logging/progress_print.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 245
+      path: \cntk\logging\progress_print.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 258
   summary: 'DEPRECATED.
 
     Updates the accumulators using the loss, the minibatch_size and the optional metric.'
@@ -518,12 +557,12 @@ items:
   name: update_with_trainer
   source:
     id: update_with_trainer
-    path: cntk/logging/progress_print.py
+    path: \cntk\logging\progress_print.py
     remote:
       branch: master
-      path: cntk/logging/progress_print.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 297
+      path: \cntk\logging\progress_print.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 310
   summary: 'DEPRECATED.
 
     Update the current loss, the minibatch size and optionally the metric using the
@@ -543,6 +582,29 @@ items:
       - bool
   type: Method
   uid: cntk.logging.progress_print.ProgressPrinter.update_with_trainer
+- _type: method
+  class: cntk.logging.progress_print.ProgressPrinter
+  fullName: cntk.logging.progress_print.ProgressPrinter.write
+  langs:
+  - python
+  module: cntk.logging.progress_print
+  name: write
+  source:
+    id: write
+    path: \cntk\logging\progress_print.py
+    remote:
+      branch: master
+      path: \cntk\logging\progress_print.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 213
+  syntax:
+    content: write(self, key, value)
+    parameters:
+    - id: self
+    - id: key
+    - id: value
+  type: Method
+  uid: cntk.logging.progress_print.ProgressPrinter.write
 references:
 - fullName: cntk.logging.progress_print.ProgressPrinter.avg_loss_since_last
   isExternal: false
@@ -584,6 +646,11 @@ references:
   name: on_training_update_end
   parent: cntk.logging.progress_print.ProgressPrinter
   uid: cntk.logging.progress_print.ProgressPrinter.on_training_update_end
+- fullName: cntk.logging.progress_print.ProgressPrinter.on_write_distributed_sync_update
+  isExternal: false
+  name: on_write_distributed_sync_update
+  parent: cntk.logging.progress_print.ProgressPrinter
+  uid: cntk.logging.progress_print.ProgressPrinter.on_write_distributed_sync_update
 - fullName: cntk.logging.progress_print.ProgressPrinter.on_write_test_summary
   isExternal: false
   name: on_write_test_summary
@@ -624,3 +691,8 @@ references:
   name: update_with_trainer
   parent: cntk.logging.progress_print.ProgressPrinter
   uid: cntk.logging.progress_print.ProgressPrinter.update_with_trainer
+- fullName: cntk.logging.progress_print.ProgressPrinter.write
+  isExternal: false
+  name: write
+  parent: cntk.logging.progress_print.ProgressPrinter
+  uid: cntk.logging.progress_print.ProgressPrinter.write

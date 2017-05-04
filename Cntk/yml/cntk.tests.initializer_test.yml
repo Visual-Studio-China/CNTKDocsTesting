@@ -11,11 +11,11 @@ items:
   name: initializer_test
   source:
     id: initializer_test
-    path: cntk/tests/initializer_test.py
+    path: \cntk\tests\initializer_test.py
     remote:
       branch: master
-      path: cntk/tests/initializer_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\initializer_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.tests.initializer_test
@@ -27,11 +27,11 @@ items:
   name: test_initializer_init
   source:
     id: test_initializer_init
-    path: cntk/tests/initializer_test.py
+    path: \cntk\tests\initializer_test.py
     remote:
       branch: master
-      path: cntk/tests/initializer_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\initializer_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 20
   syntax:
     content: test_initializer_init(device_id)

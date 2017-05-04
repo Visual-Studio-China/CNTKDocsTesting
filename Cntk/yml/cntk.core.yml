@@ -5,6 +5,8 @@ items:
   children:
   - cntk.core.NDArrayView
   - cntk.core.Value
+  - cntk.core.asarray
+  - cntk.core.asvalue
   - cntk.core.user_function
   fullName: cntk.core
   langs:
@@ -13,14 +15,60 @@ items:
   name: core
   source:
     id: core
-    path: cntk/core.py
+    path: \cntk\core.py
     remote:
       branch: master
-      path: cntk/core.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\core.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.core
+- _type: function
+  fullName: cntk.core.asarray
+  langs:
+  - python
+  module: cntk.core
+  name: asarray
+  source:
+    id: asarray
+    path: \cntk\core.py
+    remote:
+      branch: master
+      path: \cntk\core.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 618
+  summary: Converts a Value object to a sequence of NumPy arrays (if dense) or CSR
+    arrays (if sparse).
+  syntax:
+    content: asarray(value, dtype=None)
+    parameters:
+    - id: value
+    - defaultValue: None
+      id: dtype
+  type: Method
+  uid: cntk.core.asarray
+- _type: function
+  fullName: cntk.core.asvalue
+  langs:
+  - python
+  module: cntk.core
+  name: asvalue
+  source:
+    id: asvalue
+    path: \cntk\core.py
+    remote:
+      branch: master
+      path: \cntk\core.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 634
+  summary: Converts a sequence of NumPy arrays or CSR arrays to a Value object.
+  syntax:
+    content: asvalue(variable, data_array)
+    parameters:
+    - id: variable
+    - id: data_array
+  type: Method
+  uid: cntk.core.asvalue
 - _type: function
   fullName: cntk.core.user_function
   langs:
@@ -29,12 +77,12 @@ items:
   name: user_function
   source:
     id: user_function
-    path: cntk/core.py
+    path: \cntk\core.py
     remote:
       branch: master
-      path: cntk/core.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 481
+      path: \cntk\core.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 609
   summary: Wraps the passed Function to create a composite representing the composite
     Function graph rooted at the passed root Function.
   syntax:
@@ -54,6 +102,16 @@ references:
   name: Value
   parent: cntk.core
   uid: cntk.core.Value
+- fullName: cntk.core.asarray
+  isExternal: false
+  name: asarray
+  parent: cntk.core
+  uid: cntk.core.asarray
+- fullName: cntk.core.asvalue
+  isExternal: false
+  name: asvalue
+  parent: cntk.core
+  uid: cntk.core.asvalue
 - fullName: cntk.core.user_function
   isExternal: false
   name: user_function

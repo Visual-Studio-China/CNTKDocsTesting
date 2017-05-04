@@ -14,11 +14,11 @@ items:
   name: sample_installer
   source:
     id: sample_installer
-    path: cntk/sample_installer.py
+    path: \cntk\sample_installer.py
     remote:
       branch: master
-      path: cntk/sample_installer.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\sample_installer.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.sample_installer
@@ -30,11 +30,11 @@ items:
   name: default_sample_dir
   source:
     id: default_sample_dir
-    path: cntk/sample_installer.py
+    path: \cntk\sample_installer.py
     remote:
       branch: master
-      path: cntk/sample_installer.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\sample_installer.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 24
   syntax:
     content: default_sample_dir()
@@ -48,11 +48,11 @@ items:
   name: default_sample_url
   source:
     id: default_sample_url
-    path: cntk/sample_installer.py
+    path: \cntk\sample_installer.py
     remote:
       branch: master
-      path: cntk/sample_installer.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\sample_installer.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 31
   syntax:
     content: default_sample_url()
@@ -66,11 +66,11 @@ items:
   name: install_samples
   source:
     id: install_samples
-    path: cntk/sample_installer.py
+    path: \cntk\sample_installer.py
     remote:
       branch: master
-      path: cntk/sample_installer.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\sample_installer.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 34
   summary: Fetch the CNTK samples from a URL, extract to local directory, and install
     Python package requirements.
@@ -97,11 +97,11 @@ items:
   name: module_is_unreleased
   source:
     id: module_is_unreleased
-    path: cntk/sample_installer.py
+    path: \cntk\sample_installer.py
     remote:
       branch: master
-      path: cntk/sample_installer.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\sample_installer.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 21
   syntax:
     content: module_is_unreleased()

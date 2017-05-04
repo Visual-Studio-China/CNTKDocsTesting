@@ -11,11 +11,11 @@ items:
   name: stop_gradient_test
   source:
     id: stop_gradient_test
-    path: cntk/ops/tests/stop_gradient_test.py
+    path: \cntk\ops\tests\stop_gradient_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/stop_gradient_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\stop_gradient_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   summary: Unit tests for the stop_gradient class.
   type: Namespace
@@ -28,11 +28,11 @@ items:
   name: test_stop_gradient
   source:
     id: test_stop_gradient
-    path: cntk/ops/tests/stop_gradient_test.py
+    path: \cntk\ops\tests\stop_gradient_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/stop_gradient_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\stop_gradient_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 16
   syntax:
     content: test_stop_gradient()

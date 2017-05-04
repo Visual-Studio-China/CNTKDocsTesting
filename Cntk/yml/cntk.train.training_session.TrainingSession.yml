@@ -17,12 +17,12 @@ items:
   name: TrainingSession
   source:
     id: TrainingSession
-    path: cntk/train/training_session.py
+    path: \cntk\train\training_session.py
     remote:
       branch: master
-      path: cntk/train/training_session.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 95
+      path: \cntk\train\training_session.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 116
   summary: 'Bases: `cntk.cntk_py.TrainingSession`
 
     The instance of the class should be created by using `training_session()` function.
@@ -34,8 +34,8 @@ items:
 
     '
   syntax:
-    content: TrainingSession(self, trainer, mb_source, mb_size, var_to_stream, max_samples,
-      progress_frequency, checkpoint_config, cv_config)
+    content: TrainingSession(self, trainer, mb_source, mb_size, model_inputs_to_streams,
+      max_samples, progress_frequency, checkpoint_config, cv_config, test_config)
     parameters:
     - description: trainer
       id: trainer
@@ -50,7 +50,7 @@ items:
       type:
       - minibatch_size_schedule or int
     - description: mapping between input variables and input streams
-      id: var_to_stream
+      id: model_inputs_to_streams
       type:
       - dict
     - description: maximum number of samples used for training
@@ -69,6 +69,10 @@ items:
       id: cv_config
       type:
       - CrossValidationConfig
+    - description: test configuration
+      id: test_config
+      type:
+      - TestConfig
   type: Class
   uid: cntk.train.training_session.TrainingSession
 - _type: method
@@ -80,12 +84,12 @@ items:
   name: on_cross_validation_end
   source:
     id: on_cross_validation_end
-    path: cntk/train/training_session.py
+    path: \cntk\train\training_session.py
     remote:
       branch: master
-      path: cntk/train/training_session.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 169
+      path: \cntk\train\training_session.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 193
   summary: Callback that gets executed at the end of cross validation.
   syntax:
     content: on_cross_validation_end(self, index, average_error, num_samples, num_minibatches)
@@ -120,12 +124,12 @@ items:
   name: train
   source:
     id: train
-    path: cntk/internal/swig_helper.py
+    path: \cntk\internal\swig_helper.py
     remote:
       branch: master
-      path: cntk/internal/swig_helper.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 154
+      path: \cntk\internal\swig_helper.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 178
   summary: Perform training on a specified device.
   syntax:
     content: train()

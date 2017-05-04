@@ -15,12 +15,12 @@ items:
   name: CrossValidationConfig
   source:
     id: CrossValidationConfig
-    path: cntk/train/training_session.py
+    path: \cntk\train\training_session.py
     remote:
       branch: master
-      path: cntk/train/training_session.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 55
+      path: \cntk\train\training_session.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 53
   summary: 'Bases: `cntk.cntk_py.CrossValidationConfig`
 
     A cross validation configuration for the training session.'
@@ -45,7 +45,7 @@ items:
         custom cross validation logic, returns False if training should be stopped.
       id: callback
       type:
-      - func (index, avarage_error, cv_num_samples, cv_num_minibatches)
+      - func (index, average_error, cv_num_samples, cv_num_minibatches)
   type: Class
   uid: cntk.train.training_session.CrossValidationConfig
 references: []

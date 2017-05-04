@@ -12,12 +12,13 @@ items:
   name: debugging
   source:
     id: debugging
-    path: cntk/debugging/__init__.py
+    path: \cntk\debugging\__init__.py
     remote:
       branch: master
-      path: cntk/debugging/__init__.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\debugging\__init__.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
+  summary: Helper functions for debugging graphs.
   type: Namespace
   uid: cntk.debugging
 - _type: function
@@ -28,11 +29,11 @@ items:
   name: dump_function
   source:
     id: dump_function
-    path: cntk/debugging/__init__.py
+    path: \cntk\debugging\__init__.py
     remote:
       branch: master
-      path: cntk/debugging/__init__.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\debugging\__init__.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 33
   syntax:
     content: dump_function(root, tag=None)
@@ -50,11 +51,11 @@ items:
   name: dump_signature
   source:
     id: dump_signature
-    path: cntk/debugging/__init__.py
+    path: \cntk\debugging\__init__.py
     remote:
       branch: master
-      path: cntk/debugging/__init__.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\debugging\__init__.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 17
   summary: Debug helper that prints the signature of a Function.
   syntax:

@@ -1,0 +1,177 @@
+#YamlMime:PythonReference
+api_name: []
+items:
+- _type: module
+  children:
+  - cntk.layers.tests.higher_order_layers_test.test_failing_for_constructor
+  - cntk.layers.tests.higher_order_layers_test.test_for_constructor_layer
+  - cntk.layers.tests.higher_order_layers_test.test_resnet_block
+  - cntk.layers.tests.higher_order_layers_test.test_sequential_clique_with_functions
+  - cntk.layers.tests.higher_order_layers_test.test_sequential_clique_with_layers
+  - cntk.layers.tests.higher_order_layers_test.test_sequential_constructor
+  fullName: cntk.layers.tests.higher_order_layers_test
+  langs:
+  - python
+  module: cntk.layers.tests.higher_order_layers_test
+  name: higher_order_layers_test
+  source:
+    id: higher_order_layers_test
+    path: \cntk\layers\tests\higher_order_layers_test.py
+    remote:
+      branch: master
+      path: \cntk\layers\tests\higher_order_layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 0
+  type: Namespace
+  uid: cntk.layers.tests.higher_order_layers_test
+- _type: function
+  fullName: cntk.layers.tests.higher_order_layers_test.test_failing_for_constructor
+  langs:
+  - python
+  module: cntk.layers.tests.higher_order_layers_test
+  name: test_failing_for_constructor
+  source:
+    id: test_failing_for_constructor
+    path: \cntk\layers\tests\higher_order_layers_test.py
+    remote:
+      branch: master
+      path: \cntk\layers\tests\higher_order_layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 28
+  syntax:
+    content: test_failing_for_constructor()
+  type: Method
+  uid: cntk.layers.tests.higher_order_layers_test.test_failing_for_constructor
+- _type: function
+  fullName: cntk.layers.tests.higher_order_layers_test.test_for_constructor_layer
+  langs:
+  - python
+  module: cntk.layers.tests.higher_order_layers_test
+  name: test_for_constructor_layer
+  source:
+    id: test_for_constructor_layer
+    path: \cntk\layers\tests\higher_order_layers_test.py
+    remote:
+      branch: master
+      path: \cntk\layers\tests\higher_order_layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 14
+  syntax:
+    content: test_for_constructor_layer(layers_count, dense_units)
+    parameters:
+    - id: layers_count
+    - id: dense_units
+  type: Method
+  uid: cntk.layers.tests.higher_order_layers_test.test_for_constructor_layer
+- _type: function
+  fullName: cntk.layers.tests.higher_order_layers_test.test_resnet_block
+  langs:
+  - python
+  module: cntk.layers.tests.higher_order_layers_test
+  name: test_resnet_block
+  source:
+    id: test_resnet_block
+    path: \cntk\layers\tests\higher_order_layers_test.py
+    remote:
+      branch: master
+      path: \cntk\layers\tests\higher_order_layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 93
+  syntax:
+    content: test_resnet_block(input_data)
+    parameters:
+    - id: input_data
+  type: Method
+  uid: cntk.layers.tests.higher_order_layers_test.test_resnet_block
+- _type: function
+  fullName: cntk.layers.tests.higher_order_layers_test.test_sequential_clique_with_functions
+  langs:
+  - python
+  module: cntk.layers.tests.higher_order_layers_test
+  name: test_sequential_clique_with_functions
+  source:
+    id: test_sequential_clique_with_functions
+    path: \cntk\layers\tests\higher_order_layers_test.py
+    remote:
+      branch: master
+      path: \cntk\layers\tests\higher_order_layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 43
+  syntax:
+    content: test_sequential_clique_with_functions(input_data)
+    parameters:
+    - id: input_data
+  type: Method
+  uid: cntk.layers.tests.higher_order_layers_test.test_sequential_clique_with_functions
+- _type: function
+  fullName: cntk.layers.tests.higher_order_layers_test.test_sequential_clique_with_layers
+  langs:
+  - python
+  module: cntk.layers.tests.higher_order_layers_test
+  name: test_sequential_clique_with_layers
+  source:
+    id: test_sequential_clique_with_layers
+    path: \cntk\layers\tests\higher_order_layers_test.py
+    remote:
+      branch: master
+      path: \cntk\layers\tests\higher_order_layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 62
+  syntax:
+    content: test_sequential_clique_with_layers(input_elements, expected)
+    parameters:
+    - id: input_elements
+    - id: expected
+  type: Method
+  uid: cntk.layers.tests.higher_order_layers_test.test_sequential_clique_with_layers
+- _type: function
+  fullName: cntk.layers.tests.higher_order_layers_test.test_sequential_constructor
+  langs:
+  - python
+  module: cntk.layers.tests.higher_order_layers_test
+  name: test_sequential_constructor
+  source:
+    id: test_sequential_constructor
+    path: \cntk\layers\tests\higher_order_layers_test.py
+    remote:
+      branch: master
+      path: \cntk\layers\tests\higher_order_layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 78
+  syntax:
+    content: test_sequential_constructor(input_data)
+    parameters:
+    - id: input_data
+  type: Method
+  uid: cntk.layers.tests.higher_order_layers_test.test_sequential_constructor
+references:
+- fullName: cntk.layers.tests.higher_order_layers_test.test_failing_for_constructor
+  isExternal: false
+  name: test_failing_for_constructor
+  parent: cntk.layers.tests.higher_order_layers_test
+  uid: cntk.layers.tests.higher_order_layers_test.test_failing_for_constructor
+- fullName: cntk.layers.tests.higher_order_layers_test.test_for_constructor_layer
+  isExternal: false
+  name: test_for_constructor_layer
+  parent: cntk.layers.tests.higher_order_layers_test
+  uid: cntk.layers.tests.higher_order_layers_test.test_for_constructor_layer
+- fullName: cntk.layers.tests.higher_order_layers_test.test_resnet_block
+  isExternal: false
+  name: test_resnet_block
+  parent: cntk.layers.tests.higher_order_layers_test
+  uid: cntk.layers.tests.higher_order_layers_test.test_resnet_block
+- fullName: cntk.layers.tests.higher_order_layers_test.test_sequential_clique_with_functions
+  isExternal: false
+  name: test_sequential_clique_with_functions
+  parent: cntk.layers.tests.higher_order_layers_test
+  uid: cntk.layers.tests.higher_order_layers_test.test_sequential_clique_with_functions
+- fullName: cntk.layers.tests.higher_order_layers_test.test_sequential_clique_with_layers
+  isExternal: false
+  name: test_sequential_clique_with_layers
+  parent: cntk.layers.tests.higher_order_layers_test
+  uid: cntk.layers.tests.higher_order_layers_test.test_sequential_clique_with_layers
+- fullName: cntk.layers.tests.higher_order_layers_test.test_sequential_constructor
+  isExternal: false
+  name: test_sequential_constructor
+  parent: cntk.layers.tests.higher_order_layers_test
+  uid: cntk.layers.tests.higher_order_layers_test.test_sequential_constructor

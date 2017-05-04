@@ -25,13 +25,13 @@ items:
   name: MyPlus
   source:
     id: MyPlus
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 20
-  summary: 'Bases: [cntk.ops.functions.UserFunction](.md#cntk.ops.functions.UserFunction.md)
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 22
+  summary: 'Bases: [cntk.ops.functions.UserFunction](cntk.ops.functions.html.md#cntk.ops.functions.UserFunction.md)
 
 
 
@@ -50,18 +50,19 @@ items:
   name: backward
   source:
     id: backward
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 43
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 45
   syntax:
-    content: backward(self, state, root_gradients)
+    content: backward(self, state, root_gradients, input_gradients)
     parameters:
     - id: self
     - id: state
     - id: root_gradients
+    - id: input_gradients
   type: Method
   uid: cntk.ops.tests.userfunction_test.MyPlus.backward
 - _type: method
@@ -73,12 +74,12 @@ items:
   name: clone
   source:
     id: clone
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 31
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 33
   syntax:
     content: clone(self, cloned_inputs)
     parameters:
@@ -95,12 +96,12 @@ items:
   name: forward
   source:
     id: forward
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 34
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 36
   syntax:
     content: forward(self, arguments, device=None, outputs_to_retain=None)
     parameters:
@@ -121,12 +122,12 @@ items:
   name: infer_outputs
   source:
     id: infer_outputs
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 27
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 29
   syntax:
     content: infer_outputs(self)
     parameters:

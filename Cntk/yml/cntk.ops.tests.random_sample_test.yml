@@ -4,6 +4,7 @@ items:
 - _type: module
   children:
   - cntk.ops.tests.random_sample_test.test_random_sample_inclusion_frequency
+  - cntk.ops.tests.random_sample_test.test_random_sample_with_explicit_seed
   - cntk.ops.tests.random_sample_test.test_random_sample_with_replacement
   - cntk.ops.tests.random_sample_test.test_random_sample_without_replacement
   fullName: cntk.ops.tests.random_sample_test
@@ -13,11 +14,11 @@ items:
   name: random_sample_test
   source:
     id: random_sample_test
-    path: cntk/ops/tests/random_sample_test.py
+    path: \cntk\ops\tests\random_sample_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/random_sample_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\random_sample_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   summary: Unit tests random sampling related operations
   type: Namespace
@@ -30,11 +31,11 @@ items:
   name: test_random_sample_inclusion_frequency
   source:
     id: test_random_sample_inclusion_frequency
-    path: cntk/ops/tests/random_sample_test.py
+    path: \cntk\ops\tests\random_sample_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/random_sample_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\random_sample_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 49
   syntax:
     content: test_random_sample_inclusion_frequency(weights, num_samples, allow_duplicates,
@@ -51,6 +52,27 @@ items:
   type: Method
   uid: cntk.ops.tests.random_sample_test.test_random_sample_inclusion_frequency
 - _type: function
+  fullName: cntk.ops.tests.random_sample_test.test_random_sample_with_explicit_seed
+  langs:
+  - python
+  module: cntk.ops.tests.random_sample_test
+  name: test_random_sample_with_explicit_seed
+  source:
+    id: test_random_sample_with_explicit_seed
+    path: \cntk\ops\tests\random_sample_test.py
+    remote:
+      branch: master
+      path: \cntk\ops\tests\random_sample_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 118
+  syntax:
+    content: test_random_sample_with_explicit_seed(device_id, precision)
+    parameters:
+    - id: device_id
+    - id: precision
+  type: Method
+  uid: cntk.ops.tests.random_sample_test.test_random_sample_with_explicit_seed
+- _type: function
   fullName: cntk.ops.tests.random_sample_test.test_random_sample_with_replacement
   langs:
   - python
@@ -58,11 +80,11 @@ items:
   name: test_random_sample_with_replacement
   source:
     id: test_random_sample_with_replacement
-    path: cntk/ops/tests/random_sample_test.py
+    path: \cntk\ops\tests\random_sample_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/random_sample_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\random_sample_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 70
   syntax:
     content: test_random_sample_with_replacement(weights, num_samples, tolerance,
@@ -84,11 +106,11 @@ items:
   name: test_random_sample_without_replacement
   source:
     id: test_random_sample_without_replacement
-    path: cntk/ops/tests/random_sample_test.py
+    path: \cntk\ops\tests\random_sample_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/random_sample_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\random_sample_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 101
   syntax:
     content: test_random_sample_without_replacement(weights, num_samples, expected_count,
@@ -109,6 +131,11 @@ references:
   name: test_random_sample_inclusion_frequency
   parent: cntk.ops.tests.random_sample_test
   uid: cntk.ops.tests.random_sample_test.test_random_sample_inclusion_frequency
+- fullName: cntk.ops.tests.random_sample_test.test_random_sample_with_explicit_seed
+  isExternal: false
+  name: test_random_sample_with_explicit_seed
+  parent: cntk.ops.tests.random_sample_test
+  uid: cntk.ops.tests.random_sample_test.test_random_sample_with_explicit_seed
 - fullName: cntk.ops.tests.random_sample_test.test_random_sample_with_replacement
   isExternal: false
   name: test_random_sample_with_replacement

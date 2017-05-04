@@ -3,9 +3,18 @@ api_name: []
 items:
 - _type: module
   children:
-  - cntk.tests.misc_test.test_Value_raises
+  - cntk.tests.misc_test.is_locked
+  - cntk.tests.misc_test.is_locked_cross_process
+  - cntk.tests.misc_test.test_all_devices
   - cntk.tests.misc_test.test_callstack1
   - cntk.tests.misc_test.test_callstack2
+  - cntk.tests.misc_test.test_cpu_and_gpu_devices
+  - cntk.tests.misc_test.test_gpu_properties
+  - cntk.tests.misc_test.test_set_cpu_as_default_device
+  - cntk.tests.misc_test.test_set_excluded_devices
+  - cntk.tests.misc_test.test_set_gpu_as_default_device
+  - cntk.tests.misc_test.test_setting_trace_level
+  - cntk.tests.misc_test.test_use_default_device
   fullName: cntk.tests.misc_test
   langs:
   - python
@@ -13,32 +22,73 @@ items:
   name: misc_test
   source:
     id: misc_test
-    path: cntk/tests/misc_test.py
+    path: \cntk\tests\misc_test.py
     remote:
       branch: master
-      path: cntk/tests/misc_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\misc_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.tests.misc_test
 - _type: function
-  fullName: cntk.tests.misc_test.test_Value_raises
+  fullName: cntk.tests.misc_test.is_locked
   langs:
   - python
   module: cntk.tests.misc_test
-  name: test_Value_raises
+  name: is_locked
   source:
-    id: test_Value_raises
-    path: cntk/tests/misc_test.py
+    id: is_locked
+    path: \cntk\tests\misc_test.py
     remote:
       branch: master
-      path: cntk/tests/misc_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 21
+      path: \cntk\tests\misc_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 20
   syntax:
-    content: test_Value_raises()
+    content: is_locked(device)
+    parameters:
+    - id: device
   type: Method
-  uid: cntk.tests.misc_test.test_Value_raises
+  uid: cntk.tests.misc_test.is_locked
+- _type: function
+  fullName: cntk.tests.misc_test.is_locked_cross_process
+  langs:
+  - python
+  module: cntk.tests.misc_test
+  name: is_locked_cross_process
+  source:
+    id: is_locked_cross_process
+    path: \cntk\tests\misc_test.py
+    remote:
+      branch: master
+      path: \cntk\tests\misc_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 16
+  syntax:
+    content: is_locked_cross_process(queue, device_id)
+    parameters:
+    - id: queue
+    - id: device_id
+  type: Method
+  uid: cntk.tests.misc_test.is_locked_cross_process
+- _type: function
+  fullName: cntk.tests.misc_test.test_all_devices
+  langs:
+  - python
+  module: cntk.tests.misc_test
+  name: test_all_devices
+  source:
+    id: test_all_devices
+    path: \cntk\tests\misc_test.py
+    remote:
+      branch: master
+      path: \cntk\tests\misc_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 49
+  syntax:
+    content: test_all_devices()
+  type: Method
+  uid: cntk.tests.misc_test.test_all_devices
 - _type: function
   fullName: cntk.tests.misc_test.test_callstack1
   langs:
@@ -47,12 +97,12 @@ items:
   name: test_callstack1
   source:
     id: test_callstack1
-    path: cntk/tests/misc_test.py
+    path: \cntk\tests\misc_test.py
     remote:
       branch: master
-      path: cntk/tests/misc_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 11
+      path: \cntk\tests\misc_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 29
   syntax:
     content: test_callstack1()
   type: Method
@@ -65,22 +115,158 @@ items:
   name: test_callstack2
   source:
     id: test_callstack2
-    path: cntk/tests/misc_test.py
+    path: \cntk\tests\misc_test.py
     remote:
       branch: master
-      path: cntk/tests/misc_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 16
+      path: \cntk\tests\misc_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 34
   syntax:
     content: test_callstack2()
   type: Method
   uid: cntk.tests.misc_test.test_callstack2
+- _type: function
+  fullName: cntk.tests.misc_test.test_cpu_and_gpu_devices
+  langs:
+  - python
+  module: cntk.tests.misc_test
+  name: test_cpu_and_gpu_devices
+  source:
+    id: test_cpu_and_gpu_devices
+    path: \cntk\tests\misc_test.py
+    remote:
+      branch: master
+      path: \cntk\tests\misc_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 40
+  syntax:
+    content: test_cpu_and_gpu_devices()
+  type: Method
+  uid: cntk.tests.misc_test.test_cpu_and_gpu_devices
+- _type: function
+  fullName: cntk.tests.misc_test.test_gpu_properties
+  langs:
+  - python
+  module: cntk.tests.misc_test
+  name: test_gpu_properties
+  source:
+    id: test_gpu_properties
+    path: \cntk\tests\misc_test.py
+    remote:
+      branch: master
+      path: \cntk\tests\misc_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 55
+  syntax:
+    content: test_gpu_properties()
+  type: Method
+  uid: cntk.tests.misc_test.test_gpu_properties
+- _type: function
+  fullName: cntk.tests.misc_test.test_set_cpu_as_default_device
+  langs:
+  - python
+  module: cntk.tests.misc_test
+  name: test_set_cpu_as_default_device
+  source:
+    id: test_set_cpu_as_default_device
+    path: \cntk\tests\misc_test.py
+    remote:
+      branch: master
+      path: \cntk\tests\misc_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 84
+  syntax:
+    content: test_set_cpu_as_default_device()
+  type: Method
+  uid: cntk.tests.misc_test.test_set_cpu_as_default_device
+- _type: function
+  fullName: cntk.tests.misc_test.test_set_excluded_devices
+  langs:
+  - python
+  module: cntk.tests.misc_test
+  name: test_set_excluded_devices
+  source:
+    id: test_set_excluded_devices
+    path: \cntk\tests\misc_test.py
+    remote:
+      branch: master
+      path: \cntk\tests\misc_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 110
+  syntax:
+    content: test_set_excluded_devices()
+  type: Method
+  uid: cntk.tests.misc_test.test_set_excluded_devices
+- _type: function
+  fullName: cntk.tests.misc_test.test_set_gpu_as_default_device
+  langs:
+  - python
+  module: cntk.tests.misc_test
+  name: test_set_gpu_as_default_device
+  source:
+    id: test_set_gpu_as_default_device
+    path: \cntk\tests\misc_test.py
+    remote:
+      branch: master
+      path: \cntk\tests\misc_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 94
+  syntax:
+    content: test_set_gpu_as_default_device()
+  type: Method
+  uid: cntk.tests.misc_test.test_set_gpu_as_default_device
+- _type: function
+  fullName: cntk.tests.misc_test.test_setting_trace_level
+  langs:
+  - python
+  module: cntk.tests.misc_test
+  name: test_setting_trace_level
+  source:
+    id: test_setting_trace_level
+    path: \cntk\tests\misc_test.py
+    remote:
+      branch: master
+      path: \cntk\tests\misc_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 120
+  syntax:
+    content: test_setting_trace_level()
+  type: Method
+  uid: cntk.tests.misc_test.test_setting_trace_level
+- _type: function
+  fullName: cntk.tests.misc_test.test_use_default_device
+  langs:
+  - python
+  module: cntk.tests.misc_test
+  name: test_use_default_device
+  source:
+    id: test_use_default_device
+    path: \cntk\tests\misc_test.py
+    remote:
+      branch: master
+      path: \cntk\tests\misc_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 74
+  syntax:
+    content: test_use_default_device()
+  type: Method
+  uid: cntk.tests.misc_test.test_use_default_device
 references:
-- fullName: cntk.tests.misc_test.test_Value_raises
+- fullName: cntk.tests.misc_test.is_locked
   isExternal: false
-  name: test_Value_raises
+  name: is_locked
   parent: cntk.tests.misc_test
-  uid: cntk.tests.misc_test.test_Value_raises
+  uid: cntk.tests.misc_test.is_locked
+- fullName: cntk.tests.misc_test.is_locked_cross_process
+  isExternal: false
+  name: is_locked_cross_process
+  parent: cntk.tests.misc_test
+  uid: cntk.tests.misc_test.is_locked_cross_process
+- fullName: cntk.tests.misc_test.test_all_devices
+  isExternal: false
+  name: test_all_devices
+  parent: cntk.tests.misc_test
+  uid: cntk.tests.misc_test.test_all_devices
 - fullName: cntk.tests.misc_test.test_callstack1
   isExternal: false
   name: test_callstack1
@@ -91,3 +277,38 @@ references:
   name: test_callstack2
   parent: cntk.tests.misc_test
   uid: cntk.tests.misc_test.test_callstack2
+- fullName: cntk.tests.misc_test.test_cpu_and_gpu_devices
+  isExternal: false
+  name: test_cpu_and_gpu_devices
+  parent: cntk.tests.misc_test
+  uid: cntk.tests.misc_test.test_cpu_and_gpu_devices
+- fullName: cntk.tests.misc_test.test_gpu_properties
+  isExternal: false
+  name: test_gpu_properties
+  parent: cntk.tests.misc_test
+  uid: cntk.tests.misc_test.test_gpu_properties
+- fullName: cntk.tests.misc_test.test_set_cpu_as_default_device
+  isExternal: false
+  name: test_set_cpu_as_default_device
+  parent: cntk.tests.misc_test
+  uid: cntk.tests.misc_test.test_set_cpu_as_default_device
+- fullName: cntk.tests.misc_test.test_set_excluded_devices
+  isExternal: false
+  name: test_set_excluded_devices
+  parent: cntk.tests.misc_test
+  uid: cntk.tests.misc_test.test_set_excluded_devices
+- fullName: cntk.tests.misc_test.test_set_gpu_as_default_device
+  isExternal: false
+  name: test_set_gpu_as_default_device
+  parent: cntk.tests.misc_test
+  uid: cntk.tests.misc_test.test_set_gpu_as_default_device
+- fullName: cntk.tests.misc_test.test_setting_trace_level
+  isExternal: false
+  name: test_setting_trace_level
+  parent: cntk.tests.misc_test
+  uid: cntk.tests.misc_test.test_setting_trace_level
+- fullName: cntk.tests.misc_test.test_use_default_device
+  isExternal: false
+  name: test_use_default_device
+  parent: cntk.tests.misc_test
+  uid: cntk.tests.misc_test.test_use_default_device

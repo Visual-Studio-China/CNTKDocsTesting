@@ -15,11 +15,11 @@ items:
   name: userlearner_test
   source:
     id: userlearner_test
-    path: cntk/debugging/tests/userlearner_test.py
+    path: \cntk\debugging\tests\userlearner_test.py
     remote:
       branch: master
-      path: cntk/debugging/tests/userlearner_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\debugging\tests\userlearner_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.debugging.tests.userlearner_test
@@ -31,12 +31,12 @@ items:
   name: ffnet
   source:
     id: ffnet
-    path: cntk/debugging/tests/userlearner_test.py
+    path: \cntk\debugging\tests\userlearner_test.py
     remote:
       branch: master
-      path: cntk/debugging/tests/userlearner_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 83
+      path: \cntk\debugging\tests\userlearner_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 80
   syntax:
     content: ffnet(optimizer, num_minibatches_to_train)
     parameters:
@@ -52,11 +52,11 @@ items:
   name: generate_random_data
   source:
     id: generate_random_data
-    path: cntk/debugging/tests/userlearner_test.py
+    path: \cntk\debugging\tests\userlearner_test.py
     remote:
       branch: master
-      path: cntk/debugging/tests/userlearner_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\debugging\tests\userlearner_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 15
   syntax:
     content: generate_random_data(sample_size, feature_dim, num_classes)
@@ -74,12 +74,12 @@ items:
   name: test_user_learner
   source:
     id: test_user_learner
-    path: cntk/debugging/tests/userlearner_test.py
+    path: \cntk\debugging\tests\userlearner_test.py
     remote:
       branch: master
-      path: cntk/debugging/tests/userlearner_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 126
+      path: \cntk\debugging\tests\userlearner_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 123
   syntax:
     content: test_user_learner()
   type: Method

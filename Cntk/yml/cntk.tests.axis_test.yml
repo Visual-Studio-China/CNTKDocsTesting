@@ -5,6 +5,7 @@ items:
   children:
   - cntk.tests.axis_test.test_axis
   - cntk.tests.axis_test.test_axis_comparison
+  - cntk.tests.axis_test.test_axis_str
   - cntk.tests.axis_test.test_default_axis
   - cntk.tests.axis_test.test_dyn_axis
   fullName: cntk.tests.axis_test
@@ -14,11 +15,11 @@ items:
   name: axis_test
   source:
     id: axis_test
-    path: cntk/tests/axis_test.py
+    path: \cntk\tests\axis_test.py
     remote:
       branch: master
-      path: cntk/tests/axis_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\axis_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.tests.axis_test
@@ -30,12 +31,12 @@ items:
   name: test_axis
   source:
     id: test_axis
-    path: cntk/tests/axis_test.py
+    path: \cntk\tests\axis_test.py
     remote:
       branch: master
-      path: cntk/tests/axis_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 8
+      path: \cntk\tests\axis_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 9
   syntax:
     content: test_axis()
   type: Method
@@ -48,16 +49,34 @@ items:
   name: test_axis_comparison
   source:
     id: test_axis_comparison
-    path: cntk/tests/axis_test.py
+    path: \cntk\tests\axis_test.py
     remote:
       branch: master
-      path: cntk/tests/axis_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\axis_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 24
   syntax:
     content: test_axis_comparison()
   type: Method
   uid: cntk.tests.axis_test.test_axis_comparison
+- _type: function
+  fullName: cntk.tests.axis_test.test_axis_str
+  langs:
+  - python
+  module: cntk.tests.axis_test
+  name: test_axis_str
+  source:
+    id: test_axis_str
+    path: \cntk\tests\axis_test.py
+    remote:
+      branch: master
+      path: \cntk\tests\axis_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 29
+  syntax:
+    content: test_axis_str()
+  type: Method
+  uid: cntk.tests.axis_test.test_axis_str
 - _type: function
   fullName: cntk.tests.axis_test.test_default_axis
   langs:
@@ -66,11 +85,11 @@ items:
   name: test_default_axis
   source:
     id: test_default_axis
-    path: cntk/tests/axis_test.py
+    path: \cntk\tests\axis_test.py
     remote:
       branch: master
-      path: cntk/tests/axis_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\axis_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 20
   syntax:
     content: test_default_axis()
@@ -84,11 +103,11 @@ items:
   name: test_dyn_axis
   source:
     id: test_dyn_axis
-    path: cntk/tests/axis_test.py
+    path: \cntk\tests\axis_test.py
     remote:
       branch: master
-      path: cntk/tests/axis_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\axis_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 15
   syntax:
     content: test_dyn_axis()
@@ -105,6 +124,11 @@ references:
   name: test_axis_comparison
   parent: cntk.tests.axis_test
   uid: cntk.tests.axis_test.test_axis_comparison
+- fullName: cntk.tests.axis_test.test_axis_str
+  isExternal: false
+  name: test_axis_str
+  parent: cntk.tests.axis_test
+  uid: cntk.tests.axis_test.test_axis_str
 - fullName: cntk.tests.axis_test.test_default_axis
   isExternal: false
   name: test_default_axis

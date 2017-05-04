@@ -12,11 +12,11 @@ items:
   name: combine_test
   source:
     id: combine_test
-    path: cntk/ops/tests/combine_test.py
+    path: \cntk\ops\tests\combine_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/combine_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\combine_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   summary: Unit tests for combine operation, only forward pass is tested
   type: Namespace
@@ -29,12 +29,12 @@ items:
   name: test_op_combine
   source:
     id: test_op_combine
-    path: cntk/ops/tests/combine_test.py
+    path: \cntk\ops\tests\combine_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/combine_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 29
+      path: \cntk\ops\tests\combine_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 30
   syntax:
     content: test_op_combine(left_operand, right_operand, operations, expected_results,
       device_id, precision)
@@ -55,12 +55,12 @@ items:
   name: test_op_combine_input_var
   source:
     id: test_op_combine_input_var
-    path: cntk/ops/tests/combine_test.py
+    path: \cntk\ops\tests\combine_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/combine_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 69
+      path: \cntk\ops\tests\combine_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 70
   syntax:
     content: test_op_combine_input_var()
   type: Method

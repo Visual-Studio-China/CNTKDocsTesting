@@ -24,13 +24,13 @@ items:
   name: MySigmoid
   source:
     id: MySigmoid
-    path: cntk/ops/tests/userfunction_complex_test.py
+    path: \cntk\ops\tests\userfunction_complex_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_complex_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 123
-  summary: 'Bases: [cntk.ops.functions.UserFunction](.md#cntk.ops.functions.UserFunction.md)
+      path: \cntk\ops\tests\userfunction_complex_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 121
+  summary: 'Bases: [cntk.ops.functions.UserFunction](cntk.ops.functions.html.md#cntk.ops.functions.UserFunction.md)
 
 
 
@@ -48,12 +48,12 @@ items:
   name: backward
   source:
     id: backward
-    path: cntk/ops/tests/userfunction_complex_test.py
+    path: \cntk\ops\tests\userfunction_complex_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_complex_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 132
+      path: \cntk\ops\tests\userfunction_complex_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 130
   syntax:
     content: backward(self, state, root_gradients)
     parameters:
@@ -71,12 +71,12 @@ items:
   name: forward
   source:
     id: forward
-    path: cntk/ops/tests/userfunction_complex_test.py
+    path: \cntk\ops\tests\userfunction_complex_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_complex_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 127
+      path: \cntk\ops\tests\userfunction_complex_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 125
   syntax:
     content: forward(self, argument, device=None, outputs_to_retain=None)
     parameters:
@@ -97,12 +97,12 @@ items:
   name: infer_outputs
   source:
     id: infer_outputs
-    path: cntk/ops/tests/userfunction_complex_test.py
+    path: \cntk\ops\tests\userfunction_complex_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_complex_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 137
+      path: \cntk\ops\tests\userfunction_complex_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 135
   syntax:
     content: infer_outputs(self)
     parameters:

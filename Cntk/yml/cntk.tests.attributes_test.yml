@@ -14,11 +14,11 @@ items:
   name: attributes_test
   source:
     id: attributes_test
-    path: cntk/tests/attributes_test.py
+    path: \cntk\tests\attributes_test.py
     remote:
       branch: master
-      path: cntk/tests/attributes_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\attributes_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.tests.attributes_test
@@ -30,11 +30,11 @@ items:
   name: test_convolution_attributes
   source:
     id: test_convolution_attributes
-    path: cntk/tests/attributes_test.py
+    path: \cntk\tests\attributes_test.py
     remote:
       branch: master
-      path: cntk/tests/attributes_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\attributes_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 16
   syntax:
     content: test_convolution_attributes()
@@ -48,12 +48,12 @@ items:
   name: test_convolution_transpose_attributes
   source:
     id: test_convolution_transpose_attributes
-    path: cntk/tests/attributes_test.py
+    path: \cntk\tests\attributes_test.py
     remote:
       branch: master
-      path: cntk/tests/attributes_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 33
+      path: \cntk\tests\attributes_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 46
   syntax:
     content: test_convolution_transpose_attributes()
   type: Method
@@ -66,12 +66,12 @@ items:
   name: test_dropout_attributes
   source:
     id: test_dropout_attributes
-    path: cntk/tests/attributes_test.py
+    path: \cntk\tests\attributes_test.py
     remote:
       branch: master
-      path: cntk/tests/attributes_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 50
+      path: \cntk\tests\attributes_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 63
   syntax:
     content: test_dropout_attributes()
   type: Method
@@ -84,12 +84,12 @@ items:
   name: test_slice_attributes
   source:
     id: test_slice_attributes
-    path: cntk/tests/attributes_test.py
+    path: \cntk\tests\attributes_test.py
     remote:
       branch: master
-      path: cntk/tests/attributes_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 57
+      path: \cntk\tests\attributes_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 70
   syntax:
     content: test_slice_attributes()
   type: Method

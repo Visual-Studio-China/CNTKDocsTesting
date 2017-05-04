@@ -5,7 +5,6 @@ items:
   children:
   - cntk.metrics.classification_error
   - cntk.metrics.edit_distance_error
-  - cntk.metrics.lambda_rank
   - cntk.metrics.ndcg_at_1
   fullName: cntk.metrics
   langs:
@@ -14,11 +13,11 @@ items:
   name: metrics
   source:
     id: metrics
-    path: cntk/metrics/__init__.py
+    path: \cntk\metrics\__init__.py
     remote:
       branch: master
-      path: cntk/metrics/__init__.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\metrics\__init__.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.metrics
@@ -30,12 +29,12 @@ items:
   name: classification_error
   source:
     id: classification_error
-    path: cntk/internal/swig_helper.py
+    path: \cntk\internal\swig_helper.py
     remote:
       branch: master
-      path: cntk/internal/swig_helper.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 118
+      path: \cntk\internal\swig_helper.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 63
   summary: 'This operation computes the classification error. It finds the index of
     the highest value in the output_vector and compares it to the actual ground truth
     label (the index of the hot bit in the target vector). The result is a scalar
@@ -85,12 +84,12 @@ items:
   name: edit_distance_error
   source:
     id: edit_distance_error
-    path: cntk/internal/swig_helper.py
+    path: \cntk\internal\swig_helper.py
     remote:
       branch: master
-      path: cntk/internal/swig_helper.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 156
+      path: \cntk\internal\swig_helper.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 101
   summary: 'Edit distance error evaluation node with the option of specifying penalty
     of substitution, deletion and insertion, as well as squashing the input sequences
     and ignoring certain samples. Using the classic DP algorithm as described in [https://en.wikipedia.org/wiki/Edit_distance](https://en.wikipedia.org/wiki/Edit_distance),
@@ -117,9 +116,9 @@ items:
 
     -[ Example ]-
 
-    i1 = cntk.input_variable(shape=(2,)) i2 = cntk.input_variable(shape=(2,)) arguments
-    = {i1 : [[1, 3], [2, 0]], i2 : [[2, 0], [2, 0]]} a = edit_distance_error(i1, i2,
-    0, 1, 1, True, [1]) print(a.eval(arguments))'
+    i1 = cntk.input(shape=(2,)) i2 = cntk.input(shape=(2,)) arguments = {i1 : [[1,
+    3], [2, 0]], i2 : [[2, 0], [2, 0]]} a = edit_distance_error(i1, i2, 0, 1, 1, True,
+    [1]) print(a.eval(arguments))'
   syntax:
     content: edit_distance_error()
     parameters:
@@ -127,10 +126,12 @@ items:
       id: input_a
     - description: second input sequence
       id: input_b
-    - description: substitution, deletion and insertion penalties
-      id: delPen, insPen
-      type:
-      - subPen,
+    - description: substitution penalty
+      id: subPen
+    - description: deletion penalty
+      id: delPen
+    - description: insertion penalty
+      id: insPen
     - description: whether to merge sequences of identical samples (in both input
         sequences). If true and tokensToIgnore contains label '-' then given first
         input sequence as s1="a-ab-" and second as s2="-aa--abb" the edit distance
@@ -148,53 +149,6 @@ items:
   type: Method
   uid: cntk.metrics.edit_distance_error
 - _type: function
-  fullName: cntk.metrics.lambda_rank
-  langs:
-  - python
-  module: cntk.metrics
-  name: lambda_rank
-  source:
-    id: lambda_rank
-    path: cntk/internal/swig_helper.py
-    remote:
-      branch: master
-      path: cntk/internal/swig_helper.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 16
-  summary: "Groups samples according to `group`, sorts them within each group based\
-    \ on `output` and computes the Normalized Discounted Cumulative Gain (NDCG) at\
-    \ infinity for each group. Concretely, the Discounted Cumulative Gain (DCG) at\
-    \ infinity is:\n\nwhere  means the gain of the -th ranked sample.\nThe NDCG is\
-    \ just the DCG  divided by the maximum achievable DCG (obtained by placing the\
-    \ samples with the largest gain at the top of the ranking).\nSamples in the same\
-    \ group must appear in order of decreasing gain.\nIt returns 1 minus the average\
-    \ NDCG across all the groups in the minibatch multiplied by 100 times the number\
-    \ of samples in the minibatch.\nIn the backward direction it back-propagates LambdaRank\
-    \ gradients.\n-[ Example ]-\n>>> group = C.input_variable((1,))\n>>> score = C.input_variable((1,),\
-    \ needs_gradient=True)\n>>> gain  = C.input_variable((1,))\n>>> g = np.array([1,\
-    \ 1, 2, 2], dtype=np.float32).reshape(4,1,1)\n>>> s = np.array([1, 2, 3, 4], dtype=np.float32).reshape(4,1,1)\n\
-    >>> n = np.array([7, 1, 3, 1], dtype=np.float32).reshape(4,1,1)\n>>> f = C.lambda_rank(score,\
-    \ gain, group)\n>>> np.round(f.grad({score:s, gain:n, group: g}, wrt=[score]),4)\n\
-    array([[[-0.2121]],\n<BLANKLINE>\n       [[ 0.2121]],\n<BLANKLINE>\n       [[-0.1486]],\n\
-    <BLANKLINE>\n       [[ 0.1486]]], dtype=float32)"
-  syntax:
-    content: lambda_rank()
-    parameters:
-    - description: score of each sample
-      id: output
-    - description: gain of each sample
-      id: gain
-    - description: group of each sample
-      id: group
-    - description: the name of the Function instance in the network
-      id: name
-      type:
-      - str, optional
-    return:
-      description: '`Function`'
-  type: Method
-  uid: cntk.metrics.lambda_rank
-- _type: function
   fullName: cntk.metrics.ndcg_at_1
   langs:
   - python
@@ -202,12 +156,12 @@ items:
   name: ndcg_at_1
   source:
     id: ndcg_at_1
-    path: cntk/internal/swig_helper.py
+    path: \cntk\internal\swig_helper.py
     remote:
       branch: master
-      path: cntk/internal/swig_helper.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 72
+      path: \cntk\internal\swig_helper.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 17
   summary: 'Groups samples according to `group`, sorts them within each group based
     on `output` and computes the Normalized Discounted Cumulative Gain (NDCG) at 1
     for each group. Concretely, the NDCG at 1 is:
@@ -224,11 +178,11 @@ items:
 
     -[ Example ]-
 
-    >>> group = C.input_variable((1,))
+    >>> group = C.input((1,))
 
-    >>> score = C.input_variable((1,))
+    >>> score = C.input((1,))
 
-    >>> gain  = C.input_variable((1,))
+    >>> gain  = C.input((1,))
 
     >>> g = np.array([1, 1, 2, 2], dtype=np.float32).reshape(4,1,1)
 
@@ -267,11 +221,6 @@ references:
   name: edit_distance_error
   parent: cntk.metrics
   uid: cntk.metrics.edit_distance_error
-- fullName: cntk.metrics.lambda_rank
-  isExternal: false
-  name: lambda_rank
-  parent: cntk.metrics
-  uid: cntk.metrics.lambda_rank
 - fullName: cntk.metrics.ndcg_at_1
   isExternal: false
   name: ndcg_at_1

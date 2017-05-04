@@ -23,6 +23,7 @@ items:
   - cntk.layers.tests.layers_test.test_lookup
   - cntk.layers.tests.layers_test.test_recurrence
   - cntk.layers.tests.layers_test.test_recurrence_fun
+  - cntk.layers.tests.layers_test.test_recurrent_block
   - cntk.layers.tests.layers_test.test_sequential_convolution_without_reduction_dim
   - cntk.layers.tests.layers_test.test_unfold
   fullName: cntk.layers.tests.layers_test
@@ -32,11 +33,11 @@ items:
   name: layers_test
   source:
     id: layers_test
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.layers.tests.layers_test
@@ -48,12 +49,12 @@ items:
   name: assert_list_of_arrays_equal
   source:
     id: assert_list_of_arrays_equal
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 30
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 41
   syntax:
     content: assert_list_of_arrays_equal(r, exp, err_msg)
     parameters:
@@ -70,16 +71,14 @@ items:
   name: test_1D_convolution_without_reduction_dim
   source:
     id: test_1D_convolution_without_reduction_dim
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 567
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 660
   syntax:
-    content: test_1D_convolution_without_reduction_dim(device_id)
-    parameters:
-    - id: device_id
+    content: test_1D_convolution_without_reduction_dim()
   type: Method
   uid: cntk.layers.tests.layers_test.test_1D_convolution_without_reduction_dim
 - _type: function
@@ -90,16 +89,14 @@ items:
   name: test_Function
   source:
     id: test_Function
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 58
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 69
   syntax:
-    content: test_Function(device_id)
-    parameters:
-    - id: device_id
+    content: test_Function()
   type: Method
   uid: cntk.layers.tests.layers_test.test_Function
 - _type: function
@@ -110,12 +107,12 @@ items:
   name: test_default_options
   source:
     id: test_default_options
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 38
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 49
   syntax:
     content: test_default_options()
   type: Method
@@ -128,16 +125,14 @@ items:
   name: test_layers_batch_normalization
   source:
     id: test_layers_batch_normalization
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 677
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 784
   syntax:
-    content: test_layers_batch_normalization(device_id)
-    parameters:
-    - id: device_id
+    content: test_layers_batch_normalization()
   type: Method
   uid: cntk.layers.tests.layers_test.test_layers_batch_normalization
 - _type: function
@@ -148,16 +143,14 @@ items:
   name: test_layers_conv_pool_unpool_deconv
   source:
     id: test_layers_conv_pool_unpool_deconv
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 587
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 683
   syntax:
-    content: test_layers_conv_pool_unpool_deconv(device_id)
-    parameters:
-    - id: device_id
+    content: test_layers_conv_pool_unpool_deconv()
   type: Method
   uid: cntk.layers.tests.layers_test.test_layers_conv_pool_unpool_deconv
 - _type: function
@@ -168,16 +161,14 @@ items:
   name: test_layers_convolution_2d
   source:
     id: test_layers_convolution_2d
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 528
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 598
   syntax:
-    content: test_layers_convolution_2d(device_id)
-    parameters:
-    - id: device_id
+    content: test_layers_convolution_2d()
   type: Method
   uid: cntk.layers.tests.layers_test.test_layers_convolution_2d
 - _type: function
@@ -188,16 +179,14 @@ items:
   name: test_layers_convolution_3d
   source:
     id: test_layers_convolution_3d
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 502
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 572
   syntax:
-    content: test_layers_convolution_3d(device_id)
-    parameters:
-    - id: device_id
+    content: test_layers_convolution_3d()
   type: Method
   uid: cntk.layers.tests.layers_test.test_layers_convolution_3d
 - _type: function
@@ -208,16 +197,14 @@ items:
   name: test_layers_convolution_shape
   source:
     id: test_layers_convolution_shape
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 315
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 386
   syntax:
-    content: test_layers_convolution_shape(device_id)
-    parameters:
-    - id: device_id
+    content: test_layers_convolution_shape()
   type: Method
   uid: cntk.layers.tests.layers_test.test_layers_convolution_shape
 - _type: function
@@ -228,16 +215,14 @@ items:
   name: test_layers_convolution_value
   source:
     id: test_layers_convolution_value
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 411
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 482
   syntax:
-    content: test_layers_convolution_value(device_id)
-    parameters:
-    - id: device_id
+    content: test_layers_convolution_value()
   type: Method
   uid: cntk.layers.tests.layers_test.test_layers_convolution_value
 - _type: function
@@ -248,16 +233,14 @@ items:
   name: test_layers_deconvolution
   source:
     id: test_layers_deconvolution
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 580
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 676
   syntax:
-    content: test_layers_deconvolution(device_id)
-    parameters:
-    - id: device_id
+    content: test_layers_deconvolution()
   type: Method
   uid: cntk.layers.tests.layers_test.test_layers_deconvolution
 - _type: function
@@ -268,12 +251,12 @@ items:
   name: test_layers_dense
   source:
     id: test_layers_dense
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 215
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 272
   syntax:
     content: test_layers_dense(device_id)
     parameters:
@@ -288,16 +271,14 @@ items:
   name: test_layers_dropout
   source:
     id: test_layers_dropout
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 629
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 725
   syntax:
-    content: test_layers_dropout(device_id)
-    parameters:
-    - id: device_id
+    content: test_layers_dropout()
   type: Method
   uid: cntk.layers.tests.layers_test.test_layers_dropout
 - _type: function
@@ -308,16 +289,14 @@ items:
   name: test_layers_embedding
   source:
     id: test_layers_embedding
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 260
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 321
   syntax:
-    content: test_layers_embedding(device_id)
-    parameters:
-    - id: device_id
+    content: test_layers_embedding()
   type: Method
   uid: cntk.layers.tests.layers_test.test_layers_embedding
 - _type: function
@@ -328,16 +307,14 @@ items:
   name: test_layers_layer_normalization
   source:
     id: test_layers_layer_normalization
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 658
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 765
   syntax:
-    content: test_layers_layer_normalization(device_id)
-    parameters:
-    - id: device_id
+    content: test_layers_layer_normalization()
   type: Method
   uid: cntk.layers.tests.layers_test.test_layers_layer_normalization
 - _type: function
@@ -348,16 +325,14 @@ items:
   name: test_layers_name
   source:
     id: test_layers_name
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 14
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 20
   syntax:
-    content: test_layers_name(device_id)
-    parameters:
-    - id: device_id
+    content: test_layers_name()
   type: Method
   uid: cntk.layers.tests.layers_test.test_layers_name
 - _type: function
@@ -368,16 +343,14 @@ items:
   name: test_layers_stabilizer
   source:
     id: test_layers_stabilizer
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 644
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 751
   syntax:
-    content: test_layers_stabilizer(device_id)
-    parameters:
-    - id: device_id
+    content: test_layers_stabilizer()
   type: Method
   uid: cntk.layers.tests.layers_test.test_layers_stabilizer
 - _type: function
@@ -388,16 +361,14 @@ items:
   name: test_lookup
   source:
     id: test_lookup
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 90
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 101
   syntax:
-    content: test_lookup(device_id)
-    parameters:
-    - id: device_id
+    content: test_lookup()
   type: Method
   uid: cntk.layers.tests.layers_test.test_lookup
 - _type: function
@@ -408,12 +379,12 @@ items:
   name: test_recurrence
   source:
     id: test_recurrence
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 102
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 113
   syntax:
     content: test_recurrence()
   type: Method
@@ -426,18 +397,42 @@ items:
   name: test_recurrence_fun
   source:
     id: test_recurrence_fun
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 146
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 157
   syntax:
-    content: test_recurrence_fun(device_id)
-    parameters:
-    - id: device_id
+    content: test_recurrence_fun()
   type: Method
   uid: cntk.layers.tests.layers_test.test_recurrence_fun
+- _type: function
+  fullName: cntk.layers.tests.layers_test.test_recurrent_block
+  langs:
+  - python
+  module: cntk.layers.tests.layers_test
+  name: test_recurrent_block
+  source:
+    id: test_recurrent_block
+    path: \cntk\layers\tests\layers_test.py
+    remote:
+      branch: master
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 245
+  syntax:
+    content: test_recurrent_block(block_type, block_outputs_count, block_size, W_mult,
+      H_mult, expected_res)
+    parameters:
+    - id: block_type
+    - id: block_outputs_count
+    - id: block_size
+    - id: W_mult
+    - id: H_mult
+    - id: expected_res
+  type: Method
+  uid: cntk.layers.tests.layers_test.test_recurrent_block
 - _type: function
   fullName: cntk.layers.tests.layers_test.test_sequential_convolution_without_reduction_dim
   langs:
@@ -446,16 +441,14 @@ items:
   name: test_sequential_convolution_without_reduction_dim
   source:
     id: test_sequential_convolution_without_reduction_dim
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 555
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 625
   syntax:
-    content: test_sequential_convolution_without_reduction_dim(device_id)
-    parameters:
-    - id: device_id
+    content: test_sequential_convolution_without_reduction_dim()
   type: Method
   uid: cntk.layers.tests.layers_test.test_sequential_convolution_without_reduction_dim
 - _type: function
@@ -466,16 +459,14 @@ items:
   name: test_unfold
   source:
     id: test_unfold
-    path: cntk/layers/tests/layers_test.py
+    path: \cntk\layers\tests\layers_test.py
     remote:
       branch: master
-      path: cntk/layers/tests/layers_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 174
+      path: \cntk\layers\tests\layers_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 185
   syntax:
-    content: test_unfold(device_id)
-    parameters:
-    - id: device_id
+    content: test_unfold()
   type: Method
   uid: cntk.layers.tests.layers_test.test_unfold
 references:
@@ -579,6 +570,11 @@ references:
   name: test_recurrence_fun
   parent: cntk.layers.tests.layers_test
   uid: cntk.layers.tests.layers_test.test_recurrence_fun
+- fullName: cntk.layers.tests.layers_test.test_recurrent_block
+  isExternal: false
+  name: test_recurrent_block
+  parent: cntk.layers.tests.layers_test
+  uid: cntk.layers.tests.layers_test.test_recurrent_block
 - fullName: cntk.layers.tests.layers_test.test_sequential_convolution_without_reduction_dim
   isExternal: false
   name: test_sequential_convolution_without_reduction_dim

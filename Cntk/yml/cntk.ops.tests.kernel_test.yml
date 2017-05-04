@@ -4,8 +4,10 @@ items:
 - _type: module
   children:
   - cntk.ops.tests.kernel_test.test_asym_convolution
+  - cntk.ops.tests.kernel_test.test_conv_incorrect_shapes
   - cntk.ops.tests.kernel_test.test_convolution_transpose
   - cntk.ops.tests.kernel_test.test_convolution_transpose_with_output
+  - cntk.ops.tests.kernel_test.test_op_average_pooling_include_pad
   - cntk.ops.tests.kernel_test.test_op_avg_pooling
   - cntk.ops.tests.kernel_test.test_op_convolution_without_padding
   - cntk.ops.tests.kernel_test.test_op_max_pooling
@@ -20,11 +22,11 @@ items:
   name: kernel_test
   source:
     id: kernel_test
-    path: cntk/ops/tests/kernel_test.py
+    path: \cntk\ops\tests\kernel_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/kernel_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\kernel_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   summary: Unit tests for kernel operations, tested for the forward and the backward
     pass
@@ -38,11 +40,11 @@ items:
   name: test_asym_convolution
   source:
     id: test_asym_convolution
-    path: cntk/ops/tests/kernel_test.py
+    path: \cntk\ops\tests\kernel_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/kernel_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\kernel_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 82
   syntax:
     content: test_asym_convolution(input_size, conv_size, result, device_id, precision)
@@ -55,6 +57,24 @@ items:
   type: Method
   uid: cntk.ops.tests.kernel_test.test_asym_convolution
 - _type: function
+  fullName: cntk.ops.tests.kernel_test.test_conv_incorrect_shapes
+  langs:
+  - python
+  module: cntk.ops.tests.kernel_test
+  name: test_conv_incorrect_shapes
+  source:
+    id: test_conv_incorrect_shapes
+    path: \cntk\ops\tests\kernel_test.py
+    remote:
+      branch: master
+      path: \cntk\ops\tests\kernel_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 532
+  syntax:
+    content: test_conv_incorrect_shapes()
+  type: Method
+  uid: cntk.ops.tests.kernel_test.test_conv_incorrect_shapes
+- _type: function
   fullName: cntk.ops.tests.kernel_test.test_convolution_transpose
   langs:
   - python
@@ -62,12 +82,12 @@ items:
   name: test_convolution_transpose
   source:
     id: test_convolution_transpose
-    path: cntk/ops/tests/kernel_test.py
+    path: \cntk\ops\tests\kernel_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/kernel_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 422
+      path: \cntk\ops\tests\kernel_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 461
   syntax:
     content: test_convolution_transpose(input_size, conv_size, result, device_id,
       precision)
@@ -87,12 +107,12 @@ items:
   name: test_convolution_transpose_with_output
   source:
     id: test_convolution_transpose_with_output
-    path: cntk/ops/tests/kernel_test.py
+    path: \cntk\ops\tests\kernel_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/kernel_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 462
+      path: \cntk\ops\tests\kernel_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 501
   syntax:
     content: test_convolution_transpose_with_output(input_size, conv_size, result,
       device_id, precision)
@@ -105,6 +125,32 @@ items:
   type: Method
   uid: cntk.ops.tests.kernel_test.test_convolution_transpose_with_output
 - _type: function
+  fullName: cntk.ops.tests.kernel_test.test_op_average_pooling_include_pad
+  langs:
+  - python
+  module: cntk.ops.tests.kernel_test
+  name: test_op_average_pooling_include_pad
+  source:
+    id: test_op_average_pooling_include_pad
+    path: \cntk\ops\tests\kernel_test.py
+    remote:
+      branch: master
+      path: \cntk\ops\tests\kernel_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 368
+  syntax:
+    content: test_op_average_pooling_include_pad(input_size, pooling_window, strides,
+      result, device_id, precision)
+    parameters:
+    - id: input_size
+    - id: pooling_window
+    - id: strides
+    - id: result
+    - id: device_id
+    - id: precision
+  type: Method
+  uid: cntk.ops.tests.kernel_test.test_op_average_pooling_include_pad
+- _type: function
   fullName: cntk.ops.tests.kernel_test.test_op_avg_pooling
   langs:
   - python
@@ -112,12 +158,12 @@ items:
   name: test_op_avg_pooling
   source:
     id: test_op_avg_pooling
-    path: cntk/ops/tests/kernel_test.py
+    path: \cntk\ops\tests\kernel_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/kernel_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 166
+      path: \cntk\ops\tests\kernel_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 172
   syntax:
     content: test_op_avg_pooling(input_size, pooling_window, strides, result, device_id,
       precision)
@@ -138,12 +184,12 @@ items:
   name: test_op_convolution_without_padding
   source:
     id: test_op_convolution_without_padding
-    path: cntk/ops/tests/kernel_test.py
+    path: \cntk\ops\tests\kernel_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/kernel_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 37
+      path: \cntk\ops\tests\kernel_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 38
   syntax:
     content: test_op_convolution_without_padding(convolution_map, convolution_input,
       device_id, precision)
@@ -162,12 +208,12 @@ items:
   name: test_op_max_pooling
   source:
     id: test_op_max_pooling
-    path: cntk/ops/tests/kernel_test.py
+    path: \cntk\ops\tests\kernel_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/kernel_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 228
+      path: \cntk\ops\tests\kernel_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 234
   syntax:
     content: test_op_max_pooling(input_size, pooling_window, strides, autopad, result,
       device_id, precision)
@@ -189,12 +235,12 @@ items:
   name: test_op_max_unpooling
   source:
     id: test_op_max_unpooling
-    path: cntk/ops/tests/kernel_test.py
+    path: \cntk\ops\tests\kernel_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/kernel_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 264
+      path: \cntk\ops\tests\kernel_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 270
   syntax:
     content: test_op_max_unpooling(input_size, pooling_window, strides, autopad, result,
       device_id, precision)
@@ -216,12 +262,12 @@ items:
   name: test_op_pooling_ceil
   source:
     id: test_op_pooling_ceil
-    path: cntk/ops/tests/kernel_test.py
+    path: \cntk\ops\tests\kernel_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/kernel_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 321
+      path: \cntk\ops\tests\kernel_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 327
   syntax:
     content: test_op_pooling_ceil(input_size, pooling_window, strides, result, device_id,
       precision)
@@ -242,12 +288,12 @@ items:
   name: test_op_pooling_geometry
   source:
     id: test_op_pooling_geometry
-    path: cntk/ops/tests/kernel_test.py
+    path: \cntk\ops\tests\kernel_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/kernel_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 129
+      path: \cntk\ops\tests\kernel_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 135
   syntax:
     content: test_op_pooling_geometry(input_size, pooling_window, strides, padding,
       result, device_id, precision)
@@ -269,12 +315,12 @@ items:
   name: test_op_roipooling
   source:
     id: test_op_roipooling
-    path: cntk/ops/tests/kernel_test.py
+    path: \cntk\ops\tests\kernel_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/kernel_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 374
+      path: \cntk\ops\tests\kernel_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 413
   syntax:
     content: test_op_roipooling(input_map, input_rois, expected_fwd, expected_bkwd,
       device_id, precision)
@@ -293,6 +339,11 @@ references:
   name: test_asym_convolution
   parent: cntk.ops.tests.kernel_test
   uid: cntk.ops.tests.kernel_test.test_asym_convolution
+- fullName: cntk.ops.tests.kernel_test.test_conv_incorrect_shapes
+  isExternal: false
+  name: test_conv_incorrect_shapes
+  parent: cntk.ops.tests.kernel_test
+  uid: cntk.ops.tests.kernel_test.test_conv_incorrect_shapes
 - fullName: cntk.ops.tests.kernel_test.test_convolution_transpose
   isExternal: false
   name: test_convolution_transpose
@@ -303,6 +354,11 @@ references:
   name: test_convolution_transpose_with_output
   parent: cntk.ops.tests.kernel_test
   uid: cntk.ops.tests.kernel_test.test_convolution_transpose_with_output
+- fullName: cntk.ops.tests.kernel_test.test_op_average_pooling_include_pad
+  isExternal: false
+  name: test_op_average_pooling_include_pad
+  parent: cntk.ops.tests.kernel_test
+  uid: cntk.ops.tests.kernel_test.test_op_average_pooling_include_pad
 - fullName: cntk.ops.tests.kernel_test.test_op_avg_pooling
   isExternal: false
   name: test_op_avg_pooling

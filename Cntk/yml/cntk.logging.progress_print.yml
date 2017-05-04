@@ -13,11 +13,11 @@ items:
   name: progress_print
   source:
     id: progress_print
-    path: cntk/logging/progress_print.py
+    path: \cntk\logging\progress_print.py
     remote:
       branch: master
-      path: cntk/logging/progress_print.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\logging\progress_print.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.logging.progress_print
@@ -29,12 +29,12 @@ items:
   name: log_number_of_parameters
   source:
     id: log_number_of_parameters
-    path: cntk/logging/progress_print.py
+    path: \cntk\logging\progress_print.py
     remote:
       branch: master
-      path: cntk/logging/progress_print.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 505
+      path: \cntk\logging\progress_print.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 520
   syntax:
     content: log_number_of_parameters(model, trace_level=0)
     parameters:

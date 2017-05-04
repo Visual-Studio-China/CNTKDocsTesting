@@ -18,13 +18,13 @@ items:
   name: MySgdNaive
   source:
     id: MySgdNaive
-    path: cntk/debugging/tests/userlearner_test.py
+    path: \cntk\debugging\tests\userlearner_test.py
     remote:
       branch: master
-      path: cntk/debugging/tests/userlearner_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\debugging\tests\userlearner_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 29
-  summary: 'Bases: `cntk.learners.UserLearner`
+  summary: 'Bases: [cntk.learners.UserLearner](back_rst/cntk.learners.html.md#cntk.learners.UserLearner.md)
 
     '
   syntax:
@@ -40,11 +40,11 @@ items:
   name: update
   source:
     id: update
-    path: cntk/debugging/tests/userlearner_test.py
+    path: \cntk\debugging\tests\userlearner_test.py
     remote:
       branch: master
-      path: cntk/debugging/tests/userlearner_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\debugging\tests\userlearner_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 34
   syntax:
     content: update(self, gradient_values, training_sample_count, sweep_end)

@@ -23,13 +23,13 @@ items:
   name: PlusAndLast
   source:
     id: PlusAndLast
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 275
-  summary: 'Bases: [cntk.ops.functions.UserFunction](.md#cntk.ops.functions.UserFunction.md)
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 278
+  summary: 'Bases: [cntk.ops.functions.UserFunction](cntk.ops.functions.html.md#cntk.ops.functions.UserFunction.md)
 
 
 
@@ -47,12 +47,12 @@ items:
   name: forward
   source:
     id: forward
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 289
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 292
   syntax:
     content: forward(self, arguments, device=None, outputs_to_retain=None)
     parameters:
@@ -73,12 +73,12 @@ items:
   name: infer_outputs
   source:
     id: infer_outputs
-    path: cntk/ops/tests/userfunction_test.py
+    path: \cntk\ops\tests\userfunction_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 285
+      path: \cntk\ops\tests\userfunction_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 288
   syntax:
     content: infer_outputs(self)
     parameters:

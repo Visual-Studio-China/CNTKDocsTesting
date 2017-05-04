@@ -1,0 +1,120 @@
+#YamlMime:PythonReference
+api_name: []
+items:
+- _type: module
+  children:
+  - cntk.ops.tests.sequence_test.np_softmax
+  - cntk.ops.tests.sequence_test.test_neg_sequence_max
+  - cntk.ops.tests.sequence_test.test_sequence_max
+  - cntk.ops.tests.sequence_test.test_sequnce_softmax
+  fullName: cntk.ops.tests.sequence_test
+  langs:
+  - python
+  module: cntk.ops.tests.sequence_test
+  name: sequence_test
+  source:
+    id: sequence_test
+    path: \cntk\ops\tests\sequence_test.py
+    remote:
+      branch: master
+      path: \cntk\ops\tests\sequence_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 0
+  summary: Unit tests for the sequence_softmax.
+  type: Namespace
+  uid: cntk.ops.tests.sequence_test
+- _type: function
+  fullName: cntk.ops.tests.sequence_test.np_softmax
+  langs:
+  - python
+  module: cntk.ops.tests.sequence_test
+  name: np_softmax
+  source:
+    id: np_softmax
+    path: \cntk\ops\tests\sequence_test.py
+    remote:
+      branch: master
+      path: \cntk\ops\tests\sequence_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 36
+  syntax:
+    content: np_softmax(a)
+    parameters:
+    - id: a
+  type: Method
+  uid: cntk.ops.tests.sequence_test.np_softmax
+- _type: function
+  fullName: cntk.ops.tests.sequence_test.test_neg_sequence_max
+  langs:
+  - python
+  module: cntk.ops.tests.sequence_test
+  name: test_neg_sequence_max
+  source:
+    id: test_neg_sequence_max
+    path: \cntk\ops\tests\sequence_test.py
+    remote:
+      branch: master
+      path: \cntk\ops\tests\sequence_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 27
+  syntax:
+    content: test_neg_sequence_max()
+  type: Method
+  uid: cntk.ops.tests.sequence_test.test_neg_sequence_max
+- _type: function
+  fullName: cntk.ops.tests.sequence_test.test_sequence_max
+  langs:
+  - python
+  module: cntk.ops.tests.sequence_test
+  name: test_sequence_max
+  source:
+    id: test_sequence_max
+    path: \cntk\ops\tests\sequence_test.py
+    remote:
+      branch: master
+      path: \cntk\ops\tests\sequence_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 18
+  syntax:
+    content: test_sequence_max()
+  type: Method
+  uid: cntk.ops.tests.sequence_test.test_sequence_max
+- _type: function
+  fullName: cntk.ops.tests.sequence_test.test_sequnce_softmax
+  langs:
+  - python
+  module: cntk.ops.tests.sequence_test
+  name: test_sequnce_softmax
+  source:
+    id: test_sequnce_softmax
+    path: \cntk\ops\tests\sequence_test.py
+    remote:
+      branch: master
+      path: \cntk\ops\tests\sequence_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 42
+  syntax:
+    content: test_sequnce_softmax()
+  type: Method
+  uid: cntk.ops.tests.sequence_test.test_sequnce_softmax
+references:
+- fullName: cntk.ops.tests.sequence_test.np_softmax
+  isExternal: false
+  name: np_softmax
+  parent: cntk.ops.tests.sequence_test
+  uid: cntk.ops.tests.sequence_test.np_softmax
+- fullName: cntk.ops.tests.sequence_test.test_neg_sequence_max
+  isExternal: false
+  name: test_neg_sequence_max
+  parent: cntk.ops.tests.sequence_test
+  uid: cntk.ops.tests.sequence_test.test_neg_sequence_max
+- fullName: cntk.ops.tests.sequence_test.test_sequence_max
+  isExternal: false
+  name: test_sequence_max
+  parent: cntk.ops.tests.sequence_test
+  uid: cntk.ops.tests.sequence_test.test_sequence_max
+- fullName: cntk.ops.tests.sequence_test.test_sequnce_softmax
+  isExternal: false
+  name: test_sequnce_softmax
+  parent: cntk.ops.tests.sequence_test
+  uid: cntk.ops.tests.sequence_test.test_sequnce_softmax

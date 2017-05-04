@@ -4,6 +4,7 @@ items:
 - _type: module
   children:
   - cntk.logging.tests.graph_test.test_depth_first_search
+  - cntk.logging.tests.graph_test.test_depth_first_search_blocks
   - cntk.logging.tests.graph_test.test_find_nodes
   - cntk.logging.tests.graph_test.test_find_nodes_returning_proper_types
   - cntk.logging.tests.graph_test.test_plot
@@ -14,11 +15,11 @@ items:
   name: graph_test
   source:
     id: graph_test
-    path: cntk/logging/tests/graph_test.py
+    path: \cntk\logging\tests\graph_test.py
     remote:
       branch: master
-      path: cntk/logging/tests/graph_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\logging\tests\graph_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.logging.tests.graph_test
@@ -30,16 +31,40 @@ items:
   name: test_depth_first_search
   source:
     id: test_depth_first_search
-    path: cntk/logging/tests/graph_test.py
+    path: \cntk\logging\tests\graph_test.py
     remote:
       branch: master
-      path: cntk/logging/tests/graph_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 114
+      path: \cntk\logging\tests\graph_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 113
+  summary: For graphs without blocks, depth should not make any difference.
   syntax:
-    content: test_depth_first_search()
+    content: test_depth_first_search(depth)
+    parameters:
+    - id: depth
   type: Method
   uid: cntk.logging.tests.graph_test.test_depth_first_search
+- _type: function
+  fullName: cntk.logging.tests.graph_test.test_depth_first_search_blocks
+  langs:
+  - python
+  module: cntk.logging.tests.graph_test
+  name: test_depth_first_search_blocks
+  source:
+    id: test_depth_first_search_blocks
+    path: \cntk\logging\tests\graph_test.py
+    remote:
+      branch: master
+      path: \cntk\logging\tests\graph_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 127
+  syntax:
+    content: test_depth_first_search_blocks(depth, prefix_count)
+    parameters:
+    - id: depth
+    - id: prefix_count
+  type: Method
+  uid: cntk.logging.tests.graph_test.test_depth_first_search_blocks
 - _type: function
   fullName: cntk.logging.tests.graph_test.test_find_nodes
   langs:
@@ -48,12 +73,12 @@ items:
   name: test_find_nodes
   source:
     id: test_find_nodes
-    path: cntk/logging/tests/graph_test.py
+    path: \cntk\logging\tests\graph_test.py
     remote:
       branch: master
-      path: cntk/logging/tests/graph_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 62
+      path: \cntk\logging\tests\graph_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 59
   syntax:
     content: test_find_nodes()
   type: Method
@@ -66,12 +91,12 @@ items:
   name: test_find_nodes_returning_proper_types
   source:
     id: test_find_nodes_returning_proper_types
-    path: cntk/logging/tests/graph_test.py
+    path: \cntk\logging\tests\graph_test.py
     remote:
       branch: master
-      path: cntk/logging/tests/graph_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 90
+      path: \cntk\logging\tests\graph_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 88
   syntax:
     content: test_find_nodes_returning_proper_types()
   type: Method
@@ -84,12 +109,12 @@ items:
   name: test_plot
   source:
     id: test_plot
-    path: cntk/logging/tests/graph_test.py
+    path: \cntk\logging\tests\graph_test.py
     remote:
       branch: master
-      path: cntk/logging/tests/graph_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 102
+      path: \cntk\logging\tests\graph_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 100
   syntax:
     content: test_plot()
   type: Method
@@ -100,6 +125,11 @@ references:
   name: test_depth_first_search
   parent: cntk.logging.tests.graph_test
   uid: cntk.logging.tests.graph_test.test_depth_first_search
+- fullName: cntk.logging.tests.graph_test.test_depth_first_search_blocks
+  isExternal: false
+  name: test_depth_first_search_blocks
+  parent: cntk.logging.tests.graph_test
+  uid: cntk.logging.tests.graph_test.test_depth_first_search_blocks
 - fullName: cntk.logging.tests.graph_test.test_find_nodes
   isExternal: false
   name: test_find_nodes

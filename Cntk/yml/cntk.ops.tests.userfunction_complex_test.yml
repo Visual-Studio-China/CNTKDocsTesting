@@ -19,11 +19,11 @@ items:
   name: userfunction_complex_test
   source:
     id: userfunction_complex_test
-    path: cntk/ops/tests/userfunction_complex_test.py
+    path: \cntk\ops\tests\userfunction_complex_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_complex_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\userfunction_complex_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   summary: Unit tests for function extension
   type: Namespace
@@ -36,16 +36,16 @@ items:
   name: dense_layer
   source:
     id: dense_layer
-    path: cntk/ops/tests/userfunction_complex_test.py
+    path: \cntk\ops\tests\userfunction_complex_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_complex_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 47
+      path: \cntk\ops\tests\userfunction_complex_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 45
   syntax:
-    content: dense_layer(input, output_dim, nonlinearity)
+    content: dense_layer(inp, output_dim, nonlinearity)
     parameters:
-    - id: input
+    - id: inp
     - id: output_dim
     - id: nonlinearity
   type: Method
@@ -58,17 +58,17 @@ items:
   name: fully_connected_classifier_net
   source:
     id: fully_connected_classifier_net
-    path: cntk/ops/tests/userfunction_complex_test.py
+    path: \cntk\ops\tests\userfunction_complex_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_complex_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 54
+      path: \cntk\ops\tests\userfunction_complex_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 52
   syntax:
-    content: fully_connected_classifier_net(input, num_output_classes, hidden_layer_dim,
+    content: fully_connected_classifier_net(inp, num_output_classes, hidden_layer_dim,
       num_hidden_layers, nonlinearity)
     parameters:
-    - id: input
+    - id: inp
     - id: num_output_classes
     - id: hidden_layer_dim
     - id: num_hidden_layers
@@ -83,12 +83,12 @@ items:
   name: generate_random_data_sample
   source:
     id: generate_random_data_sample
-    path: cntk/ops/tests/userfunction_complex_test.py
+    path: \cntk\ops\tests\userfunction_complex_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_complex_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 27
+      path: \cntk\ops\tests\userfunction_complex_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 25
   syntax:
     content: generate_random_data_sample(sample_size, feature_dim, num_classes)
     parameters:
@@ -105,12 +105,12 @@ items:
   name: linear_layer
   source:
     id: linear_layer
-    path: cntk/ops/tests/userfunction_complex_test.py
+    path: \cntk\ops\tests\userfunction_complex_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_complex_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 39
+      path: \cntk\ops\tests\userfunction_complex_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 37
   syntax:
     content: linear_layer(input_var, output_dim)
     parameters:
@@ -126,12 +126,12 @@ items:
   name: measure_runtime
   source:
     id: measure_runtime
-    path: cntk/ops/tests/userfunction_complex_test.py
+    path: \cntk\ops\tests\userfunction_complex_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_complex_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 149
+      path: \cntk\ops\tests\userfunction_complex_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 147
   syntax:
     content: measure_runtime(device_id)
     parameters:
@@ -146,12 +146,12 @@ items:
   name: print_training_progress
   source:
     id: print_training_progress
-    path: cntk/ops/tests/userfunction_complex_test.py
+    path: \cntk\ops\tests\userfunction_complex_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_complex_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 62
+      path: \cntk\ops\tests\userfunction_complex_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 60
   syntax:
     content: print_training_progress(trainer, mb, frequency)
     parameters:
@@ -168,12 +168,12 @@ items:
   name: test_ext_user_sigmoid
   source:
     id: test_ext_user_sigmoid
-    path: cntk/ops/tests/userfunction_complex_test.py
+    path: \cntk\ops\tests\userfunction_complex_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_complex_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 141
+      path: \cntk\ops\tests\userfunction_complex_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 139
   syntax:
     content: test_ext_user_sigmoid(device_id)
     parameters:
@@ -188,12 +188,12 @@ items:
   name: train
   source:
     id: train
-    path: cntk/ops/tests/userfunction_complex_test.py
+    path: \cntk\ops\tests\userfunction_complex_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/userfunction_complex_test.py
-      repo: https://github.com/Microsoft/CNTK
-    startLine: 72
+      path: \cntk\ops\tests\userfunction_complex_test.py
+      repo: https://github.com/Microsoft/CNTK.git
+    startLine: 70
   syntax:
     content: train(nonlinearity, num_hidden_layers, device_id)
     parameters:

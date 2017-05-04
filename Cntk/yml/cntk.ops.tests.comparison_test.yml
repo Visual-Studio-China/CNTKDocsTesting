@@ -11,11 +11,11 @@ items:
   name: comparison_test
   source:
     id: comparison_test
-    path: cntk/ops/tests/comparison_test.py
+    path: \cntk\ops\tests\comparison_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/comparison_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\comparison_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   summary: Unit tests for comparison operations, each operation is tested for the
     forward and the backward pass
@@ -29,11 +29,11 @@ items:
   name: test_op_comparison
   source:
     id: test_op_comparison
-    path: cntk/ops/tests/comparison_test.py
+    path: \cntk\ops\tests\comparison_test.py
     remote:
       branch: master
-      path: cntk/ops/tests/comparison_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\ops\tests\comparison_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 40
   syntax:
     content: test_op_comparison(left_operand, right_operand, cntk_function, numpy_function,

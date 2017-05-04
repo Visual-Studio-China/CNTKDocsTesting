@@ -10,11 +10,11 @@ items:
   name: tests
   source:
     id: tests
-    path: cntk/metrics/tests/__init__.py
+    path: \cntk\metrics\tests\__init__.py
     remote:
       branch: master
-      path: cntk/metrics/tests/__init__.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\metrics\tests\__init__.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.metrics.tests

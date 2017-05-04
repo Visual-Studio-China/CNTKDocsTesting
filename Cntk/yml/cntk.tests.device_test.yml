@@ -11,11 +11,11 @@ items:
   name: device_test
   source:
     id: device_test
-    path: cntk/tests/device_test.py
+    path: \cntk\tests\device_test.py
     remote:
       branch: master
-      path: cntk/tests/device_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\device_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   summary: Unit tests for the device module
   type: Namespace
@@ -28,11 +28,11 @@ items:
   name: test_device_kind
   source:
     id: test_device_kind
-    path: cntk/tests/device_test.py
+    path: \cntk\tests\device_test.py
     remote:
       branch: master
-      path: cntk/tests/device_test.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\tests\device_test.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 15
   syntax:
     content: test_device_kind()

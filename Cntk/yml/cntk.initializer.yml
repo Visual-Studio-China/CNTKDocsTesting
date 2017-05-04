@@ -19,11 +19,11 @@ items:
   name: initializer
   source:
     id: initializer
-    path: cntk/initializer.py
+    path: \cntk\initializer.py
     remote:
       branch: master
-      path: cntk/initializer.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\initializer.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 0
   type: Namespace
   uid: cntk.initializer
@@ -35,11 +35,11 @@ items:
   name: bilinear
   source:
     id: bilinear
-    path: cntk/initializer.py
+    path: \cntk\initializer.py
     remote:
       branch: master
-      path: cntk/initializer.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\initializer.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 149
   summary: initializer
   syntax:
@@ -65,11 +65,11 @@ items:
   name: glorot_normal
   source:
     id: glorot_normal
-    path: cntk/initializer.py
+    path: \cntk\initializer.py
     remote:
       branch: master
-      path: cntk/initializer.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\initializer.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 89
   summary: initializer
   syntax:
@@ -108,11 +108,11 @@ items:
   name: glorot_uniform
   source:
     id: glorot_uniform
-    path: cntk/initializer.py
+    path: \cntk\initializer.py
     remote:
       branch: master
-      path: cntk/initializer.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\initializer.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 69
   summary: Glorot initializer
   syntax:
@@ -151,11 +151,11 @@ items:
   name: he_normal
   source:
     id: he_normal
-    path: cntk/initializer.py
+    path: \cntk\initializer.py
     remote:
       branch: master
-      path: cntk/initializer.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\initializer.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 129
   summary: initializer
   syntax:
@@ -193,11 +193,11 @@ items:
   name: he_uniform
   source:
     id: he_uniform
-    path: cntk/initializer.py
+    path: \cntk\initializer.py
     remote:
       branch: master
-      path: cntk/initializer.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\initializer.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 109
   summary: initializer
   syntax:
@@ -235,11 +235,11 @@ items:
   name: initializer_with_rank
   source:
     id: initializer_with_rank
-    path: cntk/initializer.py
+    path: \cntk\initializer.py
     remote:
       branch: master
-      path: cntk/initializer.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\initializer.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 163
   summary: override output_rank and filter_rank specification in a random initializer
     constructed without an explicit output_rank and filter_rank specification
@@ -272,11 +272,11 @@ items:
   name: normal
   source:
     id: normal
-    path: cntk/initializer.py
+    path: \cntk\initializer.py
     remote:
       branch: master
-      path: cntk/initializer.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\initializer.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 30
   summary: Normal initializer
   syntax:
@@ -302,8 +302,8 @@ items:
       type:
       - int
     return:
-      description: initializer for `cntk.ops.variables.Parameter` initialized to normal
-        distribution with mean *0* and standard deviation *scale*.
+      description: initializer for `Parameter` initialized to normal distribution
+        with mean *0* and standard deviation *scale*.
   type: Method
   uid: cntk.initializer.normal
 - _type: function
@@ -314,11 +314,11 @@ items:
   name: uniform
   source:
     id: uniform
-    path: cntk/initializer.py
+    path: \cntk\initializer.py
     remote:
       branch: master
-      path: cntk/initializer.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\initializer.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 12
   summary: Uniform initializer
   syntax:
@@ -334,9 +334,9 @@ items:
       type:
       - int
     return:
-      description: initializer for `cntk.ops.variables.Parameter` initialized to uniform
-        distribution between *scale*[-1.0, 1.0]* note this maps to the "uniform1"
-        distribution in BrainScript.
+      description: initializer for `Parameter` initialized to uniform distribution
+        between *scale*[-1.0, 1.0]* note this maps to the "uniform1" distribution
+        in BrainScript.
   type: Method
   uid: cntk.initializer.uniform
 - _type: function
@@ -347,11 +347,11 @@ items:
   name: xavier
   source:
     id: xavier
-    path: cntk/initializer.py
+    path: \cntk\initializer.py
     remote:
       branch: master
-      path: cntk/initializer.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\initializer.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 49
   summary: Xavier initializer
   syntax:

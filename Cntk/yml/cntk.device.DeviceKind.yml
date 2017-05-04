@@ -15,11 +15,11 @@ items:
   name: DeviceKind
   source:
     id: DeviceKind
-    path: cntk/device.py
+    path: \cntk\device.py
     remote:
       branch: master
-      path: cntk/device.py
-      repo: https://github.com/Microsoft/CNTK
+      path: \cntk\device.py
+      repo: https://github.com/Microsoft/CNTK.git
     startLine: 13
   summary: 'Bases: `enum.Enum`
 
