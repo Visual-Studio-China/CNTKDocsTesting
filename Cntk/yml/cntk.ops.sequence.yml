@@ -586,7 +586,7 @@ items:
   - python
   module: cntk.ops.sequence
   name: slice
-  seealsoContent: 'See also: Indexing in NumPy: [https://docs.scipy.org/doc/numpy/reference/arrays.indexing.html](https://docs.scipy.org/doc/numpy/reference/arrays.indexing.html)'
+  seealsoContent: 'Indexing in NumPy: [https://docs.scipy.org/doc/numpy/reference/arrays.indexing.html](https://docs.scipy.org/doc/numpy/reference/arrays.indexing.html)'
   source:
     id: slice
     path: \cntk\internal\swig_helper.py

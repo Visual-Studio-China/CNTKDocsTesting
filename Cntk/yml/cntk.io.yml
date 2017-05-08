@@ -35,7 +35,7 @@ items:
   - python
   module: cntk.io
   name: CTFDeserializer
-  seealsoContent: "See also: >>:cntkwiki:`CNTKTextReader format <BrainScript-CNTKTextFormat-Reader>`<<\n\
+  seealsoContent: ">>:cntkwiki:`CNTKTextReader format <BrainScript-CNTKTextFormat-Reader>`<<\n\
     \n  <SYSTEM MESSAGE: c:\\local\\anaconda3-4.1.1-windows-x86_64\\lib\\site-packages\\\
     cntk\\io\\__init__.py:docstring of cntk.io.CTFDeserializer:13: (INFO/1) No role\
     \ entry for \"cntkwiki\" in module \"docutils.parsers.rst.languages.en\". Trying\
@@ -52,10 +52,10 @@ items:
     startLine: 613
   summary: "Configures the CNTK text-format reader that reads text-based files with\
     \ lines of the form:\n<!-- literal_block {\"ids\": [], \"xml:space\": \"preserve\"\
-    , \"names\": [], \"dupnames\": [], \"classes\": [], \"backrefs\": []} -->\n\n\
+    , \"classes\": [], \"backrefs\": [], \"names\": [], \"dupnames\": []} -->\n\n\
     ````\n\n   [Sequence_Id] (Sample)+\n   ````\nwhere:\n<!-- literal_block {\"ids\"\
-    : [], \"xml:space\": \"preserve\", \"names\": [], \"dupnames\": [], \"classes\"\
-    : [], \"backrefs\": []} -->\n\n````\n\n   Sample=|Input_Name (Value )*\n   ````"
+    : [], \"xml:space\": \"preserve\", \"classes\": [], \"backrefs\": [], \"names\"\
+    : [], \"dupnames\": []} -->\n\n````\n\n   Sample=|Input_Name (Value )*\n   ````"
   syntax:
     content: CTFDeserializer(filename, streams)
     parameters:
@@ -123,7 +123,7 @@ items:
   - python
   module: cntk.io
   name: ImageDeserializer
-  seealsoContent: "See also: >>:cntkwiki:`Image reader definition <BrainScript-Image-reader>`<<\n\
+  seealsoContent: ">>:cntkwiki:`Image reader definition <BrainScript-Image-reader>`<<\n\
     \n  <SYSTEM MESSAGE: c:\\local\\anaconda3-4.1.1-windows-x86_64\\lib\\site-packages\\\
     cntk\\io\\__init__.py:docstring of cntk.io.ImageDeserializer:14: (INFO/1) No role\
     \ entry for \"cntkwiki\" in module \"docutils.parsers.rst.languages.en\". Trying\
@@ -140,10 +140,10 @@ items:
     startLine: 567
   summary: "Configures the image reader that reads images and corresponding labels\
     \ from a file of the form:\n<!-- literal_block {\"ids\": [], \"xml:space\": \"\
-    preserve\", \"names\": [], \"dupnames\": [], \"classes\": [], \"backrefs\": []}\
+    preserve\", \"classes\": [], \"backrefs\": [], \"names\": [], \"dupnames\": []}\
     \ -->\n\n````\n\n   <full path to image> <tab> <numerical label (0-based class\
     \ id)>\n   ````\nor:\n<!-- literal_block {\"ids\": [], \"xml:space\": \"preserve\"\
-    , \"names\": [], \"dupnames\": [], \"classes\": [], \"backrefs\": []} -->\n\n\
+    , \"classes\": [], \"backrefs\": [], \"names\": [], \"dupnames\": []} -->\n\n\
     ````\n\n   sequenceId <tab> path <tab> label\n   ````"
   syntax:
     content: ImageDeserializer(filename, streams)

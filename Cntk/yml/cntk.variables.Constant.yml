@@ -44,7 +44,7 @@ items:
     \ for `value` parameter.  >\n"
   syntax:
     content: Constant(self, value=None, shape=None, dtype=<cntk.default_options.default_override_or
-      object at 0x000002741CEABDD8>, device=None, name="")
+      object at 0x000001E874308F28>, device=None, name="")
     parameters:
     - description: Initial value.
       id: value

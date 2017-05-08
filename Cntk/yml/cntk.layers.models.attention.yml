@@ -39,19 +39,19 @@ items:
     learning to align and translate."
   syntax:
     content: AttentionModel(attention_dim, attention_span=None, attention_axis=None,
-      init=<cntk.default_options.default_override_or object at 0x000002741CFAEA90>,
-      go_backwards=<cntk.default_options.default_override_or object at 0x000002741CFAEAC8>,
+      init=<cntk.default_options.default_override_or object at 0x000001E874402BE0>,
+      go_backwards=<cntk.default_options.default_override_or object at 0x000001E874402C18>,
       enable_self_stabilization=<cntk.default_options.default_override_or object at
-      0x000002741CFAEB00>, name="")
+      0x000001E874402C50>, name="")
     parameters:
     - id: attention_dim
     - defaultValue: ''
       id: attention_span
-    - defaultValue: <cntk.default_options.default_override_or object at 0x000002741CFAEB00>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x000001E874402C50>
       id: attention_axis
-    - defaultValue: <cntk.default_options.default_override_or object at 0x000002741CFAEAC8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x000001E874402C18>
       id: init
-    - defaultValue: <cntk.default_options.default_override_or object at 0x000002741CFAEA90>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x000001E874402BE0>
       id: go_backwards
     - defaultValue: None
       id: enable_self_stabilization

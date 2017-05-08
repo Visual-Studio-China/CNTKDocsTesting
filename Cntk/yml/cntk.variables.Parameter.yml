@@ -42,7 +42,7 @@ items:
     \ (13, 42)\nParameters are Variables and therefore they inherit all their methods.\n"
   syntax:
     content: Parameter(self, shape=None, init=None, dtype=<cntk.default_options.default_override_or
-      object at 0x000002741CDB2EB8>, device=None, name="")
+      object at 0x000001E874308EF0>, device=None, name="")
     parameters:
     - description: the shape of the tensor holding the parameters
       id: shape

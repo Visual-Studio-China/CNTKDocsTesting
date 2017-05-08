@@ -2492,7 +2492,7 @@ items:
   - python
   module: cntk.ops
   name: reduce_log_sum_exp
-  seealsoContent: 'See also: `reduce_sum()` for more details and examples.'
+  seealsoContent: '`reduce_sum()` for more details and examples.'
   source:
     id: reduce_log_sum_exp
     path: \cntk\internal\swig_helper.py
@@ -2531,7 +2531,7 @@ items:
   - python
   module: cntk.ops
   name: reduce_max
-  seealsoContent: 'See also: `reduce_sum()` for more details and examples.'
+  seealsoContent: '`reduce_sum()` for more details and examples.'
   source:
     id: reduce_max
     path: \cntk\internal\swig_helper.py
@@ -2557,7 +2557,7 @@ items:
   - python
   module: cntk.ops
   name: reduce_mean
-  seealsoContent: 'See also: `reduce_sum()` for more details and examples.'
+  seealsoContent: '`reduce_sum()` for more details and examples.'
   source:
     id: reduce_mean
     path: \cntk\internal\swig_helper.py
@@ -2583,7 +2583,7 @@ items:
   - python
   module: cntk.ops
   name: reduce_min
-  seealsoContent: 'See also: `reduce_sum()` for more details and examples.'
+  seealsoContent: '`reduce_sum()` for more details and examples.'
   source:
     id: reduce_min
     path: \cntk\internal\swig_helper.py
@@ -2609,7 +2609,7 @@ items:
   - python
   module: cntk.ops
   name: reduce_prod
-  seealsoContent: 'See also: `reduce_sum()` for more details and examples.'
+  seealsoContent: '`reduce_sum()` for more details and examples.'
   source:
     id: reduce_prod
     path: \cntk\internal\swig_helper.py
@@ -2914,7 +2914,7 @@ items:
   - python
   module: cntk.ops
   name: slice
-  seealsoContent: 'See also: Indexing in NumPy: [https://docs.scipy.org/doc/numpy/reference/arrays.indexing.html](https://docs.scipy.org/doc/numpy/reference/arrays.indexing.html)'
+  seealsoContent: 'Indexing in NumPy: [https://docs.scipy.org/doc/numpy/reference/arrays.indexing.html](https://docs.scipy.org/doc/numpy/reference/arrays.indexing.html)'
   source:
     id: slice
     path: \cntk\internal\swig_helper.py
@@ -3235,10 +3235,11 @@ items:
     \ X @ W equals times(X, W).\nFor better performance on times operation on sequence\
     \ which is followed by sequence.reduce_sum, use infer_input_rank_to_map=TIMES_REDUCE_SEQUENCE_AXIS_WITHOUT_INFERRED_INPUT_RANK,\
     \ i.e. replace following:\n<!-- literal_block {\"ids\": [], \"xml:space\": \"\
-    preserve\", \"names\": [], \"dupnames\": [], \"classes\": [], \"backrefs\": []}\
+    preserve\", \"classes\": [], \"backrefs\": [], \"names\": [], \"dupnames\": []}\
     \ -->\n\n````\n\n   sequence.reduce_sum(times(seq1, seq2))\n   ````\nwith:\n<!--\
-    \ literal_block {\"ids\": [], \"xml:space\": \"preserve\", \"names\": [], \"dupnames\"\
-    : [], \"classes\": [], \"backrefs\": []} -->\n\n````\n\n   times(seq1, seq2, infer_input_rank_to_map=TIMES_REDUCE_SEQUENCE_AXIS_WITHOUT_INFERRED_INPUT_RANK)\n\
+    \ literal_block {\"ids\": [], \"xml:space\": \"preserve\", \"classes\": [], \"\
+    backrefs\": [], \"names\": [], \"dupnames\": []} -->\n\n````\n\n   times(seq1,\
+    \ seq2, infer_input_rank_to_map=TIMES_REDUCE_SEQUENCE_AXIS_WITHOUT_INFERRED_INPUT_RANK)\n\
     \   ````\n-[ Example ]-\n>>> C.times([[1,2],[3,4]], [[5],[6]]).eval()\narray([[\
     \ 17.],\n       [ 39.]], dtype=float32)\n>>> C.times(1.*np.reshape(np.arange(8),\
     \ (2,2,2)),1.*np.reshape(np.arange(8), (2,2,2)), output_rank=1).eval()\narray([[\
